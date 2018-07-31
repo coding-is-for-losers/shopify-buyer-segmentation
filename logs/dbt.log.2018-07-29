@@ -1,0 +1,1852 @@
+2018-07-29 10:27:37,973: Tracking: tracking
+2018-07-29 10:27:37,975: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051ad358>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051ad160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051adda0>]}
+2018-07-29 10:27:39,754: Loading dependency project from /usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/include
+2018-07-29 10:27:39,806: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/shopify-cohort-analysis/dbt_modules
+2018-07-29 10:27:39,812: Parsing get_column_values.sql
+2018-07-29 10:27:39,839: Parsing get_url_parameter.sql
+2018-07-29 10:27:39,846: Parsing split_part.sql
+2018-07-29 10:27:39,857: Parsing table_exists.sql
+2018-07-29 10:27:39,882: Parsing core.sql
+2018-07-29 10:27:39,907: Parsing adapters/bigquery.sql
+2018-07-29 10:27:39,923: Parsing adapters/common.sql
+2018-07-29 10:27:39,957: Parsing adapters/redshift.sql
+2018-07-29 10:27:39,994: Parsing adapters/snowflake.sql
+2018-07-29 10:27:40,001: Parsing etc/bigquery.sql
+2018-07-29 10:27:40,006: Parsing etc/datetime.sql
+2018-07-29 10:27:40,057: Parsing etc/get_custom_schema.sql
+2018-07-29 10:27:40,074: Parsing materializations/helpers.sql
+2018-07-29 10:27:40,107: Parsing materializations/archive/archive.sql
+2018-07-29 10:27:40,173: Parsing materializations/incremental/incremental.sql
+2018-07-29 10:27:40,257: Parsing materializations/seed/bigquery.sql
+2018-07-29 10:27:40,279: Parsing materializations/seed/seed.sql
+2018-07-29 10:27:40,468: Parsing materializations/table/bigquery_table.sql
+2018-07-29 10:27:40,511: Parsing materializations/table/table.sql
+2018-07-29 10:27:40,552: Parsing materializations/view/bigquery_view.sql
+2018-07-29 10:27:40,567: Parsing materializations/view/view.sql
+2018-07-29 10:27:40,594: Parsing schema_tests/accepted_values.sql
+2018-07-29 10:27:40,605: Parsing schema_tests/not_null.sql
+2018-07-29 10:27:40,611: Parsing schema_tests/relationships.sql
+2018-07-29 10:27:40,623: Parsing schema_tests/unique.sql
+2018-07-29 10:27:40,667: Parsing model.shopify_cohort_analysis.all_dates
+2018-07-29 10:27:40,672: Parsing model.shopify_cohort_analysis.mappings_ga_proc
+2018-07-29 10:27:40,676: Parsing model.shopify_cohort_analysis.monthend_dates
+2018-07-29 10:27:40,679: Parsing model.shopify_cohort_analysis.stores_proc
+2018-07-29 10:27:40,685: Parsing model.shopify_cohort_analysis.ga_transactions
+2018-07-29 10:27:40,696: Parsing model.shopify_cohort_analysis.shopify_customers_proc
+2018-07-29 10:27:40,706: Parsing model.shopify_cohort_analysis.shopify_discounts_proc
+2018-07-29 10:27:40,722: Parsing model.shopify_cohort_analysis.shopify_orders_proc
+2018-07-29 10:27:40,740: Parsing model.shopify_cohort_analysis.shopify_products_proc
+2018-07-29 10:27:40,756: Parsing model.shopify_cohort_analysis.shopify_refunds_proc
+2018-07-29 10:27:40,770: Parsing model.shopify_cohort_analysis.agg_customers
+2018-07-29 10:27:40,773: Parsing model.shopify_cohort_analysis.agg_transactions
+2018-07-29 10:27:40,779: Parsing model.shopify_cohort_analysis.customers_by_transaction
+2018-07-29 10:27:40,786: Parsing model.shopify_cohort_analysis.transaction_by_order_number
+2018-07-29 10:27:40,790: Parsing model.shopify_cohort_analysis.buyer_segment_lists
+2018-07-29 10:27:40,801: Parsing model.shopify_cohort_analysis.buyer_segment_stats
+2018-07-29 10:27:40,809: Parsing model.shopify_cohort_analysis.customers_proc
+2018-07-29 10:27:40,815: Parsing model.shopify_cohort_analysis.customers_proc_qoq
+2018-07-29 10:27:40,821: Parsing model.shopify_cohort_analysis.customers_proc_yoy
+2018-07-29 10:27:40,826: Parsing model.shopify_cohort_analysis.segment_proc_customers
+2018-07-29 10:27:40,830: Parsing model.shopify_cohort_analysis.segment_stats_customers_agg
+2018-07-29 10:27:40,837: Parsing model.shopify_cohort_analysis.monthly_cohort_stats
+2018-07-29 10:27:40,865: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10526fe48>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101e6cb38>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052b2ba8>]}
+2018-07-29 10:27:41,184: Encountered an error:
+2018-07-29 10:27:41,185: Compilation Error in model buyer_segment_lists (models/math/buyer-segmentation/buyer_segment_lists.sql)
+  Model 'model.shopify_cohort_analysis.buyer_segment_lists' depends on model 'agg_customers_union' which was not found or is disabled
+2018-07-29 10:27:41,204: Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/main.py", line 41, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/main.py", line 85, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/main.py", line 139, in run_from_args
+    results = run_from_task(task, proj, parsed)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/main.py", line 147, in run_from_task
+    result = task.run()
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/task/run.py", line 26, in run
+    results = runner.run(query, ModelRunner)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/runner.py", line 217, in run
+    return self.run_from_graph(Selector, Runner, query)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/runner.py", line 177, in run_from_graph
+    flat_graph, linker = self.compile(self.project)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/runner.py", line 173, in compile
+    (flat_graph, linker) = compiler.compile()
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/compilation.py", line 292, in compile
+    root_project.get('name'))
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/parser.py", line 101, in process_refs
+    target_model_package)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/utils.py", line 390, in invalid_ref_fail_unless_test
+    target_model_package)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/exceptions.py", line 190, in ref_target_not_found
+    raise_compiler_error(msg, model)
+  File "/usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/exceptions.py", line 137, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model buyer_segment_lists (models/math/buyer-segmentation/buyer_segment_lists.sql)
+  Model 'model.shopify_cohort_analysis.buyer_segment_lists' depends on model 'agg_customers_union' which was not found or is disabled
+
+2018-07-29 10:28:43,138: Tracking: tracking
+2018-07-29 10:28:43,141: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f0d278>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f0dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f0d320>]}
+2018-07-29 10:28:45,433: Loading dependency project from /usr/local/Cellar/dbt/0.10.1/libexec/lib/python3.6/site-packages/dbt/include
+2018-07-29 10:28:45,469: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/shopify-cohort-analysis/dbt_modules
+2018-07-29 10:28:45,475: Parsing get_column_values.sql
+2018-07-29 10:28:45,500: Parsing get_url_parameter.sql
+2018-07-29 10:28:45,508: Parsing split_part.sql
+2018-07-29 10:28:45,518: Parsing table_exists.sql
+2018-07-29 10:28:45,529: Parsing core.sql
+2018-07-29 10:28:45,549: Parsing adapters/bigquery.sql
+2018-07-29 10:28:45,560: Parsing adapters/common.sql
+2018-07-29 10:28:45,596: Parsing adapters/redshift.sql
+2018-07-29 10:28:45,621: Parsing adapters/snowflake.sql
+2018-07-29 10:28:45,629: Parsing etc/bigquery.sql
+2018-07-29 10:28:45,634: Parsing etc/datetime.sql
+2018-07-29 10:28:45,670: Parsing etc/get_custom_schema.sql
+2018-07-29 10:28:45,679: Parsing materializations/helpers.sql
+2018-07-29 10:28:45,702: Parsing materializations/archive/archive.sql
+2018-07-29 10:28:45,750: Parsing materializations/incremental/incremental.sql
+2018-07-29 10:28:45,810: Parsing materializations/seed/bigquery.sql
+2018-07-29 10:28:45,823: Parsing materializations/seed/seed.sql
+2018-07-29 10:28:45,914: Parsing materializations/table/bigquery_table.sql
+2018-07-29 10:28:45,977: Parsing materializations/table/table.sql
+2018-07-29 10:28:46,025: Parsing materializations/view/bigquery_view.sql
+2018-07-29 10:28:46,062: Parsing materializations/view/view.sql
+2018-07-29 10:28:46,112: Parsing schema_tests/accepted_values.sql
+2018-07-29 10:28:46,123: Parsing schema_tests/not_null.sql
+2018-07-29 10:28:46,132: Parsing schema_tests/relationships.sql
+2018-07-29 10:28:46,138: Parsing schema_tests/unique.sql
+2018-07-29 10:28:46,194: Parsing model.shopify_cohort_analysis.all_dates
+2018-07-29 10:28:46,202: Parsing model.shopify_cohort_analysis.mappings_ga_proc
+2018-07-29 10:28:46,210: Parsing model.shopify_cohort_analysis.monthend_dates
+2018-07-29 10:28:46,216: Parsing model.shopify_cohort_analysis.stores_proc
+2018-07-29 10:28:46,229: Parsing model.shopify_cohort_analysis.ga_transactions
+2018-07-29 10:28:46,326: Parsing model.shopify_cohort_analysis.shopify_customers_proc
+2018-07-29 10:28:46,349: Parsing model.shopify_cohort_analysis.shopify_discounts_proc
+2018-07-29 10:28:46,383: Parsing model.shopify_cohort_analysis.shopify_orders_proc
+2018-07-29 10:28:46,399: Parsing model.shopify_cohort_analysis.shopify_products_proc
+2018-07-29 10:28:46,412: Parsing model.shopify_cohort_analysis.shopify_refunds_proc
+2018-07-29 10:28:46,423: Parsing model.shopify_cohort_analysis.agg_customers
+2018-07-29 10:28:46,432: Parsing model.shopify_cohort_analysis.agg_transactions
+2018-07-29 10:28:46,440: Parsing model.shopify_cohort_analysis.customers_by_transaction
+2018-07-29 10:28:46,448: Parsing model.shopify_cohort_analysis.transaction_by_order_number
+2018-07-29 10:28:46,482: Parsing model.shopify_cohort_analysis.buyer_segment_lists
+2018-07-29 10:28:46,554: Parsing model.shopify_cohort_analysis.buyer_segment_stats
+2018-07-29 10:28:46,588: Parsing model.shopify_cohort_analysis.customers_proc
+2018-07-29 10:28:46,604: Parsing model.shopify_cohort_analysis.customers_proc_qoq
+2018-07-29 10:28:46,634: Parsing model.shopify_cohort_analysis.customers_proc_yoy
+2018-07-29 10:28:46,645: Parsing model.shopify_cohort_analysis.segment_proc_customers
+2018-07-29 10:28:46,649: Parsing model.shopify_cohort_analysis.segment_stats_customers_agg
+2018-07-29 10:28:46,663: Parsing model.shopify_cohort_analysis.monthly_cohort_stats
+2018-07-29 10:28:46,722: Found 22 models, 0 tests, 0 archives, 0 analyses, 62 macros, 0 operations, 0 seed files
+2018-07-29 10:28:46,835: 
+2018-07-29 10:28:46,907: Acquiring new bigquery connection "master".
+2018-07-29 10:28:46,909: Opening a new connection (0 currently allocated)
+2018-07-29 10:28:48,432: 10:28:48 | Concurrency: 4 threads (target='template')
+2018-07-29 10:28:48,434: 10:28:48 | 
+2018-07-29 10:28:48,623: 10:28:48 | 1 of 22 START table model template.all_dates......................... [RUN]
+2018-07-29 10:28:48,624: 10:28:48 | 2 of 22 START table model template.stores_proc....................... [RUN]
+2018-07-29 10:28:48,624: Compiling model.shopify_cohort_analysis.all_dates
+2018-07-29 10:28:48,624: 10:28:48 | 3 of 22 START table model template.monthend_dates.................... [RUN]
+2018-07-29 10:28:48,624: 10:28:48 | 4 of 22 START table model template.mappings_ga_proc.................. [RUN]
+2018-07-29 10:28:48,625: Compiling model.shopify_cohort_analysis.stores_proc
+2018-07-29 10:28:48,636: Writing injected SQL for node "model.shopify_cohort_analysis.all_dates"
+2018-07-29 10:28:48,636: Compiling model.shopify_cohort_analysis.monthend_dates
+2018-07-29 10:28:48,636: Compiling model.shopify_cohort_analysis.mappings_ga_proc
+2018-07-29 10:28:48,647: Writing injected SQL for node "model.shopify_cohort_analysis.stores_proc"
+2018-07-29 10:28:48,657: Writing injected SQL for node "model.shopify_cohort_analysis.monthend_dates"
+2018-07-29 10:28:48,670: Writing injected SQL for node "model.shopify_cohort_analysis.mappings_ga_proc"
+2018-07-29 10:28:48,672: Acquiring new bigquery connection "all_dates".
+2018-07-29 10:28:48,681: Opening a new connection (1 currently allocated)
+2018-07-29 10:28:48,678: Acquiring new bigquery connection "stores_proc".
+2018-07-29 10:28:48,681: Acquiring new bigquery connection "monthend_dates".
+2018-07-29 10:28:48,684: Acquiring new bigquery connection "mappings_ga_proc".
+2018-07-29 10:28:48,686: Opening a new connection (2 currently allocated)
+2018-07-29 10:28:48,689: Opening a new connection (3 currently allocated)
+2018-07-29 10:28:48,699: Opening a new connection (4 currently allocated)
+2018-07-29 10:28:49,203: Writing runtime SQL for node "model.shopify_cohort_analysis.all_dates"
+2018-07-29 10:28:49,223: Writing runtime SQL for node "model.shopify_cohort_analysis.mappings_ga_proc"
+2018-07-29 10:28:49,229: Fetching data for query all_dates:
+create or replace table `template`.`all_dates`
+  
+  as (
+    SELECT 
+date_in_range,
+unix_date(date_in_range) unix_date_in_range
+FROM UNNEST(
+    GENERATE_DATE_ARRAY(DATE('2016-01-01'), CURRENT_DATE(), INTERVAL 1 DAY)
+) AS date_in_range
+  );
+
+    
+2018-07-29 10:28:49,245: Writing runtime SQL for node "model.shopify_cohort_analysis.stores_proc"
+2018-07-29 10:28:49,246: Fetching data for query stores_proc:
+create or replace table `template`.`stores_proc`
+  
+  as (
+    select 
+store,
+store_name,
+account,
+platform,
+max(time_of_entry) time_of_entry
+
+from  ( 
+
+SELECT  
+client store,
+client_name store_name,
+account,
+platform,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.accounts` 
+where client_name != ''
+
+) 
+
+WHERE lv = time_of_entry
+group by store, store_name, account, platform
+  );
+
+    
+2018-07-29 10:28:49,267: Fetching data for query mappings_ga_proc:
+create or replace table `template`.`mappings_ga_proc`
+  
+  as (
+    select 
+store,
+account,
+store_name,
+source,
+medium,
+max(platform_n) platform,
+max(channel_n) channel,
+time_of_entry
+from  ( 
+
+SELECT  
+client store,
+account,
+client_name store_name,
+source,
+medium,
+platform as platform_n,
+channel as channel_n,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.mappings_ga` 
+
+) 
+
+WHERE lv = time_of_entry
+group by store, account, store_name, source, medium, platform_n, channel_n, time_of_entry
+  );
+
+    
+2018-07-29 10:28:49,276: Writing runtime SQL for node "model.shopify_cohort_analysis.monthend_dates"
+2018-07-29 10:28:49,281: Fetching data for query monthend_dates:
+create or replace table `template`.`monthend_dates`
+  
+  as (
+    SELECT
+date_in_range,
+date_in_range_bom,
+date_in_range_bom_mom,
+unix_date_in_range,
+unix_date_in_range_bom,
+unix_date(date_in_range_bom_mom) unix_date_in_range_bom_mom,
+yyyymm,
+date_in_range_yoy,
+unix_date(date_in_range_yoy) unix_date_in_range_yoy
+
+FROM
+(
+	SELECT 
+	date_in_range,
+	date_in_range_bom,
+	date_sub(date_in_range_bom, INTERVAL 1 MONTH) date_in_range_bom_mom,
+	date_sub(date_in_range, INTERVAL 1 YEAR) date_in_range_yoy,
+	unix_date_in_range,
+	unix_date(date_in_range_bom) unix_date_in_range_bom,
+	yyyymm,
+	first_value(date_in_range) over (partition by yyyymm order by date_in_range desc) monthend_date_in_range
+	FROM
+	( 
+		SELECT 
+		date_in_range,
+		date_trunc( date_in_range, MONTH) date_in_range_bom,
+		unix_date(date_in_range) unix_date_in_range,
+		format_date("%Y-%m", date_in_range) AS yyyymm
+		FROM UNNEST(
+		    GENERATE_DATE_ARRAY(DATE('2016-01-31'), CURRENT_DATE(), INTERVAL 1 DAY)
+		) AS date_in_range
+	)
+)
+where date_in_range = monthend_date_in_range
+  );
+
+    
+2018-07-29 10:28:50,979: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10611d240>]}
+2018-07-29 10:28:50,981: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060b86d8>]}
+2018-07-29 10:28:51,050: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10611d4a8>]}
+2018-07-29 10:28:51,070: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10611d518>]}
+2018-07-29 10:28:51,285: 10:28:51 | 1 of 22 OK created table model template.all_dates.................... [OK in 2.36s]
+2018-07-29 10:28:51,602: 10:28:51 | 3 of 22 OK created table model template.monthend_dates............... [OK in 2.34s]
+2018-07-29 10:28:51,932: 10:28:51 | 2 of 22 OK created table model template.stores_proc.................. [OK in 2.43s]
+2018-07-29 10:28:52,230: 10:28:52 | 4 of 22 OK created table model template.mappings_ga_proc............. [OK in 2.43s]
+2018-07-29 10:28:52,231: 10:28:52 | 5 of 22 START table model template.shopify_customers_proc............ [RUN]
+2018-07-29 10:28:52,231: Compiling model.shopify_cohort_analysis.shopify_customers_proc
+2018-07-29 10:28:52,231: 10:28:52 | 6 of 22 START table model template.shopify_discounts_proc............ [RUN]
+2018-07-29 10:28:52,238: Compiling model.shopify_cohort_analysis.shopify_discounts_proc
+2018-07-29 10:28:52,268: Acquiring new bigquery connection "shopify_customers_proc".
+2018-07-29 10:28:52,269: Re-using an available connection from the pool.
+2018-07-29 10:28:52,269: Fetching data for query shopify_customers_proc:
+
+
+        select
+            store_name as value
+
+        from `growth-engines-pipeline`.`template`.`stores_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-29 10:28:52,231: 10:28:52 | 7 of 22 START table model template.shopify_refunds_proc.............. [RUN]
+2018-07-29 10:28:52,280: Compiling model.shopify_cohort_analysis.shopify_refunds_proc
+2018-07-29 10:28:52,296: Acquiring new bigquery connection "shopify_discounts_proc".
+2018-07-29 10:28:52,299: Acquiring new bigquery connection "shopify_refunds_proc".
+2018-07-29 10:28:52,300: Re-using an available connection from the pool.
+2018-07-29 10:28:52,300: Fetching data for query shopify_discounts_proc:
+
+
+        select
+            store_name as value
+
+        from `growth-engines-pipeline`.`template`.`stores_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-29 10:28:52,300: Re-using an available connection from the pool.
+2018-07-29 10:28:52,304: Fetching data for query shopify_refunds_proc:
+
+
+        select
+            store_name as value
+
+        from `growth-engines-pipeline`.`template`.`stores_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-29 10:28:54,190: Writing injected SQL for node "model.shopify_cohort_analysis.shopify_discounts_proc"
+2018-07-29 10:28:54,192: Writing injected SQL for node "model.shopify_cohort_analysis.shopify_refunds_proc"
+2018-07-29 10:28:54,499: Writing runtime SQL for node "model.shopify_cohort_analysis.shopify_refunds_proc"
+2018-07-29 10:28:54,502: Writing runtime SQL for node "model.shopify_cohort_analysis.shopify_discounts_proc"
+2018-07-29 10:28:54,503: Fetching data for query shopify_discounts_proc:
+create or replace table `template`.`shopify_discounts_proc`
+  
+  as (
+    
+
+
+
+with orders as (
+
+	
+		SELECT
+		'lucadanni' store_name,
+		created_at,
+		order_number,
+		code discount_code,
+		type discount_type,
+		_sdc_sequence,
+		first_value(_sdc_sequence) OVER (PARTITION BY order_number, _id ORDER BY _sdc_sequence DESC) lv
+		FROM `growth-engines-pipeline.shopify_lucadanni.orders` 
+		cross join unnest(discount_codes)
+		where source_name != 'shopify_draft_order'
+	
+	
+	
+
+)
+
+SELECT
+store_name,
+order_number,
+discount_code,
+discount_type
+FROM orders
+where lv = _sdc_sequence
+
+
+  );
+
+    
+2018-07-29 10:28:54,504: Fetching data for query shopify_refunds_proc:
+create or replace table `template`.`shopify_refunds_proc`
+  
+  as (
+    
+
+
+
+with refunds as (
+
+	
+	SELECT
+	'lucadanni' store_name,
+	order_number,
+	checkout_id,
+	financial_status,
+	line_item_id,
+	quantity,
+	subtotal,
+	line_item.variant_id variant_id,
+	line_item.id refund_id,
+ 	_sdc_sequence
+	FROM `growth-engines-pipeline.shopify_lucadanni.orders` 
+	cross join unnest(refunds), unnest(refund_line_items)
+  	where financial_status like '%refund%'
+	
+	
+
+)
+
+SELECT * 
+FROM 
+	(
+    SELECT
+    store_name,
+	order_number,
+	checkout_id,
+	financial_status,
+	line_item_id,
+	quantity,
+	subtotal refund_amount,
+	variant_id,
+	refund_id,
+ 	_sdc_sequence,
+    first_value(_sdc_sequence) OVER (PARTITION BY order_number, line_item_id ORDER BY _sdc_sequence DESC) lv
+    FROM refunds
+   	) 
+WHERE lv = _sdc_sequence
+
+
+  );
+
+    
+2018-07-29 10:28:54,658: Writing injected SQL for node "model.shopify_cohort_analysis.shopify_customers_proc"
+2018-07-29 10:28:54,833: Writing runtime SQL for node "model.shopify_cohort_analysis.shopify_customers_proc"
+2018-07-29 10:28:54,833: Fetching data for query shopify_customers_proc:
+create or replace table `template`.`shopify_customers_proc`
+  
+  as (
+    -- depends_on: `growth-engines-pipeline`.`template`.`stores_proc`
+
+
+
+
+
+with customers as (
+
+	
+	SELECT
+	'lucadanni' store_name,
+	'Shopify' as lookup_platform,
+	created_at,
+	id,
+	first_name,
+	last_name,
+	email,
+	_sdc_sequence,
+	first_value(_sdc_sequence) over (partition by id order by _sdc_sequence desc) lv
+	FROM `growth-engines-pipeline.shopify_lucadanni.customers` 
+	
+	
+
+)
+
+SELECT
+b.account,
+b.store,
+b.platform,
+created_at,
+id,
+first_name,
+last_name,
+email
+FROM customers a
+LEFT JOIN `growth-engines-pipeline`.`template`.`stores_proc` b 
+ON ( a.store_name = b.store_name
+  AND a.lookup_platform = b.platform )
+where a.lv = a._sdc_sequence
+
+
+  );
+
+    
+2018-07-29 10:28:56,798: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062297b8>]}
+2018-07-29 10:28:56,905: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061d4a90>]}
+2018-07-29 10:28:57,172: 10:28:57 | 7 of 22 OK created table model template.shopify_refunds_proc......... [OK in 4.52s]
+2018-07-29 10:28:57,570: 10:28:57 | 6 of 22 OK created table model template.shopify_discounts_proc....... [OK in 4.67s]
+2018-07-29 10:28:59,982: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061ce470>]}
+2018-07-29 10:29:00,303: 10:29:00 | 5 of 22 OK created table model template.shopify_customers_proc....... [OK in 7.75s]
+2018-07-29 10:29:00,308: 10:29:00 | 8 of 22 START table model template.agg_customers..................... [RUN]
+2018-07-29 10:29:00,310: Compiling model.shopify_cohort_analysis.agg_customers
+2018-07-29 10:29:00,308: 10:29:00 | 9 of 22 START table model template.ga_transactions................... [RUN]
+2018-07-29 10:29:00,317: Writing injected SQL for node "model.shopify_cohort_analysis.agg_customers"
+2018-07-29 10:29:00,318: Compiling model.shopify_cohort_analysis.ga_transactions
+2018-07-29 10:29:00,309: 10:29:00 | 10 of 22 START table model template.shopify_products_proc............ [RUN]
+2018-07-29 10:29:00,319: Compiling model.shopify_cohort_analysis.shopify_products_proc
+2018-07-29 10:29:00,331: Acquiring new bigquery connection "shopify_products_proc".
+2018-07-29 10:29:00,332: Re-using an available connection from the pool.
+2018-07-29 10:29:00,337: Fetching data for query shopify_products_proc:
+
+
+        select
+            store_name as value
+
+        from `growth-engines-pipeline`.`template`.`stores_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-29 10:29:00,350: Acquiring new bigquery connection "agg_customers".
+2018-07-29 10:29:00,353: Acquiring new bigquery connection "ga_transactions".
+2018-07-29 10:29:00,354: Re-using an available connection from the pool.
+2018-07-29 10:29:00,354: Re-using an available connection from the pool.
+2018-07-29 10:29:00,355: Fetching data for query ga_transactions:
+
+
+        select
+            store_name as value
+
+        from `growth-engines-pipeline`.`template`.`stores_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Google Analytics'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-29 10:29:00,482: Writing runtime SQL for node "model.shopify_cohort_analysis.agg_customers"
+2018-07-29 10:29:00,485: Fetching data for query agg_customers:
+create or replace table `template`.`agg_customers`
+  
+  as (
+    SELECT 
+account,
+store,
+id,
+created_at,
+first_name,
+last_name,
+email,
+split(email,'@')[SAFE_ORDINAL(2)] email_domain
+FROM
+`growth-engines-pipeline`.`template`.`shopify_customers_proc`
+  );
+
+    
+2018-07-29 10:29:01,186: Writing injected SQL for node "model.shopify_cohort_analysis.shopify_products_proc"
+2018-07-29 10:29:01,329: Writing runtime SQL for node "model.shopify_cohort_analysis.shopify_products_proc"
+2018-07-29 10:29:01,334: Fetching data for query shopify_products_proc:
+create or replace table `template`.`shopify_products_proc`
+  
+  as (
+    -- depends_on: `growth-engines-pipeline`.`template`.`stores_proc`, `growth-engines-pipeline`.`template`.`shopify_refunds_proc`
+
+
+
+
+
+with products as (
+
+	
+	SELECT
+	'lucadanni' store_name,
+	'Shopify' as lookup_platform,
+	product_name,
+	lower(product_type) product_type,
+	product_id,
+	sku,
+	id variant_id,
+	cast(created_at as date) created_at,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY product_id ORDER BY _sdc_sequence DESC) lv
+	FROM (
+		SELECT
+		variants,
+		product_type,
+		title product_name,
+		_sdc_sequence
+		FROM `growth-engines-pipeline.shopify_lucadanni.products` 
+		)
+	cross join unnest(variants)
+	
+	
+
+)
+
+SELECT
+b.account,
+b.store,
+b.platform,
+max(product_type) product_type,
+product_id,
+variant_id,
+sku,
+created_at,
+product_name
+FROM products a
+LEFT JOIN `growth-engines-pipeline`.`template`.`stores_proc` b 
+ON ( a.store_name = b.store_name
+  AND a.lookup_platform = b.platform )
+where a.lv = a._sdc_sequence
+group by product_id, account, store, platform, sku, variant_id, created_at, product_name
+
+
+  );
+
+    
+2018-07-29 10:29:02,515: Writing injected SQL for node "model.shopify_cohort_analysis.ga_transactions"
+2018-07-29 10:29:02,658: Writing runtime SQL for node "model.shopify_cohort_analysis.ga_transactions"
+2018-07-29 10:29:02,659: Fetching data for query ga_transactions:
+create or replace table `template`.`ga_transactions`
+  
+  as (
+    -- depends_on: `growth-engines-pipeline`.`template`.`stores_proc`,`growth-engines-pipeline`.`template`.`mappings_ga_proc`
+
+
+
+
+with ga_report as (
+
+	    
+	    	
+		   	SELECT
+		   	'yandy' as store_name,
+		   	'Google Analytics' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			cast(date as date) date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) campaign,
+			cast(regexp_replace(transactionid, r'#|B', '') as int64) transactionid,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, transactionid ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.ga_yandy.report` 
+
+		     UNION ALL 
+	   
+	    	
+		   	SELECT
+		   	'lucadanni' as store_name,
+		   	'Google Analytics' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			cast(date as date) date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) campaign,
+			cast(regexp_replace(transactionid, r'#|B', '') as int64) transactionid,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, transactionid ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.ga_lucadanni.report` 
+
+		    
+	   
+
+)
+
+
+SELECT  
+date,
+b.store store,
+c.source source,
+c.medium medium,
+a.campaign campaign,
+concat(a.source, ' / ', a.medium) source_medium,  
+case when c.platform is null then "Unmapped" else c.platform end as platform,
+case when c.channel is null then "Unmapped" else c.channel end as channel,
+url,
+transactionid
+FROM (
+
+	SELECT 
+	store_name,
+	lookup_platform,
+	date,
+	transactionid,
+	max(url) url,
+	max(source) source,
+	max(medium) medium,
+	max(campaign) campaign
+	FROM ga_report
+	where lv = _sdc_sequence
+	group by store_name, lookup_platform, date, transactionid
+
+) a
+LEFT JOIN `growth-engines-pipeline`.`template`.`stores_proc` b 
+ON ( a.store_name = b.store_name 
+	AND a.lookup_platform = b.platform )
+LEFT JOIN `growth-engines-pipeline`.`template`.`mappings_ga_proc` c
+ON ( a.source = c.source
+  AND a.medium = c.medium 
+  AND a.store_name = c.store_name )
+
+
+  );
+
+    
+2018-07-29 10:29:03,599: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060f4eb8>]}
+2018-07-29 10:29:04,262: 10:29:04 | 10 of 22 OK created table model template.shopify_products_proc....... [OK in 3.28s]
+2018-07-29 10:29:04,715: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ff07f0>]}
+2018-07-29 10:29:05,290: 10:29:05 | 8 of 22 OK created table model template.agg_customers................ [OK in 4.41s]
+2018-07-29 10:29:26,929: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061ce7b8>]}
+2018-07-29 10:29:27,322: 10:29:27 | 9 of 22 OK created table model template.ga_transactions.............. [OK in 26.61s]
+2018-07-29 10:29:27,324: 10:29:27 | 11 of 22 START table model template.shopify_orders_proc.............. [RUN]
+2018-07-29 10:29:27,324: Compiling model.shopify_cohort_analysis.shopify_orders_proc
+2018-07-29 10:29:27,345: Acquiring new bigquery connection "shopify_orders_proc".
+2018-07-29 10:29:27,345: Re-using an available connection from the pool.
+2018-07-29 10:29:27,345: Fetching data for query shopify_orders_proc:
+
+
+        select
+            store_name as value
+
+        from `growth-engines-pipeline`.`template`.`stores_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-07-29 10:29:28,752: Writing injected SQL for node "model.shopify_cohort_analysis.shopify_orders_proc"
+2018-07-29 10:29:28,925: Writing runtime SQL for node "model.shopify_cohort_analysis.shopify_orders_proc"
+2018-07-29 10:29:28,926: Fetching data for query shopify_orders_proc:
+create or replace table `template`.`shopify_orders_proc`
+  
+  as (
+    -- depends_on: `growth-engines-pipeline`.`template`.`stores_proc`, `growth-engines-pipeline`.`template`.`shopify_refunds_proc`, `growth-engines-pipeline`.`template`.`shopify_discounts_proc`
+
+
+
+
+
+with orders as (
+
+	
+	SELECT 
+	store_name,
+	lookup_platform,
+	created_at,
+	order_number,
+	quantity,
+	price, 
+	total_order_price_undiscounted,
+	total_discounts,
+	total_order_shipping_price,
+	total_order_price_incl_shipping,
+	checkout_id,
+	product_id, 
+	landing_site,
+	sku, 
+	variant_title, 
+	variant_id,
+	line_item_id,
+	customer_id,
+	_sdc_sequence,
+	lv
+	FROM (
+
+		SELECT
+		'lucadanni' store_name,
+		'Shopify' as lookup_platform,
+		created_at,
+		order_number,
+		quantity,
+		cast(pre_tax_price as float64) price, 
+		total_line_items_price total_order_price_undiscounted,
+		total_discounts,
+		cast(discounted_price as float64) total_order_shipping_price,
+		total_price_usd total_order_price_incl_shipping,
+		checkout_id,
+		product_id, 
+		landing_site,
+		sku, 
+		variant_title, 
+		variant_id,
+		_id line_item_id,
+		customer.id customer_id,
+		_sdc_sequence,
+		first_value(_sdc_sequence) OVER (PARTITION BY order_number, _id ORDER BY _sdc_sequence DESC) lv
+		FROM `growth-engines-pipeline.shopify_lucadanni.orders` 
+		cross join unnest(line_items), unnest(shipping_lines)
+		where source_name != 'shopify_draft_order'
+	)
+	
+	
+	
+
+)
+
+SELECT
+b.account,
+b.store,
+b.platform,
+created_at,
+a.order_number,
+a.quantity prelim_quantity,
+c.quantity refund_quantity,
+case when c.quantity is not null then a.quantity - c.quantity else a.quantity end as quantity,
+price prelim_revenue, 
+total_order_price_undiscounted,
+total_discounts,
+trim(lower(d.discount_code)) discount_code,
+d.discount_type,
+total_order_shipping_price,
+total_order_price_incl_shipping,
+refund_amount,
+case when refund_amount is not null then price - refund_amount else price end as revenue,
+a.checkout_id,
+a.product_id, 
+landing_site,
+sku, 
+variant_title, 
+a.variant_id,
+a.line_item_id,	
+customer_id
+FROM orders a
+LEFT JOIN `growth-engines-pipeline`.`template`.`stores_proc` b 
+ON ( a.store_name = b.store_name
+  AND a.lookup_platform = b.platform )
+LEFT JOIN `growth-engines-pipeline`.`template`.`shopify_refunds_proc` c
+ON ( a.order_number = c.order_number
+	AND a.line_item_id = c.line_item_id
+	AND a.store_name = c.store_name )
+LEFT JOIN `growth-engines-pipeline`.`template`.`shopify_discounts_proc` d
+ON ( a.order_number = d.order_number 
+    AND a.store_name = d.store_name )  	
+where a.lv = a._sdc_sequence
+
+
+  );
+
+    
+2018-07-29 10:29:38,249: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106229a90>]}
+2018-07-29 10:29:38,710: 10:29:38 | 11 of 22 OK created table model template.shopify_orders_proc......... [OK in 10.93s]
+2018-07-29 10:29:38,711: 10:29:38 | 12 of 22 START table model template.transaction_by_order_number...... [RUN]
+2018-07-29 10:29:38,711: Compiling model.shopify_cohort_analysis.transaction_by_order_number
+2018-07-29 10:29:38,719: Writing injected SQL for node "model.shopify_cohort_analysis.transaction_by_order_number"
+2018-07-29 10:29:38,720: Acquiring new bigquery connection "transaction_by_order_number".
+2018-07-29 10:29:38,721: Re-using an available connection from the pool.
+2018-07-29 10:29:38,843: Writing runtime SQL for node "model.shopify_cohort_analysis.transaction_by_order_number"
+2018-07-29 10:29:38,845: Fetching data for query transaction_by_order_number:
+create or replace table `template`.`transaction_by_order_number`
+  
+  as (
+    SELECT
+store,
+cast(created_at as date) order_date,
+order_number,
+customer_id,
+sum(quantity) quantity,
+sum(revenue) revenue,
+max(total_order_shipping_price) shipping_price
+FROM
+`growth-engines-pipeline`.`template`.`shopify_orders_proc`
+GROUP BY store, order_date, order_number, customer_id
+  );
+
+    
+2018-07-29 10:29:43,334: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10615b550>]}
+2018-07-29 10:29:44,216: 10:29:44 | 12 of 22 OK created table model template.transaction_by_order_number. [OK in 4.62s]
+2018-07-29 10:29:44,217: 10:29:44 | 13 of 22 START table model template.customers_by_transaction......... [RUN]
+2018-07-29 10:29:44,217: Compiling model.shopify_cohort_analysis.customers_by_transaction
+2018-07-29 10:29:44,227: Writing injected SQL for node "model.shopify_cohort_analysis.customers_by_transaction"
+2018-07-29 10:29:44,229: Acquiring new bigquery connection "customers_by_transaction".
+2018-07-29 10:29:44,230: Re-using an available connection from the pool.
+2018-07-29 10:29:44,377: Writing runtime SQL for node "model.shopify_cohort_analysis.customers_by_transaction"
+2018-07-29 10:29:44,377: Fetching data for query customers_by_transaction:
+create or replace table `template`.`customers_by_transaction`
+  
+  as (
+    SELECT
+store,
+customer_id,
+order_number,
+order_date,
+recent_order_date,
+first_order_date,
+case when first_order_number = order_number then 'New'
+	when date_diff(order_date, recent_order_date, DAY) <= 365 then 'Repeat'
+	when date_diff(order_date, recent_order_date, DAY) > 365 then 'Reactivated'
+ else '' end as order_type,
+quantity,
+revenue,
+1 as orders,
+first_order_revenue,
+lifetime_revenue
+FROM
+
+(
+
+	SELECT
+	store,
+	customer_id,
+	order_number,
+	order_date,
+	quantity,
+	revenue,
+	lag(order_date) over w1 recent_order_date,
+	first_value(order_date) over w1 first_order_date,
+	first_value(order_number) over w1 first_order_number,
+	first_value(revenue) over w1 first_order_revenue,
+	sum(revenue) over w2 lifetime_revenue
+	FROM `growth-engines-pipeline`.`template`.`transaction_by_order_number`
+	WINDOW w1 as (PARTITION BY store, customer_id ORDER BY order_date asc),
+	w2 as (PARTITION BY store, customer_id)
+)
+  );
+
+    
+2018-07-29 10:29:48,260: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060ea278>]}
+2018-07-29 10:29:49,173: 10:29:49 | 13 of 22 OK created table model template.customers_by_transaction.... [OK in 4.04s]
+2018-07-29 10:29:49,174: 10:29:49 | 14 of 22 START table model template.agg_transactions................. [RUN]
+2018-07-29 10:29:49,174: Compiling model.shopify_cohort_analysis.agg_transactions
+2018-07-29 10:29:49,185: Writing injected SQL for node "model.shopify_cohort_analysis.agg_transactions"
+2018-07-29 10:29:49,187: Acquiring new bigquery connection "agg_transactions".
+2018-07-29 10:29:49,187: Re-using an available connection from the pool.
+2018-07-29 10:29:49,355: Writing runtime SQL for node "model.shopify_cohort_analysis.agg_transactions"
+2018-07-29 10:29:49,356: Fetching data for query agg_transactions:
+create or replace table `template`.`agg_transactions`
+  
+  as (
+    with ga_transaction as (
+
+	SELECT
+	date, 
+	store,
+	transactionid,
+	channel,
+	platform,
+	url,
+	campaign
+	FROM `growth-engines-pipeline`.`template`.`ga_transactions`
+),
+
+customers_by_transaction as (
+	
+	SELECT
+	store,
+	customer_id,
+	order_number,
+	order_date,
+	first_order_date,
+	recent_order_date,
+	order_type,
+	quantity,
+	revenue,
+	orders,
+	first_order_revenue,
+	lifetime_revenue
+	FROM `growth-engines-pipeline`.`template`.`customers_by_transaction`
+)
+
+SELECT
+store,
+customer_id,
+order_number,
+transactionid,
+order_date,
+first_order_date,
+format_date("%Y-%m", first_order_date) AS first_order_month,
+order_type,
+first_order_revenue,
+lifetime_revenue,
+first_value(channel) over w1 as first_order_channel,
+first_value(platform) over w1 as first_order_platform,
+channel,
+platform,
+url,
+campaign,
+quantity,
+revenue,
+orders
+FROM (
+
+	SELECT
+	a.store,
+	a.customer_id,
+	a.order_number,
+	b.transactionid,
+	a.order_date, 
+	a.first_order_date, 
+	a.order_type,
+	a.first_order_revenue,
+	a.lifetime_revenue,
+	b.channel,
+	b.platform,
+	b.url,
+	b.campaign,
+	a.quantity,
+	a.revenue,
+	a.orders
+	FROM customers_by_transaction a
+	LEFT JOIN ga_transaction b
+	ON (
+	    a.store = b.store AND
+	    a.order_number = b.transactionid
+	)	
+)
+WINDOW w1 as (PARTITION BY store, customer_id ORDER BY order_date asc)
+  );
+
+    
+2018-07-29 10:29:57,491: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10615b550>]}
+2018-07-29 10:29:57,879: 10:29:57 | 14 of 22 OK created table model template.agg_transactions............ [OK in 8.32s]
+2018-07-29 10:29:57,880: 10:29:57 | 15 of 22 START table model template.customers_proc_qoq............... [RUN]
+2018-07-29 10:29:57,881: Compiling model.shopify_cohort_analysis.customers_proc_qoq
+2018-07-29 10:29:57,880: 10:29:57 | 16 of 22 START table model template.customers_proc_yoy............... [RUN]
+2018-07-29 10:29:57,887: Compiling model.shopify_cohort_analysis.customers_proc_yoy
+2018-07-29 10:29:57,896: Writing injected SQL for node "model.shopify_cohort_analysis.customers_proc_qoq"
+2018-07-29 10:29:57,899: Writing injected SQL for node "model.shopify_cohort_analysis.customers_proc_yoy"
+2018-07-29 10:29:57,880: 10:29:57 | 17 of 22 START table model template.monthly_cohort_stats............. [RUN]
+2018-07-29 10:29:57,899: Compiling model.shopify_cohort_analysis.monthly_cohort_stats
+2018-07-29 10:29:57,907: Acquiring new bigquery connection "customers_proc_qoq".
+2018-07-29 10:29:57,907: Re-using an available connection from the pool.
+2018-07-29 10:29:57,908: Writing injected SQL for node "model.shopify_cohort_analysis.monthly_cohort_stats"
+2018-07-29 10:29:57,910: Acquiring new bigquery connection "customers_proc_yoy".
+2018-07-29 10:29:57,912: Re-using an available connection from the pool.
+2018-07-29 10:29:57,915: Acquiring new bigquery connection "monthly_cohort_stats".
+2018-07-29 10:29:57,917: Re-using an available connection from the pool.
+2018-07-29 10:29:58,074: Writing runtime SQL for node "model.shopify_cohort_analysis.monthly_cohort_stats"
+2018-07-29 10:29:58,075: Fetching data for query monthly_cohort_stats:
+create or replace table `template`.`monthly_cohort_stats`
+  
+  as (
+    WITH transactions AS (
+
+  SELECT 
+  store, 
+  order_number,
+  order_date,
+  order_type,
+  first_order_month,
+  unix_date(order_date) d, 
+  customer_id, 
+  first_order_channel,
+  first_order_platform,
+  channel,
+  platform,
+  url,
+  campaign,
+  quantity,
+  revenue,
+  orders
+  FROM `growth-engines-pipeline`.`template`.`agg_transactions`
+),
+
+daterange AS (
+
+  SELECT * FROM `growth-engines-pipeline`.`template`.`monthend_dates`    
+)
+
+SELECT 
+date_in_range month,
+unix_date_in_range, 
+unix_date_in_range_bom, 
+store, 
+order_type,
+first_order_channel,
+first_order_platform,
+first_order_month,
+channel,
+platform,
+url,
+campaign,
+count(distinct(customer_id)) buyers,
+sum(orders) orders,
+sum(quantity) quantity,
+sum(revenue) revenue
+FROM daterange
+JOIN transactions
+ON transactions.d >= daterange.unix_date_in_range_bom 
+AND transactions.d <= daterange.unix_date_in_range
+GROUP BY month, unix_date_in_range, unix_date_in_range_bom, store, order_type, 
+first_order_channel, first_order_platform, first_order_month, channel, platform, url, campaign
+  );
+
+    
+2018-07-29 10:29:58,113: Writing runtime SQL for node "model.shopify_cohort_analysis.customers_proc_qoq"
+2018-07-29 10:29:58,114: Fetching data for query customers_proc_qoq:
+create or replace table `template`.`customers_proc_qoq`
+  
+  as (
+    WITH customers AS (
+
+  SELECT 
+  store,
+  customer_id,
+  order_date,
+  unix_date(order_date) unix_order_date, 
+  first_order_date,
+  unix_date(first_order_date) first_order_unix_date,
+  first_order_revenue,
+  first_order_channel,
+  first_order_platform,
+  channel,
+  platform,
+  url,
+  campaign,
+  quantity,
+  revenue,
+  orders
+  FROM `growth-engines-pipeline`.`template`.`agg_transactions`
+),
+
+daterange AS (
+  SELECT * FROM `growth-engines-pipeline`.`template`.`monthend_dates`    
+)
+
+SELECT
+store,
+period,
+customer_id,
+date,
+window_end_unix_date,
+window_start_unix_date,
+first_order_unix_date,
+first_order_channel,
+first_order_platform,
+recency_days,
+frequency,
+quantity,
+revenue, 
+PERCENTILE_CONT(revenue, 0.90) OVER w1 AS revenue_90pct,
+PERCENTILE_CONT(revenue, 0.10) OVER w1 AS revenue_10pct
+FROM (
+   
+  SELECT 
+  store,
+  period,
+  customer_id,
+  date,
+  window_end_unix_date,
+  window_start_unix_date,
+  first_order_unix_date,
+  window_end_unix_date - unix_date(recent_order) recency_days,
+  first_order_channel,
+  first_order_platform,
+  quantity,
+  revenue, 
+  frequency
+  FROM 
+  (  
+
+    SELECT 
+    store,
+    'Rolling Quarter' as period,
+    customer_id,
+    date_in_range date,
+    unix_date_in_range, 
+    unix_date_in_range window_end_unix_date, 
+    unix_date_in_range - 90 window_start_unix_date, 
+    first_order_unix_date,
+    first_order_channel,
+    first_order_platform,
+    max(order_date) recent_order,
+    sum(quantity) as quantity,
+    sum(revenue) as revenue,
+    sum(orders) as frequency
+    FROM daterange
+    JOIN customers
+    ON customers.unix_order_date > ( daterange.unix_date_in_range - 90 )
+    AND customers.unix_order_date <= daterange.unix_date_in_range
+    GROUP BY store, customer_id, date, unix_date_in_range, window_end_unix_date, 
+    window_start_unix_date, first_order_unix_date, first_order_channel, first_order_platform
+
+    UNION ALL
+
+    SELECT 
+    store,
+    'Rolling Previous Quarter' as period,
+    customer_id,
+    date_in_range date,
+    unix_date_in_range, 
+    unix_date_in_range - 90 window_end_unix_date, 
+    unix_date_in_range - 180 window_start_unix_date, 
+    first_order_unix_date,
+    first_order_channel,
+    first_order_platform,
+    max(order_date) recent_order,
+    sum(quantity) as quantity,
+    sum(revenue) as revenue,
+    sum(orders) as frequency
+    FROM daterange
+    JOIN customers
+    ON customers.unix_order_date > ( daterange.unix_date_in_range - 180 )
+    AND customers.unix_order_date <= ( daterange.unix_date_in_range - 90 )
+    GROUP BY store, customer_id, date, unix_date_in_range, window_end_unix_date, 
+    window_start_unix_date, first_order_unix_date, first_order_channel, first_order_platform
+
+  )
+)
+WINDOW w1 as (PARTITION BY store, period, date)
+  );
+
+    
+2018-07-29 10:29:58,125: Writing runtime SQL for node "model.shopify_cohort_analysis.customers_proc_yoy"
+2018-07-29 10:29:58,128: Fetching data for query customers_proc_yoy:
+create or replace table `template`.`customers_proc_yoy`
+  
+  as (
+    WITH customers AS (
+
+  SELECT 
+  store,
+  customer_id,
+  order_date,
+  unix_date(order_date) unix_order_date, 
+  first_order_date,
+  unix_date(first_order_date) first_order_unix_date,
+  first_order_revenue,
+  first_order_channel,
+  first_order_platform,
+  channel,
+  platform,
+  url,
+  campaign,
+  quantity,
+  revenue,
+  orders
+  FROM `growth-engines-pipeline`.`template`.`agg_transactions`
+),
+
+daterange AS (
+  SELECT * FROM `growth-engines-pipeline`.`template`.`monthend_dates`    
+)
+
+SELECT
+store,
+period,
+customer_id,
+date,
+window_end_unix_date,
+window_start_unix_date,
+first_order_unix_date,
+first_order_channel,
+first_order_platform,
+recency_days,
+frequency,
+quantity,
+revenue, 
+PERCENTILE_CONT(revenue, 0.90) OVER w1 AS revenue_90pct,
+PERCENTILE_CONT(revenue, 0.10) OVER w1 AS revenue_10pct
+FROM (
+   
+  SELECT 
+  store,
+  period,
+  customer_id,
+  date,
+  window_end_unix_date,
+  window_start_unix_date,
+  first_order_unix_date,
+  window_end_unix_date - unix_date(recent_order) recency_days,
+  first_order_channel,
+  first_order_platform,
+  quantity,
+  revenue, 
+  frequency
+  FROM 
+  (  
+
+    SELECT 
+    store,
+    'Rolling Year' as period,
+    customer_id,
+    date_in_range date,
+    unix_date_in_range, 
+    unix_date_in_range window_end_unix_date, 
+    unix_date_in_range - 365 window_start_unix_date, 
+    first_order_unix_date,
+    first_order_channel,
+    first_order_platform,
+    max(order_date) recent_order,
+    sum(quantity) as quantity,
+    sum(revenue) as revenue,
+    sum(orders) as frequency
+    FROM daterange
+    JOIN customers
+    ON customers.unix_order_date > ( daterange.unix_date_in_range - 365 )
+    AND customers.unix_order_date <= daterange.unix_date_in_range
+    GROUP BY store, customer_id, date, unix_date_in_range, window_end_unix_date, 
+    window_start_unix_date, first_order_unix_date, first_order_channel, first_order_platform
+
+    UNION ALL
+
+    SELECT 
+    store,
+    'Rolling Previous Year' as period,
+    customer_id,
+    date_in_range date,
+    unix_date_in_range, 
+    unix_date_in_range - 365 window_end_unix_date, 
+    unix_date_in_range - 730 window_start_unix_date, 
+    first_order_unix_date,
+    first_order_channel,
+    first_order_platform,
+    max(order_date) recent_order,
+    sum(quantity) as quantity,
+    sum(revenue) as revenue,
+    sum(orders) as frequency
+    FROM daterange
+    JOIN customers
+    ON customers.unix_order_date > ( daterange.unix_date_in_range - 730 )
+    AND customers.unix_order_date <= ( daterange.unix_date_in_range - 365 )
+    GROUP BY store, customer_id, date, unix_date_in_range, window_end_unix_date, 
+    window_start_unix_date, first_order_unix_date, first_order_channel, first_order_platform
+
+  )
+)
+WINDOW w1 as (PARTITION BY store, period, date)
+  );
+
+    
+2018-07-29 10:30:03,161: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061ce9b0>]}
+2018-07-29 10:30:03,495: 10:30:03 | 17 of 22 OK created table model template.monthly_cohort_stats........ [OK in 5.26s]
+2018-07-29 10:30:10,611: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060ea278>]}
+2018-07-29 10:30:11,752: 10:30:11 | 15 of 22 OK created table model template.customers_proc_qoq.......... [OK in 12.73s]
+2018-07-29 10:30:19,767: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1049b3390>]}
+2018-07-29 10:30:20,722: 10:30:20 | 16 of 22 OK created table model template.customers_proc_yoy.......... [OK in 21.88s]
+2018-07-29 10:30:20,724: 10:30:20 | 18 of 22 START table model template.customers_proc................... [RUN]
+2018-07-29 10:30:20,724: Compiling model.shopify_cohort_analysis.customers_proc
+2018-07-29 10:30:20,737: Writing injected SQL for node "model.shopify_cohort_analysis.customers_proc"
+2018-07-29 10:30:20,739: Acquiring new bigquery connection "customers_proc".
+2018-07-29 10:30:20,740: Re-using an available connection from the pool.
+2018-07-29 10:30:21,052: Writing runtime SQL for node "model.shopify_cohort_analysis.customers_proc"
+2018-07-29 10:30:21,054: Fetching data for query customers_proc:
+create or replace table `template`.`customers_proc`
+  
+  as (
+    SELECT 
+store,
+period,
+customer_id,
+date,
+window_end_unix_date,
+window_start_unix_date,
+first_order_unix_date,
+first_order_channel,
+first_order_platform,
+recency_days,
+frequency,
+quantity,
+revenue, 
+revenue_90pct,
+revenue_10pct
+FROM 
+`growth-engines-pipeline`.`template`.`customers_proc_qoq`
+
+UNION ALL
+
+SELECT 
+store,
+period,
+customer_id,
+date,
+window_end_unix_date,
+window_start_unix_date,
+first_order_unix_date,
+first_order_channel,
+first_order_platform,
+recency_days,
+frequency,
+quantity,
+revenue, 
+revenue_90pct,
+revenue_10pct
+FROM 
+`growth-engines-pipeline`.`template`.`customers_proc_yoy`
+  );
+
+    
+2018-07-29 10:30:46,128: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10615b550>]}
+2018-07-29 10:30:47,379: 10:30:47 | 18 of 22 OK created table model template.customers_proc.............. [OK in 25.40s]
+2018-07-29 10:30:47,380: 10:30:47 | 19 of 22 START table model template.segment_proc_customers........... [RUN]
+2018-07-29 10:30:47,381: Compiling model.shopify_cohort_analysis.segment_proc_customers
+2018-07-29 10:30:47,391: Writing injected SQL for node "model.shopify_cohort_analysis.segment_proc_customers"
+2018-07-29 10:30:47,398: Acquiring new bigquery connection "segment_proc_customers".
+2018-07-29 10:30:47,398: Re-using an available connection from the pool.
+2018-07-29 10:30:47,556: Writing runtime SQL for node "model.shopify_cohort_analysis.segment_proc_customers"
+2018-07-29 10:30:47,556: Fetching data for query segment_proc_customers:
+create or replace table `template`.`segment_proc_customers`
+  
+  as (
+    SELECT
+store,
+period,
+customer_id,
+date,
+first_order_unix_date,
+first_order_channel,
+first_order_platform,
+recency_days,
+frequency,
+quantity,
+revenue, 
+revenue_90pct,
+revenue_10pct,
+case when first_order_unix_date >= window_start_unix_date then 'New'
+	else 'Existing' end as newness_segment,
+case when revenue >= revenue_90pct then 'Whale'
+	when revenue <= revenue_10pct then 'Minnow'
+	else 'Bristlemouth' end as revenue_segment,
+case when frequency = 1 then '1'
+	when frequency = 2 then '2'
+	when frequency > 2 then '3+'
+	else null end as frequency_segment
+FROM `growth-engines-pipeline`.`template`.`customers_proc`
+  );
+
+    
+2018-07-29 10:31:14,289: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028e8828>]}
+2018-07-29 10:31:15,326: 10:31:15 | 19 of 22 OK created table model template.segment_proc_customers...... [OK in 26.91s]
+2018-07-29 10:31:15,327: 10:31:15 | 20 of 22 START table model template.segment_stats_customers_agg...... [RUN]
+2018-07-29 10:31:15,328: Compiling model.shopify_cohort_analysis.segment_stats_customers_agg
+2018-07-29 10:31:15,348: Writing injected SQL for node "model.shopify_cohort_analysis.segment_stats_customers_agg"
+2018-07-29 10:31:15,351: Acquiring new bigquery connection "segment_stats_customers_agg".
+2018-07-29 10:31:15,351: Re-using an available connection from the pool.
+2018-07-29 10:31:15,691: Writing runtime SQL for node "model.shopify_cohort_analysis.segment_stats_customers_agg"
+2018-07-29 10:31:15,691: Fetching data for query segment_stats_customers_agg:
+create or replace table `template`.`segment_stats_customers_agg`
+  
+  as (
+    WITH ty as (
+
+	SELECT
+	store,
+	'Rolling YoY' as period,
+	date,
+	customer_id,
+	first_order_channel,
+	first_order_platform,
+	revenue_segment as revenue_segment,
+	frequency_segment as frequency_segment,
+	newness_segment as newness_segment,
+	recency_days as recency,
+	frequency as frequency,
+	revenue as revenue,
+	'' as revenue_segment_prev,
+	'' as frequency_segment_prev,
+	'' as newness_segment_prev,
+	0 as recency_prev,
+	0 as frequency_prev,
+	0 as revenue_prev
+	FROM `growth-engines-pipeline`.`template`.`segment_proc_customers`
+	WHERE period = 'Rolling Year'
+
+),
+
+this_month_1yr as (
+
+	SELECT
+	store,
+	'Rolling YoY' as period,
+	date,
+	customer_id,
+	first_order_channel,
+	first_order_platform,	
+	revenue_segment as revenue_segment,
+	frequency_segment as frequency_segment,
+	newness_segment as newness_segment,
+	recency_days as recency,
+	frequency as frequency,
+	revenue as revenue,
+	'' as revenue_segment_prev,
+	'' as frequency_segment_prev,
+	'' as newness_segment_prev,
+	0 as recency_prev,
+	0 as frequency_prev,
+	0 as revenue_prev	
+	FROM `growth-engines-pipeline`.`template`.`segment_proc_customers`
+	WHERE period = 'Rolling Previous Year'
+
+),
+
+this_quarter as (
+
+	SELECT
+	store,
+	'Rolling QoQ' as period,	
+	date,
+	customer_id,
+	first_order_channel,
+	first_order_platform,	
+	revenue_segment as revenue_segment,
+	frequency_segment as frequency_segment,
+	newness_segment as newness_segment,
+	recency_days as recency,
+	frequency as frequency,
+	revenue as revenue,
+	'' as revenue_segment_prev,
+	'' as frequency_segment_prev,
+	'' as newness_segment_prev,
+	0 as recency_prev,
+	0 as frequency_prev,
+	0 as revenue_prev	
+	FROM `growth-engines-pipeline`.`template`.`segment_proc_customers`
+	WHERE period = 'Rolling Quarter'
+
+),
+
+last_quarter as (
+
+	SELECT
+	store,
+	'Rolling QoQ' as period,
+	date,
+	customer_id,
+	first_order_channel,
+	first_order_platform,	
+	revenue_segment as revenue_segment,
+	frequency_segment as frequency_segment,
+	newness_segment as newness_segment,
+	recency_days as recency,
+	frequency as frequency,
+	revenue as revenue,
+	'' as revenue_segment_prev,
+	'' as frequency_segment_prev,
+	'' as newness_segment_prev,
+	0 as recency_prev,
+	0 as frequency_prev,
+	0 as revenue_prev		
+	FROM `growth-engines-pipeline`.`template`.`segment_proc_customers`
+	WHERE period = 'Rolling Previous Quarter'
+
+)
+
+SELECT
+store,
+period,
+date, 
+customer_id,
+1 as buyers,
+first_order_channel,
+first_order_platform,	
+case when max(revenue_segment) != '' then max(revenue_segment) 
+	when max(revenue_segment_prev) != '' then 'Dormant'
+	else '' end as revenue_segment,
+case when max(newness_segment) = 'New' then 'New since prior period' 
+	else max(revenue_segment_prev) end as revenue_segment_prev,
+case when max(frequency_segment) != '' then max(frequency_segment) 
+	when max(frequency_segment_prev) != '' then 'Dormant'
+	else '' end as frequency_segment,
+case when max(newness_segment) = 'New' then 'New since prior period' 
+	else max(frequency_segment_prev) end as frequency_segment_prev,
+ifnull(sum(recency), 0) recency,
+ifnull(sum(frequency), 0) frequency,
+ifnull(sum(revenue), 0) revenue,
+case when sum(frequency) > 0 then sum(revenue)/sum(frequency) else 0 end as aov,
+ifnull(sum(recency_prev), 0) recency_prev,
+ifnull(sum(frequency_prev), 0) frequency_prev,
+ifnull(sum(revenue_prev), 0) revenue_prev,
+case when sum(frequency_prev) > 0 then sum(revenue_prev)/sum(frequency_prev) else 0 end as aov_prev
+FROM
+(
+	SELECT * FROM ty
+	UNION ALL
+	SELECT * FROM this_month_1yr
+	UNION ALL
+	SELECT * FROM this_quarter
+	UNION ALL
+	SELECT * FROM last_quarter
+
+)
+GROUP BY store, period, date, customer_id, first_order_channel, first_order_platform
+  );
+
+    
+2018-07-29 10:31:53,516: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028e8ef0>]}
+2018-07-29 10:31:54,805: 10:31:54 | 20 of 22 OK created table model template.segment_stats_customers_agg. [OK in 38.19s]
+2018-07-29 10:31:54,806: 10:31:54 | 21 of 22 START table model template.buyer_segment_stats.............. [RUN]
+2018-07-29 10:31:54,807: Compiling model.shopify_cohort_analysis.buyer_segment_stats
+2018-07-29 10:31:54,823: Writing injected SQL for node "model.shopify_cohort_analysis.buyer_segment_stats"
+2018-07-29 10:31:54,827: Acquiring new bigquery connection "buyer_segment_stats".
+2018-07-29 10:31:54,827: Re-using an available connection from the pool.
+2018-07-29 10:31:54,981: Writing runtime SQL for node "model.shopify_cohort_analysis.buyer_segment_stats"
+2018-07-29 10:31:54,982: Fetching data for query buyer_segment_stats:
+create or replace table `template`.`buyer_segment_stats`
+  
+  as (
+    SELECT
+store,
+period,
+date,
+'Overall' as view,
+'Overall' as view_segment,
+'Revenue' as segment_type,
+revenue_segment as segment,
+revenue_segment_prev as segment_prev,
+sum(buyers) buyers,
+case when sum(buyers) > 0 then sum(recency)/sum(buyers) else null end as  recency,
+sum(frequency) frequency,
+sum(revenue) revenue,
+case when sum(frequency) > 0 then sum(revenue)/sum(frequency) else null end as aov,
+case when sum(buyers) > 0 then sum(recency_prev)/sum(buyers) else null end as  recency_prev,
+sum(frequency_prev) frequency_prev,
+sum(revenue_prev) revenue_prev,
+case when sum(frequency_prev) > 0 then sum(revenue_prev)/sum(frequency_prev) else null end as aov_prev
+FROM `growth-engines-pipeline`.`template`.`segment_stats_customers_agg`
+where revenue_segment != ''
+and revenue_segment_prev != ''
+GROUP BY store, period, date, segment, segment_prev, view, view_segment, segment_type
+
+UNION ALL
+
+SELECT
+store,
+period,
+date,
+'First Order Channel' as view,
+first_order_channel as view_segment,
+'Revenue' as segment_type,
+revenue_segment as segment,
+revenue_segment_prev as segment_prev,
+sum(buyers) buyers,
+case when sum(buyers) > 0 then sum(recency)/sum(buyers) else null end as  recency,
+sum(frequency) frequency,
+sum(revenue) revenue,
+case when sum(frequency) > 0 then sum(revenue)/sum(frequency) else null end as aov,
+case when sum(buyers) > 0 then sum(recency_prev)/sum(buyers) else null end as  recency_prev,
+sum(frequency_prev) frequency_prev,
+sum(revenue_prev) revenue_prev,
+case when sum(frequency_prev) > 0 then sum(revenue_prev)/sum(frequency_prev) else null end as aov_prev
+FROM `growth-engines-pipeline`.`template`.`segment_stats_customers_agg`
+where revenue_segment != ''
+and revenue_segment_prev != ''
+GROUP BY store, period, date, segment, segment_prev, view, view_segment, segment_type
+
+UNION ALL
+
+SELECT
+store,
+period,
+date,
+'First Order Platform' as view,
+first_order_platform as view_segment,
+'Revenue' as segment_type,
+revenue_segment as segment,
+revenue_segment_prev as segment_prev,
+sum(buyers) buyers,
+case when sum(buyers) > 0 then sum(recency)/sum(buyers) else null end as  recency,
+sum(frequency) frequency,
+sum(revenue) revenue,
+case when sum(frequency) > 0 then sum(revenue)/sum(frequency) else null end as aov,
+case when sum(buyers) > 0 then sum(recency_prev)/sum(buyers) else null end as  recency_prev,
+sum(frequency_prev) frequency_prev,
+sum(revenue_prev) revenue_prev,
+case when sum(frequency_prev) > 0 then sum(revenue_prev)/sum(frequency_prev) else null end as aov_prev
+FROM `growth-engines-pipeline`.`template`.`segment_stats_customers_agg`
+where revenue_segment != ''
+and revenue_segment_prev != ''
+GROUP BY store, period, date, segment, segment_prev, view, view_segment, segment_type
+
+UNION ALL
+
+SELECT
+store,
+period,
+date,
+'Overall' as view,
+'Overall' as view_segment,
+'Frequency' as segment_type,
+frequency_segment as segment,
+frequency_segment_prev as segment_prev,
+sum(buyers) buyers,
+case when sum(buyers) > 0 then sum(recency)/sum(buyers) else null end as  recency,
+sum(frequency) frequency,
+sum(revenue) revenue,
+case when sum(frequency) > 0 then sum(revenue)/sum(frequency) else null end as aov,
+case when sum(buyers) > 0 then sum(recency_prev)/sum(buyers) else null end as  recency_prev,
+sum(frequency_prev) frequency_prev,
+sum(revenue_prev) revenue_prev,
+case when sum(frequency_prev) > 0 then sum(revenue_prev)/sum(frequency_prev) else null end as aov_prev
+FROM `growth-engines-pipeline`.`template`.`segment_stats_customers_agg`
+where frequency_segment != ''
+and frequency_segment_prev != ''
+GROUP BY store, period, date, segment, segment_prev, view, view_segment, segment_type
+
+UNION ALL
+
+SELECT
+store,
+period,
+date,
+'First Order Channel' as view,
+first_order_channel as view_segment,
+'Frequency' as segment_type,
+frequency_segment as segment,
+frequency_segment_prev as segment_prev,
+sum(buyers) buyers,
+case when sum(buyers) > 0 then sum(recency)/sum(buyers) else null end as  recency,
+sum(frequency) frequency,
+sum(revenue) revenue,
+case when sum(frequency) > 0 then sum(revenue)/sum(frequency) else null end as aov,
+case when sum(buyers) > 0 then sum(recency_prev)/sum(buyers) else null end as  recency_prev,
+sum(frequency_prev) frequency_prev,
+sum(revenue_prev) revenue_prev,
+case when sum(frequency_prev) > 0 then sum(revenue_prev)/sum(frequency_prev) else null end as aov_prev
+FROM `growth-engines-pipeline`.`template`.`segment_stats_customers_agg`
+where frequency_segment != ''
+and frequency_segment_prev != ''
+GROUP BY store, period, date, segment, segment_prev, view, view_segment, segment_type
+
+UNION ALL
+
+SELECT
+store,
+period,
+date,
+'First Order Platform' as view,
+first_order_platform as view_segment,
+'Frequency' as segment_type,
+frequency_segment as segment,
+frequency_segment_prev as segment_prev,
+sum(buyers) buyers,
+case when sum(buyers) > 0 then sum(recency)/sum(buyers) else null end as  recency,
+sum(frequency) frequency,
+sum(revenue) revenue,
+case when sum(frequency) > 0 then sum(revenue)/sum(frequency) else null end as aov,
+case when sum(buyers) > 0 then sum(recency_prev)/sum(buyers) else null end as  recency_prev,
+sum(frequency_prev) frequency_prev,
+sum(revenue_prev) revenue_prev,
+case when sum(frequency_prev) > 0 then sum(revenue_prev)/sum(frequency_prev) else null end as aov_prev
+FROM `growth-engines-pipeline`.`template`.`segment_stats_customers_agg`
+where frequency_segment != ''
+and frequency_segment_prev != ''
+GROUP BY store, period, date, segment, segment_prev, view, view_segment, segment_type
+  );
+
+    
+2018-07-29 10:31:58,984: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028e8828>]}
+2018-07-29 10:31:59,286: 10:31:59 | 21 of 22 OK created table model template.buyer_segment_stats......... [OK in 4.18s]
+2018-07-29 10:31:59,287: 10:31:59 | 22 of 22 START table model template.buyer_segment_lists.............. [RUN]
+2018-07-29 10:31:59,287: Compiling model.shopify_cohort_analysis.buyer_segment_lists
+2018-07-29 10:31:59,293: Writing injected SQL for node "model.shopify_cohort_analysis.buyer_segment_lists"
+2018-07-29 10:31:59,299: Acquiring new bigquery connection "buyer_segment_lists".
+2018-07-29 10:31:59,299: Re-using an available connection from the pool.
+2018-07-29 10:31:59,429: Writing runtime SQL for node "model.shopify_cohort_analysis.buyer_segment_lists"
+2018-07-29 10:31:59,429: Fetching data for query buyer_segment_lists:
+create or replace table `template`.`buyer_segment_lists`
+  
+  as (
+    SELECT
+a.store,
+period,
+date,
+customer_id,
+b.first_name,
+b.last_name,
+b.email,
+recency,
+frequency,
+revenue,
+aov,
+revenue_segment,
+frequency_segment
+FROM `growth-engines-pipeline`.`template`.`segment_stats_customers_agg` a
+LEFT JOIN `growth-engines-pipeline`.`template`.`agg_customers` b
+ON (
+	a.store = b.store AND
+	a.customer_id = b.id
+)
+where ( revenue_segment != '' or frequency_segment != '' )
+  );
+
+    
+2018-07-29 10:32:42,314: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '967a52b4-b3d3-4015-aa41-1d80a0d7a78a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028e8ef0>]}
+2018-07-29 10:32:43,420: 10:32:43 | 22 of 22 OK created table model template.buyer_segment_lists......... [OK in 43.03s]
+2018-07-29 10:32:43,484: 10:32:43 | 
+2018-07-29 10:32:43,484: 10:32:43 | Finished running 22 table models in 236.65s.
+2018-07-29 10:32:43,484: Connection 'master' was left open.
+2018-07-29 10:32:43,485: 
+2018-07-29 10:32:43,485: Completed successfully
+2018-07-29 10:32:43,486: 
+Done. PASS=22 ERROR=0 SKIP=0 TOTAL=22
+2018-07-29 10:32:43,487: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fd7080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fd71d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fd7780>]}
+2018-07-29 10:32:43,809: Flushing usage events
+2018-07-29 10:32:44,052: sys:1: ResourceWarning: unclosed <socket.socket fd=15, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61225), raddr=('172.217.12.13', 443)>
+
+2018-07-29 10:32:44,054: sys:1: ResourceWarning: unclosed <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61227), raddr=('172.217.12.13', 443)>
+
+2018-07-29 10:32:44,058: sys:1: ResourceWarning: unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61198), raddr=('172.217.11.234', 443)>
+
+2018-07-29 10:32:44,064: sys:1: ResourceWarning: unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61194), raddr=('172.217.12.13', 443)>
+
+2018-07-29 10:32:44,069: sys:1: ResourceWarning: unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61228), raddr=('172.217.12.13', 443)>
+
+2018-07-29 10:32:44,073: sys:1: ResourceWarning: unclosed <socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61233), raddr=('172.217.3.10', 443)>
+
+2018-07-29 10:32:44,074: sys:1: ResourceWarning: unclosed <socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61234), raddr=('172.217.3.10', 443)>
+
+2018-07-29 10:32:44,075: sys:1: ResourceWarning: unclosed <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61229), raddr=('172.217.12.13', 443)>
+
+2018-07-29 10:32:44,076: sys:1: ResourceWarning: unclosed <socket.socket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61232), raddr=('172.217.3.10', 443)>
+
+2018-07-29 10:32:44,077: sys:1: ResourceWarning: unclosed <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.217', 61235), raddr=('172.217.3.10', 443)>
+

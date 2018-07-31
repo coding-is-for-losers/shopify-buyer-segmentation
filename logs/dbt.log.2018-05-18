@@ -1,0 +1,2960 @@
+2018-05-18 09:34:31,032: Tracking: tracking
+2018-05-18 09:34:31,044: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10817d5f8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10817d550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10817dd68>]}
+2018-05-18 09:34:32,023: Loading dependency project from /usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/include
+2018-05-18 09:34:32,047: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/growth-engines/dbt_modules
+2018-05-18 09:34:32,050: Parsing get_column_values.sql
+2018-05-18 09:34:32,072: Parsing get_url_parameter.sql
+2018-05-18 09:34:32,078: Parsing split_part.sql
+2018-05-18 09:34:32,091: Parsing table_exists.sql
+2018-05-18 09:34:32,102: Parsing core.sql
+2018-05-18 09:34:32,117: Parsing adapters/bigquery.sql
+2018-05-18 09:34:32,124: Parsing adapters/common.sql
+2018-05-18 09:34:32,149: Parsing adapters/postgres.sql
+2018-05-18 09:34:32,155: Parsing adapters/redshift.sql
+2018-05-18 09:34:32,181: Parsing etc/get_custom_schema.sql
+2018-05-18 09:34:32,190: Parsing materializations/archive.sql
+2018-05-18 09:34:32,224: Parsing materializations/bigquery.sql
+2018-05-18 09:34:32,242: Parsing materializations/helpers.sql
+2018-05-18 09:34:32,262: Parsing materializations/incremental.sql
+2018-05-18 09:34:32,292: Parsing materializations/table.sql
+2018-05-18 09:34:32,315: Parsing materializations/view.sql
+2018-05-18 09:34:32,332: Parsing materializations/wrapper.sql
+2018-05-18 09:34:32,338: Parsing schema_tests/accepted_values.sql
+2018-05-18 09:34:32,344: Parsing schema_tests/not_null.sql
+2018-05-18 09:34:32,348: Parsing schema_tests/relationships.sql
+2018-05-18 09:34:32,354: Parsing schema_tests/unique.sql
+2018-05-18 09:34:32,501: Parsing model.agency_data_pipeline.accounts_proc
+2018-05-18 09:34:32,504: Parsing model.agency_data_pipeline.all_dates
+2018-05-18 09:34:32,505: Parsing model.agency_data_pipeline.carts_proc
+2018-05-18 09:34:32,508: Parsing model.agency_data_pipeline.clients_proc
+2018-05-18 09:34:32,510: Parsing model.agency_data_pipeline.cogs_proc
+2018-05-18 09:34:32,512: Parsing model.agency_data_pipeline.conversion_goals_proc
+2018-05-18 09:34:32,515: Parsing model.agency_data_pipeline.mappings_ga_proc
+2018-05-18 09:34:32,517: Acquiring new bigquery connection "master".
+2018-05-18 09:34:32,517: Opening a new connection (0 currently allocated)
+2018-05-18 09:34:32,522: Parsing model.agency_data_pipeline.monthend_dates
+2018-05-18 09:34:32,523: Parsing model.agency_data_pipeline.adwords_ads
+2018-05-18 09:34:32,526: Parsing model.agency_data_pipeline.adwords_campaigns
+2018-05-18 09:34:32,528: Parsing model.agency_data_pipeline.adwords_conversions
+2018-05-18 09:34:32,531: Parsing model.agency_data_pipeline.adwords_impression_share
+2018-05-18 09:34:32,532: Parsing model.agency_data_pipeline.adwords_join
+2018-05-18 09:34:32,535: Parsing model.agency_data_pipeline.adwords_stats
+2018-05-18 09:34:32,536: Parsing model.agency_data_pipeline.adwords_urls
+2018-05-18 09:34:32,539: Parsing model.agency_data_pipeline.bing_ads_ads
+2018-05-18 09:34:32,541: Parsing model.agency_data_pipeline.bing_ads_conversions
+2018-05-18 09:34:32,544: Parsing model.agency_data_pipeline.bing_ads_impression_share
+2018-05-18 09:34:32,546: Parsing model.agency_data_pipeline.bing_ads_stats
+2018-05-18 09:34:32,548: Parsing model.agency_data_pipeline.fb_adcreative
+2018-05-18 09:34:32,553: Parsing model.agency_data_pipeline.fb_ads
+2018-05-18 09:34:32,559: Parsing model.agency_data_pipeline.fb_ads_insights
+2018-05-18 09:34:32,565: Parsing model.agency_data_pipeline.fb_ads_insights_conversions
+2018-05-18 09:34:32,571: Parsing model.agency_data_pipeline.fb_ads_stats
+2018-05-18 09:34:32,573: Parsing model.agency_data_pipeline.ga_conversions
+2018-05-18 09:34:32,576: Parsing model.agency_data_pipeline.ga_traffic
+2018-05-18 09:34:32,588: Parsing model.agency_data_pipeline.ga_transactions
+2018-05-18 09:34:32,597: Parsing model.agency_data_pipeline.ga_mcf_proc
+2018-05-18 09:34:32,600: Parsing model.agency_data_pipeline.ga_mcf_stats
+2018-05-18 09:34:32,603: Parsing model.agency_data_pipeline.autoanything_category_proc
+2018-05-18 09:34:32,605: Parsing model.agency_data_pipeline.autoanything_customers_info_proc
+2018-05-18 09:34:32,607: Parsing model.agency_data_pipeline.autoanything_customers_proc
+2018-05-18 09:34:32,609: Parsing model.agency_data_pipeline.autoanything_orders_info_proc
+2018-05-18 09:34:32,612: Parsing model.agency_data_pipeline.autoanything_orders_proc
+2018-05-18 09:34:32,615: Parsing model.agency_data_pipeline.autoanything_ordr_promo_proc
+2018-05-18 09:34:32,617: Parsing model.agency_data_pipeline.autoanything_products_proc
+2018-05-18 09:34:32,620: Parsing model.agency_data_pipeline.autoanything_products_proc_prelim
+2018-05-18 09:34:32,622: Parsing model.agency_data_pipeline.autoanything_promo
+2018-05-18 09:34:32,625: Parsing model.agency_data_pipeline.autoanything_promo_proc
+2018-05-18 09:34:32,627: Parsing model.agency_data_pipeline.autoanything_returns_proc
+2018-05-18 09:34:32,629: Parsing model.agency_data_pipeline.yandy_base_proc
+2018-05-18 09:34:32,633: Parsing model.agency_data_pipeline.yandy_customers_proc
+2018-05-18 09:34:32,634: Parsing model.agency_data_pipeline.yandy_fifo_transactions_proc
+2018-05-18 09:34:32,636: Parsing model.agency_data_pipeline.yandy_orders_info_proc
+2018-05-18 09:34:32,639: Parsing model.agency_data_pipeline.yandy_orders_proc
+2018-05-18 09:34:32,641: Parsing model.agency_data_pipeline.yandy_orders_prods_proc
+2018-05-18 09:34:32,643: Parsing model.agency_data_pipeline.yandy_product_options_proc
+2018-05-18 09:34:32,645: Parsing model.agency_data_pipeline.yandy_products_info_proc
+2018-05-18 09:34:32,647: Parsing model.agency_data_pipeline.yandy_products_proc
+2018-05-18 09:34:32,649: Parsing model.agency_data_pipeline.shopify_customers_proc
+2018-05-18 09:34:32,655: Parsing model.agency_data_pipeline.shopify_orders_proc
+2018-05-18 09:34:32,663: Parsing model.agency_data_pipeline.shopify_products_proc
+2018-05-18 09:34:32,670: Parsing model.agency_data_pipeline.shopify_refunds_proc
+2018-05-18 09:34:32,675: Parsing model.agency_data_pipeline.agg_campaign
+2018-05-18 09:34:32,679: Parsing model.agency_data_pipeline.agg_campaign_daily
+2018-05-18 09:34:32,681: Parsing model.agency_data_pipeline.agg_campaign_daily_anomalies
+2018-05-18 09:34:32,684: Parsing model.agency_data_pipeline.agg_customers_union
+2018-05-18 09:34:32,686: Parsing model.agency_data_pipeline.agg_ga_campaign
+2018-05-18 09:34:32,689: Parsing model.agency_data_pipeline.agg_ga_campaign_by_type
+2018-05-18 09:34:32,691: Parsing model.agency_data_pipeline.agg_ga_transaction
+2018-05-18 09:34:32,695: Parsing model.agency_data_pipeline.agg_ga_transaction_order_number
+2018-05-18 09:34:32,698: Parsing model.agency_data_pipeline.agg_orders_union
+2018-05-18 09:34:32,701: Parsing model.agency_data_pipeline.agg_platform_monthly
+2018-05-18 09:34:32,703: Parsing model.agency_data_pipeline.agg_platforms_client
+2018-05-18 09:34:32,705: Parsing model.agency_data_pipeline.agg_platforms_union
+2018-05-18 09:34:32,708: Parsing model.agency_data_pipeline.agg_products
+2018-05-18 09:34:32,710: Parsing model.agency_data_pipeline.agg_products_cogs
+2018-05-18 09:34:32,712: Parsing model.agency_data_pipeline.agg_transaction
+2018-05-18 09:34:32,716: Parsing model.agency_data_pipeline.agg_transaction_daily
+2018-05-18 09:34:32,718: Parsing model.agency_data_pipeline.agg_transaction_line_item
+2018-05-18 09:34:32,719: Parsing model.agency_data_pipeline.agg_transaction_line_item_type
+2018-05-18 09:34:32,722: Parsing model.agency_data_pipeline.agg_transaction_order_number
+2018-05-18 09:34:32,726: Parsing model.agency_data_pipeline.agg_transaction_product_type
+2018-05-18 09:34:32,729: Parsing model.agency_data_pipeline.customers_by_transaction
+2018-05-18 09:34:32,731: Parsing model.agency_data_pipeline.growth_customer_0_365
+2018-05-18 09:34:32,736: Parsing model.agency_data_pipeline.growth_customer_0_365_segment
+2018-05-18 09:34:32,740: Parsing model.agency_data_pipeline.growth_stats
+2018-05-18 09:34:32,742: Parsing model.agency_data_pipeline.growth_customer_0_30
+2018-05-18 09:34:32,745: Parsing model.agency_data_pipeline.growth_customer_0_30_segment
+2018-05-18 09:34:32,748: Parsing model.agency_data_pipeline.growth_stats_monthly
+2018-05-18 09:34:32,753: Parsing model.agency_data_pipeline.retention_0_365
+2018-05-18 09:34:32,756: Parsing model.agency_data_pipeline.retention_0_365_new
+2018-05-18 09:34:32,759: Parsing model.agency_data_pipeline.retention_0_365_reactivated
+2018-05-18 09:34:32,762: Parsing model.agency_data_pipeline.retention_0_365_rebuy
+2018-05-18 09:34:32,764: Parsing model.agency_data_pipeline.retention_30_395
+2018-05-18 09:34:32,766: Parsing model.agency_data_pipeline.retention_365_730
+2018-05-18 09:34:32,769: Parsing model.agency_data_pipeline.retention_730_plus
+2018-05-18 09:34:32,771: Parsing model.agency_data_pipeline.retention_stats
+2018-05-18 09:34:32,780: Parsing model.agency_data_pipeline.retention_stats_data_studio
+2018-05-18 09:34:32,782: Parsing model.agency_data_pipeline.retention_stats_forecast
+2018-05-18 09:34:32,785: Parsing model.agency_data_pipeline.retention_stats_rebuy_rate
+2018-05-18 09:34:32,790: Parsing model.agency_data_pipeline.retention_0_30
+2018-05-18 09:34:32,792: Parsing model.agency_data_pipeline.retention_0_30_new
+2018-05-18 09:34:32,795: Parsing model.agency_data_pipeline.retention_0_30_reactivated
+2018-05-18 09:34:32,798: Parsing model.agency_data_pipeline.retention_0_30_rebuy
+2018-05-18 09:34:32,802: Parsing model.agency_data_pipeline.retention_30_60
+2018-05-18 09:34:32,806: Parsing model.agency_data_pipeline.retention_60_plus
+2018-05-18 09:34:32,810: Parsing model.agency_data_pipeline.retention_stats_month
+2018-05-18 09:34:32,817: Parsing model.agency_data_pipeline.retention_stats_month_data_studio
+2018-05-18 09:34:32,823: Parsing model.agency_data_pipeline.retention_stats_month_forecast
+2018-05-18 09:34:32,830: Parsing model.agency_data_pipeline.retention_stats_rebuy_rate_month
+2018-05-18 09:34:32,836: Parsing model.agency_data_pipeline.customers_first_purchase_proc
+2018-05-18 09:34:32,842: Parsing model.agency_data_pipeline.customers_proc
+2018-05-18 09:34:32,846: Parsing model.agency_data_pipeline.segment_list_customers
+2018-05-18 09:34:32,851: Parsing model.agency_data_pipeline.segment_proc_customers
+2018-05-18 09:34:32,854: Parsing model.agency_data_pipeline.segment_proc_customers_pct
+2018-05-18 09:34:32,856: Parsing model.agency_data_pipeline.segment_stats_customers
+2018-05-18 09:34:32,858: Parsing model.agency_data_pipeline.segment_stats_customers_agg
+2018-05-18 09:34:32,861: Parsing model.agency_data_pipeline.segment_stats_customers_pct
+2018-05-18 09:34:32,863: Parsing model.agency_data_pipeline.segment_stats_customers_roll_rates
+2018-05-18 09:34:32,865: Parsing model.agency_data_pipeline.customers_first_purchase_product_type_proc
+2018-05-18 09:34:32,867: Parsing model.agency_data_pipeline.customers_products_proc
+2018-05-18 09:34:32,869: Parsing model.agency_data_pipeline.segment_list_customers_products
+2018-05-18 09:34:32,871: Parsing model.agency_data_pipeline.segment_proc_customers_products
+2018-05-18 09:34:32,873: Parsing model.agency_data_pipeline.segment_stats_customers_products
+2018-05-18 09:34:32,875: Parsing model.agency_data_pipeline.segment_stats_customers_products_agg
+2018-05-18 09:34:32,877: Parsing model.agency_data_pipeline.frequency_proc
+2018-05-18 09:34:32,880: Parsing model.agency_data_pipeline.frequency_stats
+2018-05-18 09:34:32,882: Parsing model.agency_data_pipeline.order_paths_agg
+2018-05-18 09:34:32,884: Parsing model.agency_data_pipeline.order_paths_proc
+2018-05-18 09:34:32,886: Parsing model.agency_data_pipeline.order_paths_stats
+2018-05-18 09:34:32,888: Parsing model.agency_data_pipeline.products_proc
+2018-05-18 09:34:32,892: Parsing model.agency_data_pipeline.segment_proc_category_pct
+2018-05-18 09:34:32,894: Parsing model.agency_data_pipeline.segment_proc_sku
+2018-05-18 09:34:32,896: Parsing model.agency_data_pipeline.segment_proc_sku_pct
+2018-05-18 09:34:32,899: Parsing model.agency_data_pipeline.segment_stats_category
+2018-05-18 09:34:32,901: Parsing model.agency_data_pipeline.segment_stats_category_pct
+2018-05-18 09:34:32,902: Parsing model.agency_data_pipeline.segment_stats_category_roll_rates
+2018-05-18 09:34:32,904: Parsing model.agency_data_pipeline.segment_stats_sku
+2018-05-18 09:34:32,908: Parsing model.agency_data_pipeline.segment_stats_sku_pct
+2018-05-18 09:34:32,909: Parsing model.agency_data_pipeline.segment_stats_sku_roll_rates
+2018-05-18 09:34:32,959: Found 131 models, 0 tests, 0 archives, 0 analyses, 46 macros, 0 operations
+2018-05-18 09:34:33,058: 
+2018-05-18 09:34:34,885: 09:34:34 | Concurrency: 4 threads (target='dev')
+2018-05-18 09:34:34,885: 09:34:34 | 
+2018-05-18 09:34:35,826: 09:34:35 | 1 of 131 START table model dev.conversion_goals_proc................. [RUN]
+2018-05-18 09:34:35,826: Compiling model.agency_data_pipeline.conversion_goals_proc
+2018-05-18 09:34:35,826: 09:34:35 | 2 of 131 START table model dev.autoanything_promo_proc............... [RUN]
+2018-05-18 09:34:35,832: Compiling model.agency_data_pipeline.autoanything_promo_proc
+2018-05-18 09:34:35,826: 09:34:35 | 3 of 131 START table model dev.carts_proc............................ [RUN]
+2018-05-18 09:34:35,833: Writing injected SQL for node "model.agency_data_pipeline.conversion_goals_proc"
+2018-05-18 09:34:35,842: Writing injected SQL for node "model.agency_data_pipeline.autoanything_promo_proc"
+2018-05-18 09:34:35,826: 09:34:35 | 4 of 131 START table model dev.bing_ads_impression_share............. [RUN]
+2018-05-18 09:34:35,842: Compiling model.agency_data_pipeline.carts_proc
+2018-05-18 09:34:35,843: Compiling model.agency_data_pipeline.bing_ads_impression_share
+2018-05-18 09:34:35,850: Writing injected SQL for node "model.agency_data_pipeline.carts_proc"
+2018-05-18 09:34:35,851: Acquiring new bigquery connection "conversion_goals_proc".
+2018-05-18 09:34:35,861: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_impression_share"
+2018-05-18 09:34:35,862: Acquiring new bigquery connection "autoanything_promo_proc".
+2018-05-18 09:34:35,862: Opening a new connection (1 currently allocated)
+2018-05-18 09:34:35,912: Opening a new connection (2 currently allocated)
+2018-05-18 09:34:35,913: Acquiring new bigquery connection "carts_proc".
+2018-05-18 09:34:35,916: Acquiring new bigquery connection "bing_ads_impression_share".
+2018-05-18 09:34:35,920: Opening a new connection (3 currently allocated)
+2018-05-18 09:34:35,923: Opening a new connection (4 currently allocated)
+2018-05-18 09:34:37,260: Model SQL (autoanything_promo_proc):
+SELECT
+promo_id,
+promo_code
+FROM (
+
+	SELECT
+	promo_id,
+	promo_code,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY promo_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_autoanything_ssh.promo` 
+)
+where lv = _sdc_sequence
+2018-05-18 09:34:37,586: Model SQL (carts_proc):
+select 
+client,
+client_name,
+account,
+platform
+from  ( 
+
+SELECT  
+client,
+client_name,
+account,
+platform,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.accounts`
+WHERE platform in ('Shopify', 'Custom cart')
+
+) 
+
+WHERE lv = time_of_entry
+2018-05-18 09:34:37,652: Model SQL (conversion_goals_proc):
+select 
+client,
+platform,
+goal_name,
+max(goal_type) goal_type,
+account,
+max(time_of_entry) time_of_entry
+from  ( 
+
+SELECT  
+client,
+platform,
+trim(replace(replace(lower(goal_name),',',''),' ','')) goal_name,
+goal_type,
+account,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY platform ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.conversion_goals` 
+
+) 
+
+WHERE lv = time_of_entry
+group by client, platform, account, goal_name
+2018-05-18 09:34:37,884: Model SQL (bing_ads_impression_share):
+SELECT 
+date, 
+account,
+channel,
+platform,
+sum(impressions) impressions,
+sum(available_impressions) available_impressions
+FROM
+
+(
+
+SELECT  
+cast(gregoriandate as date) date,
+replace(accountname,',','') account,  
+'Paid' as channel,
+'Bing Ads' as platform,
+case when impressionsharepercent is null then 0 else impressions end as impressions,
+cast(round(case when ( impressionsharepercent is not null and impressionsharepercent > 0 ) then (impressions*100)/impressionsharepercent else 0 end) as int64) as available_impressions,
+_sdc_sequence,
+first_value(_sdc_sequence) OVER (PARTITION BY campaignid, gregoriandate ORDER BY _sdc_sequence DESC) lv
+FROM `growth-engines-pipeline.bing_ads.campaign_performance_report` 
+
+)
+
+where lv = _sdc_sequence
+group by date, account, channel, platform
+2018-05-18 09:34:38,375: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083c9780>]}
+2018-05-18 09:34:38,717: 09:34:38 | 2 of 131 OK created table model dev.autoanything_promo_proc.......... [CREATE TABLE in 2.54s]
+2018-05-18 09:34:38,717: 09:34:38 | 5 of 131 START table model dev.monthend_dates........................ [RUN]
+2018-05-18 09:34:38,718: Compiling model.agency_data_pipeline.monthend_dates
+2018-05-18 09:34:38,724: Writing injected SQL for node "model.agency_data_pipeline.monthend_dates"
+2018-05-18 09:34:38,725: Acquiring new bigquery connection "monthend_dates".
+2018-05-18 09:34:38,725: Re-using an available connection from the pool.
+2018-05-18 09:34:38,771: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083fb668>]}
+2018-05-18 09:34:38,818: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083c9668>]}
+2018-05-18 09:34:39,061: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083bd2b0>]}
+2018-05-18 09:34:39,309: 09:34:39 | 3 of 131 OK created table model dev.carts_proc....................... [CREATE TABLE in 2.93s]
+2018-05-18 09:34:39,311: 09:34:39 | 6 of 131 START table model dev.all_dates............................. [RUN]
+2018-05-18 09:34:39,313: Compiling model.agency_data_pipeline.all_dates
+2018-05-18 09:34:39,321: Writing injected SQL for node "model.agency_data_pipeline.all_dates"
+2018-05-18 09:34:39,324: Acquiring new bigquery connection "all_dates".
+2018-05-18 09:34:39,324: Re-using an available connection from the pool.
+2018-05-18 09:34:39,665: 09:34:39 | 1 of 131 OK created table model dev.conversion_goals_proc............ [CREATE TABLE in 2.99s]
+2018-05-18 09:34:39,666: 09:34:39 | 7 of 131 START table model dev.yandy_fifo_transactions_proc.......... [RUN]
+2018-05-18 09:34:39,666: Compiling model.agency_data_pipeline.yandy_fifo_transactions_proc
+2018-05-18 09:34:39,675: Writing injected SQL for node "model.agency_data_pipeline.yandy_fifo_transactions_proc"
+2018-05-18 09:34:39,678: Acquiring new bigquery connection "yandy_fifo_transactions_proc".
+2018-05-18 09:34:39,678: Re-using an available connection from the pool.
+2018-05-18 09:34:39,913: Model SQL (monthend_dates):
+SELECT
+date_in_range,
+date_in_range_bom,
+date_in_range_bom_mom,
+unix_date_in_range,
+unix_date_in_range_bom,
+unix_date(date_in_range_bom_mom) unix_date_in_range_bom_mom,
+yyyymm,
+date_in_range_yoy,
+unix_date(date_in_range_yoy) unix_date_in_range_yoy
+
+FROM
+(
+	SELECT 
+	date_in_range,
+	date_in_range_bom,
+	date_sub(date_in_range_bom, INTERVAL 1 MONTH) date_in_range_bom_mom,
+	date_sub(date_in_range, INTERVAL 1 YEAR) date_in_range_yoy,
+	unix_date_in_range,
+	unix_date(date_in_range_bom) unix_date_in_range_bom,
+	yyyymm,
+	first_value(date_in_range) over (partition by yyyymm order by date_in_range desc) monthend_date_in_range
+	FROM
+	( 
+		SELECT 
+		date_in_range,
+		date_trunc( date_in_range, MONTH) date_in_range_bom,
+		unix_date(date_in_range) unix_date_in_range,
+		format_date("%Y-%m", date_in_range) AS yyyymm
+		FROM UNNEST(
+		    GENERATE_DATE_ARRAY(DATE('2016-01-31'), CURRENT_DATE(), INTERVAL 1 DAY)
+		) AS date_in_range
+	)
+)
+where date_in_range = monthend_date_in_range
+2018-05-18 09:34:40,016: 09:34:40 | 4 of 131 OK created table model dev.bing_ads_impression_share........ [CREATE TABLE in 3.22s]
+2018-05-18 09:34:40,016: 09:34:40 | 8 of 131 START table model dev.adwords_campaigns..................... [RUN]
+2018-05-18 09:34:40,017: Compiling model.agency_data_pipeline.adwords_campaigns
+2018-05-18 09:34:40,027: Writing injected SQL for node "model.agency_data_pipeline.adwords_campaigns"
+2018-05-18 09:34:40,031: Acquiring new bigquery connection "adwords_campaigns".
+2018-05-18 09:34:40,031: Re-using an available connection from the pool.
+2018-05-18 09:34:40,220: Model SQL (all_dates):
+SELECT 
+date_in_range,
+unix_date(date_in_range) unix_date_in_range
+FROM UNNEST(
+    GENERATE_DATE_ARRAY(DATE('2016-01-01'), CURRENT_DATE(), INTERVAL 1 DAY)
+) AS date_in_range
+2018-05-18 09:34:40,618: Model SQL (yandy_fifo_transactions_proc):
+select 
+client,
+order_id,
+prod_option_id,
+quantity,
+price,
+cost_price,
+reason_code
+from  ( 
+
+SELECT  
+'Yandy' as client,
+prod_option_id,
+order_id,
+quantity,
+price,
+cost_price,
+reason_code,
+_sdc_sequence,
+first_value(_sdc_sequence) OVER (PARTITION BY order_id, prod_option_id, reason_code ORDER BY _sdc_sequence DESC) lv
+FROM `growth-engines-pipeline.cart_yandy.fifo_transactions`
+WHERE reason_code in ('SALE', 'RETURN')
+
+) 
+
+WHERE lv = _sdc_sequence
+2018-05-18 09:34:41,069: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77ec88>]}
+2018-05-18 09:34:41,383: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108243320>]}
+2018-05-18 09:34:41,423: 09:34:41 | 5 of 131 OK created table model dev.monthend_dates................... [CREATE TABLE in 2.35s]
+2018-05-18 09:34:41,424: 09:34:41 | 9 of 131 START table model dev.yandy_orders_prods_proc............... [RUN]
+2018-05-18 09:34:41,425: Compiling model.agency_data_pipeline.yandy_orders_prods_proc
+2018-05-18 09:34:41,434: Writing injected SQL for node "model.agency_data_pipeline.yandy_orders_prods_proc"
+2018-05-18 09:34:41,439: Acquiring new bigquery connection "yandy_orders_prods_proc".
+2018-05-18 09:34:41,440: Re-using an available connection from the pool.
+2018-05-18 09:34:41,598: Model SQL (adwords_campaigns):
+select
+day,
+campaignid, 
+campaign,
+account, 
+channel,
+platform,
+sum(cost) cost,
+sum(impressions) impressions,
+sum(clicks) clicks,
+sum(impression_share_num) impression_share_num,
+sum(impression_share_den) impression_share_den
+from 
+  ( 
+	SELECT  
+	day,
+	campaignid,
+	campaign,
+	account as account,
+	'Paid' as channel,
+	'Adwords' as platform,
+	cost/1000000 cost, 
+	impressions as impressions, 
+	clicks, 
+	case when searchimprshare is not null then impressions end as impression_share_num,
+	case when searchimprshare is not null then impressions/(searchimprshare/100) end as impression_share_den,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY campaignid, day ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.adwords_2.CAMPAIGN_PERFORMANCE_REPORT`
+  )
+where lv = _sdc_sequence
+group by day, campaignid, account, channel, platform, campaign
+2018-05-18 09:34:41,773: 09:34:41 | 6 of 131 OK created table model dev.all_dates........................ [CREATE TABLE in 2.07s]
+2018-05-18 09:34:41,774: 09:34:41 | 10 of 131 START table model dev.adwords_urls......................... [RUN]
+2018-05-18 09:34:41,774: Compiling model.agency_data_pipeline.adwords_urls
+2018-05-18 09:34:41,783: Writing injected SQL for node "model.agency_data_pipeline.adwords_urls"
+2018-05-18 09:34:41,786: Acquiring new bigquery connection "adwords_urls".
+2018-05-18 09:34:41,788: Re-using an available connection from the pool.
+2018-05-18 09:34:42,486: Model SQL (yandy_orders_prods_proc):
+SELECT
+order_id,
+option_id,
+prod_name
+FROM ( 
+
+	SELECT
+	order_id,
+	option_id,
+	max(prod_name) prod_name
+	FROM
+	(
+
+		SELECT
+		order_id,
+		prod_name, 
+		option_id,
+		_sdc_sequence,
+		first_value(_sdc_sequence) OVER (PARTITION BY order_id, option_id ORDER BY _sdc_sequence DESC) lv
+		FROM `growth-engines-pipeline.cart_yandy.orders_prods`
+		where order_date >= '2012-01-01'
+
+	)
+	where lv = _sdc_sequence	
+	group by order_id, option_id
+
+)
+2018-05-18 09:34:42,847: Model SQL (adwords_urls):
+SELECT
+campaignid,
+lower(trim(regexp_replace(replace(replace(replace(replace(finalurl,'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url
+
+FROM (
+
+SELECT  
+campaignid,
+max(finalurl) finalurl
+FROM `growth-engines-pipeline.adwords_2.FINAL_URL_REPORT`
+group by campaignid
+
+)
+2018-05-18 09:34:45,180: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108243320>]}
+2018-05-18 09:34:45,520: 09:34:45 | 10 of 131 OK created table model dev.adwords_urls.................... [CREATE TABLE in 3.41s]
+2018-05-18 09:34:45,521: 09:34:45 | 11 of 131 START table model dev.ga_conversions....................... [RUN]
+2018-05-18 09:34:45,521: Compiling model.agency_data_pipeline.ga_conversions
+2018-05-18 09:34:45,528: Writing injected SQL for node "model.agency_data_pipeline.ga_conversions"
+2018-05-18 09:34:45,532: Acquiring new bigquery connection "ga_conversions".
+2018-05-18 09:34:45,532: Re-using an available connection from the pool.
+2018-05-18 09:34:46,680: Model SQL (ga_conversions):
+select 
+client,
+client_name,
+platform,
+goal_name,
+goal_type,
+account,
+time_of_entry
+from  ( 
+
+SELECT  
+client,
+client_name,
+platform,
+trim(goal_name) goal_name,
+goal_type,
+account,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client, platform, goal_name ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.conversion_goals` 
+WHERE platform = 'Google Analytics'
+
+) 
+
+WHERE lv = time_of_entry
+2018-05-18 09:34:47,863: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108243320>]}
+2018-05-18 09:34:48,223: 09:34:48 | 11 of 131 OK created table model dev.ga_conversions.................. [CREATE TABLE in 2.34s]
+2018-05-18 09:34:48,223: 09:34:48 | 12 of 131 START table model dev.cogs_proc............................ [RUN]
+2018-05-18 09:34:48,223: Compiling model.agency_data_pipeline.cogs_proc
+2018-05-18 09:34:48,230: Writing injected SQL for node "model.agency_data_pipeline.cogs_proc"
+2018-05-18 09:34:48,232: Acquiring new bigquery connection "cogs_proc".
+2018-05-18 09:34:48,232: Re-using an available connection from the pool.
+2018-05-18 09:34:49,446: Model SQL (cogs_proc):
+select 
+client,
+variant_id,
+cogs_dol,
+cogs_pct
+from  ( 
+
+SELECT  
+client,
+variant_id,
+cogs_dol,
+cogs_pct,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.cogs`
+where client != ''
+
+)
+WHERE lv = time_of_entry
+2018-05-18 09:34:50,633: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108243320>]}
+2018-05-18 09:34:51,353: 09:34:51 | 12 of 131 OK created table model dev.cogs_proc....................... [CREATE TABLE in 2.41s]
+2018-05-18 09:34:51,353: 09:34:51 | 13 of 131 START table model dev.clients_proc......................... [RUN]
+2018-05-18 09:34:51,353: Compiling model.agency_data_pipeline.clients_proc
+2018-05-18 09:34:51,362: Writing injected SQL for node "model.agency_data_pipeline.clients_proc"
+2018-05-18 09:34:51,363: Acquiring new bigquery connection "clients_proc".
+2018-05-18 09:34:51,364: Re-using an available connection from the pool.
+2018-05-18 09:34:52,438: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77e780>]}
+2018-05-18 09:34:52,518: Model SQL (clients_proc):
+select 
+client,
+client_name,
+account,
+platform
+from  ( 
+
+SELECT  
+client,
+client_name,
+account,
+platform,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.accounts`
+where client_name != ''
+) 
+
+WHERE lv = time_of_entry
+2018-05-18 09:34:52,783: 09:34:52 | 8 of 131 OK created table model dev.adwords_campaigns................ [CREATE TABLE in 12.42s]
+2018-05-18 09:34:52,783: 09:34:52 | 14 of 131 START table model dev.accounts_proc........................ [RUN]
+2018-05-18 09:34:52,784: Compiling model.agency_data_pipeline.accounts_proc
+2018-05-18 09:34:52,793: Writing injected SQL for node "model.agency_data_pipeline.accounts_proc"
+2018-05-18 09:34:52,794: Acquiring new bigquery connection "accounts_proc".
+2018-05-18 09:34:52,794: Re-using an available connection from the pool.
+2018-05-18 09:34:53,652: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108243320>]}
+2018-05-18 09:34:53,892: Model SQL (accounts_proc):
+select 
+client,
+account,
+platform,
+max(time_of_entry)
+
+from  ( 
+
+SELECT  
+client,
+account,
+platform,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client, platform ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.accounts` 
+
+) 
+
+WHERE lv = time_of_entry
+group by client, account, platform
+order by client asc, account asc
+2018-05-18 09:34:54,003: 09:34:54 | 13 of 131 OK created table model dev.clients_proc.................... [CREATE TABLE in 2.30s]
+2018-05-18 09:34:54,003: 09:34:54 | 15 of 131 START table model dev.yandy_orders_info_proc............... [RUN]
+2018-05-18 09:34:54,003: Compiling model.agency_data_pipeline.yandy_orders_info_proc
+2018-05-18 09:34:54,014: Writing injected SQL for node "model.agency_data_pipeline.yandy_orders_info_proc"
+2018-05-18 09:34:54,016: Acquiring new bigquery connection "yandy_orders_info_proc".
+2018-05-18 09:34:54,016: Re-using an available connection from the pool.
+2018-05-18 09:34:55,051: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77e780>]}
+2018-05-18 09:34:55,165: Model SQL (yandy_orders_info_proc):
+SELECT
+order_id,
+order_date,
+shipping_cost,
+coupon_discount,
+coupon_code,
+referrer,
+email,
+first_name,
+last_name,
+order_status,
+ROW_NUMBER() OVER() customer_id_row_number
+FROM 
+(
+	SELECT 
+	order_id,
+	order_date,
+	shipping_cost,
+	coupon_discount,
+	coupon_code,	
+	referrer,
+	email,
+	first_name,
+	last_name,
+	order_status
+	FROM (
+
+		SELECT
+		order_id,
+		order_date,
+		shipping_cost,
+		coupon_discount,
+		coupon_code,
+		referrer,
+		email,
+		bill_first_name first_name,
+		bill_last_name last_name,
+		order_status,
+		_sdc_sequence,
+		first_value(_sdc_sequence) OVER (PARTITION BY order_id ORDER BY _sdc_sequence DESC) lv
+		FROM `growth-engines-pipeline.cart_yandy.orders` 
+		where order_date >= '2012-01-01'
+	)
+	where lv = _sdc_sequence
+)
+2018-05-18 09:34:55,402: 09:34:55 | 14 of 131 OK created table model dev.accounts_proc................... [CREATE TABLE in 2.27s]
+2018-05-18 09:34:55,402: 09:34:55 | 16 of 131 START table model dev.bing_ads_ads......................... [RUN]
+2018-05-18 09:34:55,402: Compiling model.agency_data_pipeline.bing_ads_ads
+2018-05-18 09:34:55,407: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_ads"
+2018-05-18 09:34:55,408: Acquiring new bigquery connection "bing_ads_ads".
+2018-05-18 09:34:55,408: Re-using an available connection from the pool.
+2018-05-18 09:34:56,584: Model SQL (bing_ads_ads):
+select
+date, 
+account, 
+channel,
+platform,
+campaignid,
+campaignname,
+max(lower(trim(replace(regexp_replace(replace(replace(replace(url,'www.',''),'http://',''),'https://',''),r'\?.*$','' ),'.html',''),'/'))) as url,
+lower(replace(replace(replace(utm_campaign,' ', ''),'-',''),'_','')) utm_campaign,
+sum(cost) as cost,
+sum(impressions) as impressions,
+sum(clicks) as clicks,
+sum(conversions) as conversions
+from 
+  ( 
+SELECT  
+cast(gregoriandate as date) date,
+replace(accountname,',','') account,
+'Paid' as channel,
+'Bing Ads' as platform,
+adid,
+adtype,
+campaignid, 
+campaignname,
+finalurl url,
+campaignname as utm_campaign,
+spend cost, 
+impressions, 
+clicks, 
+conversions,
+_sdc_sequence,
+first_value(_sdc_sequence) OVER (PARTITION BY adid, gregoriandate ORDER BY _sdc_sequence DESC) lv
+FROM `growth-engines-pipeline.bing_ads.ad_performance_report` 
+  )
+
+where lv = _sdc_sequence
+group by date, account, channel, platform, campaignid, campaignname, utm_campaign
+2018-05-18 09:34:57,689: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083c9668>]}
+2018-05-18 09:34:58,484: 09:34:58 | 7 of 131 OK created table model dev.yandy_fifo_transactions_proc..... [CREATE TABLE in 18.02s]
+2018-05-18 09:34:58,484: 09:34:58 | 17 of 131 START table model dev.autoanything_ordr_promo_proc......... [RUN]
+2018-05-18 09:34:58,485: Compiling model.agency_data_pipeline.autoanything_ordr_promo_proc
+2018-05-18 09:34:58,491: Writing injected SQL for node "model.agency_data_pipeline.autoanything_ordr_promo_proc"
+2018-05-18 09:34:58,492: Acquiring new bigquery connection "autoanything_ordr_promo_proc".
+2018-05-18 09:34:58,492: Re-using an available connection from the pool.
+2018-05-18 09:34:59,459: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77e780>]}
+2018-05-18 09:34:59,461: Model SQL (autoanything_ordr_promo_proc):
+SELECT
+ordr_id,
+promo_id 
+FROM (
+
+	SELECT
+	ordr_id,
+	promo_id,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY ordr_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_autoanything_ssh.ordr_promo` 
+)
+where lv = _sdc_sequence
+2018-05-18 09:35:00,217: Bad request while running:
+SELECT
+order_id,
+order_date,
+shipping_cost,
+coupon_discount,
+coupon_code,
+referrer,
+email,
+first_name,
+last_name,
+order_status,
+ROW_NUMBER() OVER() customer_id_row_number
+FROM 
+(
+	SELECT 
+	order_id,
+	order_date,
+	shipping_cost,
+	coupon_discount,
+	coupon_code,	
+	referrer,
+	email,
+	first_name,
+	last_name,
+	order_status
+	FROM (
+
+		SELECT
+		order_id,
+		order_date,
+		shipping_cost,
+		coupon_discount,
+		coupon_code,
+		referrer,
+		email,
+		bill_first_name first_name,
+		bill_last_name last_name,
+		order_status,
+		_sdc_sequence,
+		first_value(_sdc_sequence) OVER (PARTITION BY order_id ORDER BY _sdc_sequence DESC) lv
+		FROM `growth-engines-pipeline.cart_yandy.orders` 
+		where order_date >= '2012-01-01'
+	)
+	where lv = _sdc_sequence
+)
+2018-05-18 09:35:00,218: 400 Resources exceeded during query execution: The query could not be executed in the allotted memory. OVER() operator used too much memory..
+2018-05-18 09:35:00,219: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a79ad30>]}
+2018-05-18 09:35:00,219: 09:35:00 | 16 of 131 OK created table model dev.bing_ads_ads.................... [CREATE TABLE in 4.06s]
+2018-05-18 09:35:00,221: 09:35:00 | 18 of 131 START table model dev.adwords_conversions.................. [RUN]
+2018-05-18 09:35:00,224: Compiling model.agency_data_pipeline.adwords_conversions
+2018-05-18 09:35:00,234: Writing injected SQL for node "model.agency_data_pipeline.adwords_conversions"
+2018-05-18 09:35:00,235: Acquiring new bigquery connection "adwords_conversions".
+2018-05-18 09:35:00,235: Re-using an available connection from the pool.
+2018-05-18 09:35:00,704: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083c9668>]}
+2018-05-18 09:35:00,996: 09:35:00 | 15 of 131 ERROR creating table model dev.yandy_orders_info_proc...... [ERROR in 6.22s]
+2018-05-18 09:35:00,997: 09:35:00 | 19 of 131 START table model dev.yandy_product_options_proc........... [RUN]
+2018-05-18 09:35:00,997: Compiling model.agency_data_pipeline.yandy_product_options_proc
+2018-05-18 09:35:01,005: Writing injected SQL for node "model.agency_data_pipeline.yandy_product_options_proc"
+2018-05-18 09:35:01,007: Acquiring new bigquery connection "yandy_product_options_proc".
+2018-05-18 09:35:01,007: Re-using an available connection from the pool.
+2018-05-18 09:35:01,663: 09:35:01 | 17 of 131 OK created table model dev.autoanything_ordr_promo_proc.... [CREATE TABLE in 2.22s]
+2018-05-18 09:35:01,663: 09:35:01 | 20 of 131 START table model dev.autoanything_returns_proc............ [RUN]
+2018-05-18 09:35:01,664: Compiling model.agency_data_pipeline.autoanything_returns_proc
+2018-05-18 09:35:01,673: Writing injected SQL for node "model.agency_data_pipeline.autoanything_returns_proc"
+2018-05-18 09:35:01,675: Acquiring new bigquery connection "autoanything_returns_proc".
+2018-05-18 09:35:01,675: Re-using an available connection from the pool.
+2018-05-18 09:35:01,787: Model SQL (adwords_conversions):
+select 
+client,
+client_name,
+platform,
+goal_name,
+goal_type,
+account,
+time_of_entry
+from  ( 
+
+SELECT  
+client,
+client_name,
+platform,
+trim(lower(goal_name)) goal_name,
+goal_type,
+account,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client, platform, goal_name ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.conversion_goals` 
+WHERE platform = 'Adwords'
+
+) 
+
+WHERE lv = time_of_entry
+2018-05-18 09:35:02,118: Model SQL (yandy_product_options_proc):
+SELECT
+prod_id,
+prod_option_id,
+option_sku,
+inception
+FROM 
+(
+	SELECT
+	prod_id,
+	prod_option_id,
+	option_sku,
+	inception,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY prod_option_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_yandy.product_options` 
+)
+where lv = _sdc_sequence
+2018-05-18 09:35:02,793: Model SQL (autoanything_returns_proc):
+SELECT
+ordr_id,
+ordr_item_id,
+return_quantity,
+return_price
+FROM (
+
+	SELECT
+	ordr_id,
+	ordr_item_id,
+	quantity return_quantity,
+	unit_final_price * quantity return_price,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY ordr_item_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_autoanything_ssh.return_item` 
+	WHERE return_item_status_id in ('ISSED', 'COMPL')
+)
+where lv = _sdc_sequence
+2018-05-18 09:35:03,001: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77e780>]}
+2018-05-18 09:35:04,652: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7e8eb8>]}
+2018-05-18 09:35:04,854: 09:35:04 | 18 of 131 OK created table model dev.adwords_conversions............. [CREATE TABLE in 2.78s]
+2018-05-18 09:35:04,858: 09:35:04 | 21 of 131 START table model dev.autoanything_customers_info_proc..... [RUN]
+2018-05-18 09:35:04,859: Compiling model.agency_data_pipeline.autoanything_customers_info_proc
+2018-05-18 09:35:04,866: Writing injected SQL for node "model.agency_data_pipeline.autoanything_customers_info_proc"
+2018-05-18 09:35:04,867: Acquiring new bigquery connection "autoanything_customers_info_proc".
+2018-05-18 09:35:04,867: Re-using an available connection from the pool.
+2018-05-18 09:35:05,631: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e89e48>]}
+2018-05-18 09:35:05,786: 09:35:05 | 19 of 131 OK created table model dev.yandy_product_options_proc...... [CREATE TABLE in 3.65s]
+2018-05-18 09:35:05,788: 09:35:05 | 22 of 131 START table model dev.autoanything_category_proc........... [RUN]
+2018-05-18 09:35:05,788: Compiling model.agency_data_pipeline.autoanything_category_proc
+2018-05-18 09:35:05,800: Writing injected SQL for node "model.agency_data_pipeline.autoanything_category_proc"
+2018-05-18 09:35:05,802: Acquiring new bigquery connection "autoanything_category_proc".
+2018-05-18 09:35:05,802: Re-using an available connection from the pool.
+2018-05-18 09:35:06,354: Model SQL (autoanything_customers_info_proc):
+SELECT 
+account,
+client,
+platform,
+created_at,
+first_value(member_id) over (partition by client, email order by member_id asc) id,
+member_id,
+email,
+first_name,
+last_name
+FROM ( 
+
+	SELECT
+	'AutoAnything' account,
+	'AutoAnything' client,
+	'Microsoft SQL' as platform,
+	date_created created_at,
+	member_id,
+	email_addr email,
+	first_name,
+	last_name,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY member_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_autoanything_ssh.member` 
+	
+)
+where _sdc_sequence = lv
+2018-05-18 09:35:06,570: 09:35:06 | 20 of 131 OK created table model dev.autoanything_returns_proc....... [CREATE TABLE in 3.97s]
+2018-05-18 09:35:06,571: 09:35:06 | 23 of 131 START table model dev.autoanything_products_proc_prelim.... [RUN]
+2018-05-18 09:35:06,571: Compiling model.agency_data_pipeline.autoanything_products_proc_prelim
+2018-05-18 09:35:06,580: Writing injected SQL for node "model.agency_data_pipeline.autoanything_products_proc_prelim"
+2018-05-18 09:35:06,581: Acquiring new bigquery connection "autoanything_products_proc_prelim".
+2018-05-18 09:35:06,581: Re-using an available connection from the pool.
+2018-05-18 09:35:06,862: Model SQL (autoanything_category_proc):
+SELECT
+category_id,
+category_name
+FROM (
+
+	SELECT
+	category_id,
+	category_name,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY category_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_autoanything_ssh.category`
+)
+where lv = _sdc_sequence
+2018-05-18 09:35:07,854: Model SQL (autoanything_products_proc_prelim):
+SELECT
+product_id,
+primary_category_id,
+product_name
+FROM (
+
+	SELECT
+	product_id,
+	primary_category_id,
+	product_name product_name,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY product_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_autoanything_ssh.product`
+)
+where _sdc_sequence = lv
+2018-05-18 09:35:07,856: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77ec88>]}
+2018-05-18 09:35:08,154: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7a0978>]}
+2018-05-18 09:35:08,953: 09:35:08 | 9 of 131 OK created table model dev.yandy_orders_prods_proc.......... [CREATE TABLE in 26.43s]
+2018-05-18 09:35:08,954: 09:35:08 | 24 of 131 START table model dev.yandy_products_info_proc............. [RUN]
+2018-05-18 09:35:08,955: Compiling model.agency_data_pipeline.yandy_products_info_proc
+2018-05-18 09:35:08,965: Writing injected SQL for node "model.agency_data_pipeline.yandy_products_info_proc"
+2018-05-18 09:35:08,969: Acquiring new bigquery connection "yandy_products_info_proc".
+2018-05-18 09:35:08,970: Re-using an available connection from the pool.
+2018-05-18 09:35:09,114: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083d9cf8>]}
+2018-05-18 09:35:09,450: 09:35:09 | 22 of 131 OK created table model dev.autoanything_category_proc...... [CREATE TABLE in 2.37s]
+2018-05-18 09:35:09,791: 09:35:09 | 23 of 131 OK created table model dev.autoanything_products_proc_prelim [CREATE TABLE in 2.54s]
+2018-05-18 09:35:10,488: Model SQL (yandy_products_info_proc):
+SELECT 
+ptype,
+prod_id
+FROM (
+
+	SELECT
+	ptype,
+	prod_id,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY prod_id ORDER BY _sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_yandy.products` 
+)
+where lv = _sdc_sequence
+2018-05-18 09:35:12,827: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77ec88>]}
+2018-05-18 09:35:13,169: 09:35:13 | 24 of 131 OK created table model dev.yandy_products_info_proc........ [CREATE TABLE in 3.87s]
+2018-05-18 09:35:30,757: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77e780>]}
+2018-05-18 09:35:31,124: 09:35:31 | 21 of 131 OK created table model dev.autoanything_customers_info_proc [CREATE TABLE in 25.90s]
+2018-05-18 09:35:31,125: 09:35:31 | 25 of 131 START table model dev.fb_adcreative........................ [RUN]
+2018-05-18 09:35:31,125: 09:35:31 | 26 of 131 START table model dev.autoanything_promo................... [RUN]
+2018-05-18 09:35:31,126: 09:35:31 | 27 of 131 START table model dev.autoanything_customers_proc.......... [RUN]
+2018-05-18 09:35:31,126: 09:35:31 | 28 of 131 START table model dev.mappings_ga_proc..................... [RUN]
+2018-05-18 09:35:31,126: Compiling model.agency_data_pipeline.fb_adcreative
+2018-05-18 09:35:31,126: Compiling model.agency_data_pipeline.autoanything_promo
+2018-05-18 09:35:31,126: Compiling model.agency_data_pipeline.autoanything_customers_proc
+2018-05-18 09:35:31,127: Compiling model.agency_data_pipeline.mappings_ga_proc
+2018-05-18 09:35:31,149: Acquiring new bigquery connection "fb_adcreative".
+2018-05-18 09:35:31,156: Writing injected SQL for node "model.agency_data_pipeline.autoanything_customers_proc"
+2018-05-18 09:35:31,139: Writing injected SQL for node "model.agency_data_pipeline.autoanything_promo"
+2018-05-18 09:35:31,157: Writing injected SQL for node "model.agency_data_pipeline.mappings_ga_proc"
+2018-05-18 09:35:31,157: Re-using an available connection from the pool.
+2018-05-18 09:35:31,158: Fetching data for query fb_adcreative:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:35:31,161: Acquiring new bigquery connection "autoanything_promo".
+2018-05-18 09:35:31,162: Acquiring new bigquery connection "autoanything_customers_proc".
+2018-05-18 09:35:31,163: Re-using an available connection from the pool.
+2018-05-18 09:35:31,163: Acquiring new bigquery connection "mappings_ga_proc".
+2018-05-18 09:35:31,164: Re-using an available connection from the pool.
+2018-05-18 09:35:31,165: Re-using an available connection from the pool.
+2018-05-18 09:35:31,851: Model SQL (autoanything_promo):
+SELECT
+a.ordr_id,
+a.promo_id,
+b.promo_code discount_code
+FROM `growth-engines-pipeline`.`dev`.`autoanything_ordr_promo_proc` a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`autoanything_ordr_promo_proc` b
+ON (
+	a.promo_id = b.promo_id
+)
+2018-05-18 09:35:31,851: Bad request while running:
+SELECT
+a.ordr_id,
+a.promo_id,
+b.promo_code discount_code
+FROM `growth-engines-pipeline`.`dev`.`autoanything_ordr_promo_proc` a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`autoanything_ordr_promo_proc` b
+ON (
+	a.promo_id = b.promo_id
+)
+2018-05-18 09:35:31,851: 400 Name promo_code not found inside b at [4:3]
+2018-05-18 09:35:31,852: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ebba58>]}
+2018-05-18 09:35:31,967: Model SQL (mappings_ga_proc):
+select 
+client,
+account,
+client_name,
+source,
+medium,
+max(platform_n) platform,
+max(channel_n) channel,
+time_of_entry
+from  ( 
+
+SELECT  
+client,
+account,
+client_name,
+source,
+medium,
+platform as platform_n,
+channel as channel_n,
+time_of_entry,
+first_value(time_of_entry) OVER (PARTITION BY client, source, medium ORDER BY time_of_entry DESC) lv
+FROM `growth-engines-pipeline.agency_data_pipeline.mappings_ga` 
+
+) 
+
+WHERE lv = time_of_entry
+and client in (select client from `growth-engines-pipeline`.`dev`.`accounts_proc` )
+group by client, account, client_name, source, medium, platform_n, channel_n, time_of_entry
+2018-05-18 09:35:32,193: 09:35:32 | 26 of 131 ERROR creating table model dev.autoanything_promo.......... [ERROR in 0.73s]
+2018-05-18 09:35:32,193: 09:35:32 | 29 of 131 START table model dev.bing_ads_conversions................. [RUN]
+2018-05-18 09:35:32,194: Compiling model.agency_data_pipeline.bing_ads_conversions
+2018-05-18 09:35:32,202: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_conversions"
+2018-05-18 09:35:32,203: Acquiring new bigquery connection "bing_ads_conversions".
+2018-05-18 09:35:32,204: Re-using an available connection from the pool.
+2018-05-18 09:35:32,211: Model SQL (autoanything_customers_proc):
+SELECT 
+account,
+client,
+platform,
+created_at,
+id,
+email,
+first_name,
+last_name
+FROM `growth-engines-pipeline`.`dev`.`autoanything_customers_info_proc`
+where id = member_id
+2018-05-18 09:35:32,297: Writing injected SQL for node "model.agency_data_pipeline.fb_adcreative"
+2018-05-18 09:35:33,157: Model SQL (bing_ads_conversions):
+SELECT
+date, 
+a.account account, 
+a.channel channel,
+a.platform platform,
+campaignid,
+campaignname,
+sum( case when b.goal_type = 'Transactions' then conversions else 0 end ) as transactions,
+sum( case when b.goal_type = 'Transactions' then revenue else 0 end ) as revenue
+FROM
+
+  ( 
+SELECT  
+cast(gregoriandate as date) date,
+replace(accountname,',','') account,
+'Paid' as channel,
+'Bing Ads' as platform,
+trim(replace(replace(lower(goal),',',''),' ','')) goal,
+goalid,
+campaignid,
+campaignname,
+conversions,
+revenue,
+_sdc_sequence,
+first_value(_sdc_sequence) OVER (PARTITION BY campaignid, goalid, gregoriandate ORDER BY _sdc_sequence DESC) lv
+FROM `growth-engines-pipeline.bing_ads.goals_and_funnels_report` 
+
+  ) a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`conversion_goals_proc` b
+ON (
+	a.account = b.account AND
+	a.platform = b.platform AND
+	a.goal = b.goal_name
+)
+where a.lv = a._sdc_sequence
+group by date, account, channel, platform, campaignid, campaignname
+2018-05-18 09:35:33,269: Model SQL (fb_adcreative):
+
+
+
+
+with fb_adcreative as (
+
+
+	    
+		   	SELECT 
+			id,
+			object_url,
+			url_tags,
+			_sdc_sequence
+			FROM `growth-engines-pipeline.fb_ads_luca_danni.adcreative`
+		     UNION ALL 
+	   
+		   	SELECT 
+			id,
+			object_url,
+			url_tags,
+			_sdc_sequence
+			FROM `growth-engines-pipeline.fb_ads_yandy.adcreative`
+		     UNION ALL 
+	   
+		   	SELECT 
+			id,
+			object_url,
+			url_tags,
+			_sdc_sequence
+			FROM `growth-engines-pipeline.fb_ads_autoanything.adcreative`
+		    
+	   
+)
+
+select creative_id, max(url) url
+from (
+  select
+  id creative_id,
+  lower(trim(regexp_replace(replace(replace(replace(replace(object_url,'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+  first_value(_sdc_sequence) OVER (PARTITION BY id ORDER BY _sdc_sequence DESC) lv,
+  _sdc_sequence
+  from fb_adcreative
+  )
+where lv = _sdc_sequence
+group by creative_id
+
+
+2018-05-18 09:35:34,321: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7a1400>]}
+2018-05-18 09:35:34,750: 09:35:34 | 28 of 131 OK created table model dev.mappings_ga_proc................ [CREATE TABLE in 3.19s]
+2018-05-18 09:35:34,751: 09:35:34 | 30 of 131 START table model dev.adwords_ads.......................... [RUN]
+2018-05-18 09:35:34,751: Compiling model.agency_data_pipeline.adwords_ads
+2018-05-18 09:35:34,757: Writing injected SQL for node "model.agency_data_pipeline.adwords_ads"
+2018-05-18 09:35:34,758: Acquiring new bigquery connection "adwords_ads".
+2018-05-18 09:35:34,759: Re-using an available connection from the pool.
+2018-05-18 09:35:35,370: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10843b710>]}
+2018-05-18 09:35:35,528: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e6fe80>]}
+2018-05-18 09:35:35,712: 09:35:35 | 29 of 131 OK created table model dev.bing_ads_conversions............ [CREATE TABLE in 3.18s]
+2018-05-18 09:35:35,713: 09:35:35 | 31 of 131 START table model dev.shopify_refunds_proc................. [RUN]
+2018-05-18 09:35:35,714: Compiling model.agency_data_pipeline.shopify_refunds_proc
+2018-05-18 09:35:35,721: Acquiring new bigquery connection "shopify_refunds_proc".
+2018-05-18 09:35:35,723: Re-using an available connection from the pool.
+2018-05-18 09:35:35,723: Fetching data for query shopify_refunds_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:35:35,737: Model SQL (adwords_ads):
+SELECT  
+day,
+campaignid,
+a.account as account,
+utm_campaign,
+sum( case when b.goal_type = 'Transaction' then conversions else 0 end ) as transactions,
+sum( case when b.goal_type = 'Transaction' then revenue else 0 end ) as revenue
+FROM (
+
+	SELECT  
+	day,
+	adid,
+	campaignid,
+	account,
+	lower(conversionname) conversionname,
+	conversions,
+	totalconvvalue revenue,
+	lower(campaign) utm_campaign,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY campaignid, day ORDER BY _sdc_sequence DESC) lv
+	FROM
+	`growth-engines-pipeline.adwords_2.AD_PERFORMANCE_REPORT`
+
+) a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`adwords_conversions` b
+ON ( a.conversionname = b.goal_name
+	AND a.account = b.account )
+WHERE lv = _sdc_sequence
+group by day, campaignid, account, utm_campaign
+2018-05-18 09:35:36,116: 09:35:36 | 25 of 131 OK created table model dev.fb_adcreative................... [CREATE TABLE in 4.40s]
+2018-05-18 09:35:36,116: 09:35:36 | 32 of 131 START table model dev.fb_ads_insights...................... [RUN]
+2018-05-18 09:35:36,117: Compiling model.agency_data_pipeline.fb_ads_insights
+2018-05-18 09:35:36,124: Acquiring new bigquery connection "fb_ads_insights".
+2018-05-18 09:35:36,125: Re-using an available connection from the pool.
+2018-05-18 09:35:36,125: Fetching data for query fb_ads_insights:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:35:36,435: Writing injected SQL for node "model.agency_data_pipeline.fb_ads_insights"
+2018-05-18 09:35:36,924: Writing injected SQL for node "model.agency_data_pipeline.shopify_refunds_proc"
+2018-05-18 09:35:37,726: Model SQL (fb_ads_insights):
+
+
+
+
+with fb_ads_insights as (
+
+	    
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			spend,
+			reach,
+			inline_link_clicks,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY date_start, ad_id, campaign_id ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.fb_ads_luca_danni.ads_insights`
+		     UNION ALL 
+	   
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			spend,
+			reach,
+			inline_link_clicks,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY date_start, ad_id, campaign_id ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.fb_ads_yandy.ads_insights`
+		     UNION ALL 
+	   
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			spend,
+			reach,
+			inline_link_clicks,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY date_start, ad_id, campaign_id ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.fb_ads_autoanything.ads_insights`
+		    
+	   
+
+)
+
+select
+date_start date,
+campaign_id,
+campaign_name campaign,
+ad_id,
+account_name account,
+max(spend) cost,
+max(reach) impressions,
+max(inline_link_clicks) clicks
+from fb_ads_insights
+where lv = _sdc_sequence
+group by date, campaign_id, ad_id, account, campaign
+
+
+2018-05-18 09:35:37,730: Model SQL (shopify_refunds_proc):
+
+
+
+
+with refunds as (
+
+	
+	SELECT
+	order_number,
+	checkout_id,
+	financial_status,
+	line_item_id,
+	quantity,
+	subtotal,
+	line_item.variant_id variant_id,
+	line_item.id refund_id,
+ 	_sdc_sequence
+	FROM `growth-engines-pipeline.shopify_lucadanni.orders` 
+	cross join unnest(refunds), unnest(refund_line_items)
+  	where financial_status like '%refund%'
+	
+	
+
+)
+
+SELECT * 
+FROM 
+	(
+    SELECT
+	order_number,
+	checkout_id,
+	financial_status,
+	line_item_id,
+	quantity,
+	subtotal refund_amount,
+	variant_id,
+	refund_id,
+ 	_sdc_sequence,
+    first_value(_sdc_sequence) OVER (PARTITION BY order_number, line_item_id ORDER BY _sdc_sequence DESC) lv
+    FROM refunds
+   	) 
+WHERE lv = _sdc_sequence
+
+
+2018-05-18 09:35:39,175: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7b2eb8>]}
+2018-05-18 09:35:39,543: 09:35:39 | 30 of 131 OK created table model dev.adwords_ads..................... [CREATE TABLE in 4.42s]
+2018-05-18 09:35:39,543: 09:35:39 | 33 of 131 START table model dev.ga_mcf_proc.......................... [RUN]
+2018-05-18 09:35:39,544: Compiling model.agency_data_pipeline.ga_mcf_proc
+2018-05-18 09:35:39,555: Writing injected SQL for node "model.agency_data_pipeline.ga_mcf_proc"
+2018-05-18 09:35:39,559: Acquiring new bigquery connection "ga_mcf_proc".
+2018-05-18 09:35:39,559: Re-using an available connection from the pool.
+2018-05-18 09:35:39,938: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10843b710>]}
+2018-05-18 09:35:40,282: 09:35:40 | 31 of 131 OK created table model dev.shopify_refunds_proc............ [CREATE TABLE in 4.22s]
+2018-05-18 09:35:40,285: 09:35:40 | 34 of 131 START table model dev.fb_ads_insights_conversions.......... [RUN]
+2018-05-18 09:35:40,286: Compiling model.agency_data_pipeline.fb_ads_insights_conversions
+2018-05-18 09:35:40,295: Acquiring new bigquery connection "fb_ads_insights_conversions".
+2018-05-18 09:35:40,296: Model SQL (ga_mcf_proc):
+SELECT 
+date,
+account,
+'Google Analytics' as lookup_platform,
+source_medium_path,
+trim(lower(split(split(source_medium_path,'->')[SAFE_ORDINAL(1)],'/')[SAFE_ORDINAL(1)])) as source,
+trim(lower(split(split(source_medium_path,'->')[SAFE_ORDINAL(1)],'/')[SAFE_ORDINAL(2)])) as medium,
+lower(replace(replace(replace(first_interaction_campaign,' ', ''),'-',''),'_','')) campaign,
+cast(regexp_replace(transaction_id, r'#', '') as int64) transactionid,
+max(first_interaction_conversions) transactions,
+max(first_interaction_conversion_value) revenue
+FROM `growth-engines-pipeline.agency_data_pipeline.ga_mcf`
+where account in (select account from `growth-engines-pipeline`.`dev`.`accounts_proc` where platform = 'Google Analytics')
+group by date, account, source, medium, campaign, source_medium_path, lookup_platform, transactionid
+2018-05-18 09:35:40,296: Re-using an available connection from the pool.
+2018-05-18 09:35:40,296: Fetching data for query fb_ads_insights_conversions:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:35:40,617: Writing injected SQL for node "model.agency_data_pipeline.fb_ads_insights_conversions"
+2018-05-18 09:35:41,126: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7b8390>]}
+2018-05-18 09:35:41,478: Model SQL (fb_ads_insights_conversions):
+
+
+
+
+with fb_ads_insights_conversions as (
+
+	    
+
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			_sdc_sequence,
+			action_type,
+			_28d_click conversions,
+			null as revenue
+			FROM `growth-engines-pipeline.fb_ads_luca_danni.ads_insights`
+			cross join unnest(actions)
+			where action_type = 'offsite_conversion.fb_pixel_purchase'
+			
+			UNION ALL
+
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			_sdc_sequence,
+			action_type,
+			null as conversions,
+			_28d_click as revenue
+			FROM `growth-engines-pipeline.fb_ads_luca_danni.ads_insights`
+			cross join unnest(action_values)
+			where action_type = 'offsite_conversion.fb_pixel_purchase'
+
+		     UNION ALL 
+	   
+
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			_sdc_sequence,
+			action_type,
+			_28d_click conversions,
+			null as revenue
+			FROM `growth-engines-pipeline.fb_ads_yandy.ads_insights`
+			cross join unnest(actions)
+			where action_type = 'offsite_conversion.fb_pixel_purchase'
+			
+			UNION ALL
+
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			_sdc_sequence,
+			action_type,
+			null as conversions,
+			_28d_click as revenue
+			FROM `growth-engines-pipeline.fb_ads_yandy.ads_insights`
+			cross join unnest(action_values)
+			where action_type = 'offsite_conversion.fb_pixel_purchase'
+
+		     UNION ALL 
+	   
+
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			_sdc_sequence,
+			action_type,
+			_28d_click conversions,
+			null as revenue
+			FROM `growth-engines-pipeline.fb_ads_autoanything.ads_insights`
+			cross join unnest(actions)
+			where action_type = 'offsite_conversion.fb_pixel_purchase'
+			
+			UNION ALL
+
+		   	SELECT 
+			date_start,
+			campaign_id,
+			campaign_name,
+			ad_id,
+			account_name,
+			_sdc_sequence,
+			action_type,
+			null as conversions,
+			_28d_click as revenue
+			FROM `growth-engines-pipeline.fb_ads_autoanything.ads_insights`
+			cross join unnest(action_values)
+			where action_type = 'offsite_conversion.fb_pixel_purchase'
+
+		    
+	   
+
+)
+
+SELECT 
+date,
+campaign_id,
+campaign,
+ad_id,
+account,
+sum(conversions) conversions,
+sum(revenue) revenue
+FROM 
+		(
+	    SELECT
+	    date_start date,
+	    campaign_id,
+	    campaign_name campaign,
+	    ad_id,
+	    account_name account,
+	    action_type,
+	    conversions,
+	    revenue,
+	    first_value(_sdc_sequence) OVER (PARTITION BY ad_id, date_start ORDER BY _sdc_sequence DESC) lv,
+	    _sdc_sequence
+	    FROM fb_ads_insights_conversions
+	   	)
+where lv = _sdc_sequence
+group by date, campaign_id, campaign, ad_id, account
+
+
+
+2018-05-18 09:35:41,487: 09:35:41 | 32 of 131 OK created table model dev.fb_ads_insights................. [CREATE TABLE in 5.01s]
+2018-05-18 09:35:44,825: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10843b710>]}
+2018-05-18 09:35:45,167: 09:35:45 | 34 of 131 OK created table model dev.fb_ads_insights_conversions..... [CREATE TABLE in 4.54s]
+2018-05-18 09:35:54,634: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7b2eb8>]}
+2018-05-18 09:35:54,979: 09:35:54 | 33 of 131 OK created table model dev.ga_mcf_proc..................... [CREATE TABLE in 15.09s]
+2018-05-18 09:35:58,169: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083c9f60>]}
+2018-05-18 09:35:58,507: 09:35:58 | 27 of 131 OK created table model dev.autoanything_customers_proc..... [CREATE TABLE in 27.04s]
+2018-05-18 09:35:58,508: 09:35:58 | 35 of 131 START table model dev.shopify_customers_proc............... [RUN]
+2018-05-18 09:35:58,508: Compiling model.agency_data_pipeline.shopify_customers_proc
+2018-05-18 09:35:58,514: 09:35:58 | 36 of 131 START table model dev.fb_ads............................... [RUN]
+2018-05-18 09:35:58,521: 09:35:58 | 37 of 131 START table model dev.autoanything_products_proc........... [RUN]
+2018-05-18 09:35:58,524: Acquiring new bigquery connection "shopify_customers_proc".
+2018-05-18 09:35:58,525: Compiling model.agency_data_pipeline.fb_ads
+2018-05-18 09:35:58,525: Compiling model.agency_data_pipeline.autoanything_products_proc
+2018-05-18 09:35:58,530: Re-using an available connection from the pool.
+2018-05-18 09:35:58,535: Acquiring new bigquery connection "fb_ads".
+2018-05-18 09:35:58,542: Writing injected SQL for node "model.agency_data_pipeline.autoanything_products_proc"
+2018-05-18 09:35:58,542: Fetching data for query shopify_customers_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:35:58,542: Re-using an available connection from the pool.
+2018-05-18 09:35:58,543: Fetching data for query fb_ads:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:35:58,546: Acquiring new bigquery connection "autoanything_products_proc".
+2018-05-18 09:35:58,546: Re-using an available connection from the pool.
+2018-05-18 09:35:58,934: Writing injected SQL for node "model.agency_data_pipeline.shopify_customers_proc"
+2018-05-18 09:35:58,962: Writing injected SQL for node "model.agency_data_pipeline.fb_ads"
+2018-05-18 09:35:59,642: Model SQL (autoanything_products_proc):
+SELECT
+account,
+client,
+platform,
+lower(b.category_name) product_type,
+product_id,
+sku,
+variant_id,
+a.created_at,
+product_name
+FROM (
+
+	SELECT
+	'AutoAnything' account,
+	'AutoAnything' client,
+	'Microsoft SQL' as platform,
+	b.primary_category_id primary_category_id,
+	b.product_name product_name,
+	a.product_id product_id,
+	a.diststock sku,
+	a.variant_id variant_id,
+	a._sdc_sequence,
+	cast(a.create_date as date) created_at,
+	first_value(a._sdc_sequence) OVER (PARTITION BY a.variant_id ORDER BY a._sdc_sequence DESC) lv
+	FROM `growth-engines-pipeline.cart_autoanything_ssh.variant` a
+	LEFT JOIN `growth-engines-pipeline`.`dev`.`autoanything_products_proc_prelim` b
+	ON (
+		a.product_id = b.product_id
+		) 
+
+) a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`autoanything_category_proc` b
+ON (
+	a.primary_category_id = b.category_id
+)
+where a.lv = a._sdc_sequence
+2018-05-18 09:35:59,695: Model SQL (shopify_customers_proc):
+-- depends_on: `growth-engines-pipeline`.`dev`.`accounts_proc`
+
+
+
+
+
+with customers as (
+
+	
+	SELECT
+	'lucadanni' client_name,
+	'Shopify' as lookup_platform,
+	created_at,
+	id,
+	first_name,
+	last_name,
+	email,
+	_sdc_sequence,
+	first_value(_sdc_sequence) over (partition by id, _sdc_sequence order by _sdc_sequence desc) lv
+	FROM `growth-engines-pipeline.shopify_lucadanni.customers` 
+	
+	
+
+)
+
+SELECT
+b.account,
+b.client,
+b.platform,
+created_at,
+id,
+first_name,
+last_name,
+email
+FROM customers a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`clients_proc` b 
+ON ( a.client_name = b.client_name
+  AND a.lookup_platform = b.platform )
+where a.lv = a._sdc_sequence
+
+
+2018-05-18 09:36:00,068: Model SQL (fb_ads):
+-- depends_on: `growth-engines-pipeline`.`dev`.`fb_adcreative`
+
+
+
+
+
+with fb_ads as (
+
+	    
+		   	SELECT 
+			id ad_id,
+			creative.creative_id creative_id,
+			_sdc_sequence
+			FROM `growth-engines-pipeline.fb_ads_luca_danni.ads`
+		      UNION ALL 
+	   
+		   	SELECT 
+			id ad_id,
+			creative.creative_id creative_id,
+			_sdc_sequence
+			FROM `growth-engines-pipeline.fb_ads_yandy.ads`
+		      UNION ALL 
+	   
+		   	SELECT 
+			id ad_id,
+			creative.creative_id creative_id,
+			_sdc_sequence
+			FROM `growth-engines-pipeline.fb_ads_autoanything.ads`
+		     
+	   
+
+)
+
+SELECT
+a.ad_id,
+b.creative_id,
+b.url
+FROM (
+    SELECT
+    ad_id,
+    creative_id,
+    first_value(_sdc_sequence) OVER (PARTITION BY ad_id ORDER BY _sdc_sequence DESC) lv,
+    _sdc_sequence
+    FROM fb_ads
+    ) a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`fb_adcreative` b
+ON (
+	a.creative_id = b.creative_id 
+)
+WHERE a.lv = a._sdc_sequence
+
+
+2018-05-18 09:36:02,396: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e79780>]}
+2018-05-18 09:36:02,756: 09:36:02 | 36 of 131 OK created table model dev.fb_ads.......................... [CREATE TABLE in 3.87s]
+2018-05-18 09:36:06,298: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a77e780>]}
+2018-05-18 09:36:07,013: 09:36:07 | 35 of 131 OK created table model dev.shopify_customers_proc.......... [CREATE TABLE in 7.79s]
+2018-05-18 09:36:23,960: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7d1668>]}
+2018-05-18 09:36:24,311: 09:36:24 | 37 of 131 OK created table model dev.autoanything_products_proc...... [CREATE TABLE in 25.43s]
+2018-05-18 09:36:24,312: 09:36:24 | 38 of 131 START table model dev.shopify_orders_proc.................. [RUN]
+2018-05-18 09:36:24,312: Compiling model.agency_data_pipeline.shopify_orders_proc
+2018-05-18 09:36:24,318: 09:36:24 | 39 of 131 START table model dev.shopify_products_proc................ [RUN]
+2018-05-18 09:36:24,318: 09:36:24 | 40 of 131 START table model dev.bing_ads_stats....................... [RUN]
+2018-05-18 09:36:24,318: 09:36:24 | 41 of 131 START table model dev.ga_mcf_stats......................... [RUN]
+2018-05-18 09:36:24,323: Acquiring new bigquery connection "shopify_orders_proc".
+2018-05-18 09:36:24,323: Compiling model.agency_data_pipeline.shopify_products_proc
+2018-05-18 09:36:24,323: Compiling model.agency_data_pipeline.bing_ads_stats
+2018-05-18 09:36:24,324: Compiling model.agency_data_pipeline.ga_mcf_stats
+2018-05-18 09:36:24,324: Re-using an available connection from the pool.
+2018-05-18 09:36:24,335: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_stats"
+2018-05-18 09:36:24,336: Acquiring new bigquery connection "shopify_products_proc".
+2018-05-18 09:36:24,341: Writing injected SQL for node "model.agency_data_pipeline.ga_mcf_stats"
+2018-05-18 09:36:24,341: Fetching data for query shopify_orders_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:24,341: Re-using an available connection from the pool.
+2018-05-18 09:36:24,342: Fetching data for query shopify_products_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:24,347: Acquiring new bigquery connection "bing_ads_stats".
+2018-05-18 09:36:24,347: Re-using an available connection from the pool.
+2018-05-18 09:36:24,350: Acquiring new bigquery connection "ga_mcf_stats".
+2018-05-18 09:36:24,350: Re-using an available connection from the pool.
+2018-05-18 09:36:24,690: Writing injected SQL for node "model.agency_data_pipeline.shopify_products_proc"
+2018-05-18 09:36:24,769: Writing injected SQL for node "model.agency_data_pipeline.shopify_orders_proc"
+2018-05-18 09:36:25,449: Model SQL (shopify_products_proc):
+-- depends_on: `growth-engines-pipeline`.`dev`.`accounts_proc`, `growth-engines-pipeline`.`dev`.`shopify_refunds_proc`
+
+
+
+
+
+with products as (
+
+	
+	SELECT
+	'lucadanni' client_name,
+	'Shopify' as lookup_platform,
+	product_name,
+	lower(product_type) product_type,
+	product_id,
+	sku,
+	id variant_id,
+	cast(created_at as date) created_at,
+	_sdc_sequence,
+	first_value(_sdc_sequence) OVER (PARTITION BY product_id ORDER BY _sdc_sequence DESC) lv
+	FROM (
+		SELECT
+		variants,
+		product_type,
+		title product_name,
+		_sdc_sequence
+		FROM `growth-engines-pipeline.shopify_lucadanni.products` 
+		)
+	cross join unnest(variants)
+	
+	
+
+)
+
+SELECT
+b.account,
+b.client,
+b.platform,
+max(product_type) product_type,
+product_id,
+variant_id,
+sku,
+created_at,
+product_name
+FROM products a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`clients_proc` b 
+ON ( a.client_name = b.client_name
+  AND a.lookup_platform = b.platform )
+where a.lv = a._sdc_sequence
+group by product_id, account, client, platform, sku, variant_id, created_at, product_name
+
+
+2018-05-18 09:36:25,473: Model SQL (ga_mcf_stats):
+SELECT  
+date,
+a.account account,
+b.client client,
+case when c.platform is null then "Unmapped" else c.platform end as platform,
+case when c.channel is null then "Unmapped" else c.channel end as channel,
+lower(a.source) source,
+lower(a.medium) medium,
+lower(campaign) campaign,
+transactionid,
+sum(transactions) first_touch_transactions,
+sum(revenue) first_touch_revenue
+FROM `growth-engines-pipeline`.`dev`.`ga_mcf_proc` a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`accounts_proc` b 
+ON ( a.account = b.account and
+	a.lookup_platform = b.platform )
+LEFT JOIN `growth-engines-pipeline`.`dev`.`mappings_ga_proc` c
+ON ( lower(a.source) = c.source
+  AND lower(a.medium) = c.medium 
+  and a.account = c.account )
+group by date, account, client, source, medium, campaign, platform, channel, transactionid
+2018-05-18 09:36:25,477: Model SQL (bing_ads_stats):
+select
+a.date, 
+a.account, 
+a.channel,
+a.platform,
+url,
+a.campaignname campaign,
+utm_campaign,
+case when ( utm_campaign like '%brand%' or utm_campaign like '%[b]%' ) and utm_campaign not like '%non%' then 'Brand Search'
+	when utm_campaign like '%shopping%' then 'Shopping'
+	else 'Non-brand Search' end as campaign_type,
+cost,
+clicks,
+impressions,
+transactions,
+revenue
+FROM `growth-engines-pipeline`.`dev`.`bing_ads_ads` a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`bing_ads_conversions` b
+ON (
+	a.date = b.date AND
+	a.account = b.account AND
+	a.campaignid = b.campaignid
+
+)
+2018-05-18 09:36:25,816: Model SQL (shopify_orders_proc):
+-- depends_on: `growth-engines-pipeline`.`dev`.`accounts_proc`, `growth-engines-pipeline`.`dev`.`shopify_refunds_proc`
+
+
+
+
+
+with orders as (
+
+	
+	SELECT 
+	client_name,
+	lookup_platform,
+	created_at,
+	order_number,
+	quantity,
+	price, 
+	total_order_price_undiscounted,
+	total_discounts,
+	discount_codes.code discount_code,
+	discount_codes.type discount_type,
+	total_order_shipping_price,
+	total_order_price_incl_shipping,
+	checkout_id,
+	product_id, 
+	landing_site,
+	sku, 
+	variant_title, 
+	variant_id,
+	line_item_id,
+	customer_id,
+	_sdc_sequence,
+	lv
+	FROM (
+
+		SELECT
+		'lucadanni' client_name,
+		'Shopify' as lookup_platform,
+		created_at,
+		order_number,
+		quantity,
+		cast(pre_tax_price as float64) price, 
+		total_line_items_price total_order_price_undiscounted,
+		total_discounts,
+		discount_codes,
+		cast(discounted_price as float64) total_order_shipping_price,
+		total_price_usd total_order_price_incl_shipping,
+		checkout_id,
+		product_id, 
+		landing_site,
+		sku, 
+		variant_title, 
+		variant_id,
+		_id line_item_id,
+		customer.id customer_id,
+		_sdc_sequence,
+		first_value(_sdc_sequence) OVER (PARTITION BY order_number, _id ORDER BY _sdc_sequence DESC) lv
+		FROM `growth-engines-pipeline.shopify_lucadanni.orders` 
+		cross join unnest(line_items), unnest(shipping_lines)
+		where source_name != 'shopify_draft_order'
+	)
+	cross join unnest(discount_codes)
+	
+	
+
+)
+
+SELECT
+b.account,
+b.client,
+b.platform,
+created_at,
+a.order_number,
+a.quantity,
+c.quantity refund_quantity,
+case when c.quantity is not null then a.quantity - c.quantity else a.quantity end as final_quantity,
+price, 
+total_order_price_undiscounted,
+total_discounts,
+discount_code,
+discount_type,
+total_order_shipping_price,
+total_order_price_incl_shipping,
+refund_amount,
+case when refund_amount is not null then price - refund_amount else price end as final_price,
+a.checkout_id,
+a.product_id, 
+landing_site,
+sku, 
+variant_title, 
+a.variant_id,
+a.line_item_id,	
+customer_id
+FROM orders a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`clients_proc` b 
+ON ( a.client_name = b.client_name
+  AND a.lookup_platform = b.platform )
+LEFT JOIN `growth-engines-pipeline`.`dev`.`shopify_refunds_proc` c
+ON ( a.order_number = c.order_number
+	AND a.line_item_id = c.line_item_id )   	
+where a.lv = a._sdc_sequence
+
+
+2018-05-18 09:36:25,816: Bad request while running:
+-- depends_on: `growth-engines-pipeline`.`dev`.`accounts_proc`, `growth-engines-pipeline`.`dev`.`shopify_refunds_proc`
+
+
+
+
+
+with orders as (
+
+	
+	SELECT 
+	client_name,
+	lookup_platform,
+	created_at,
+	order_number,
+	quantity,
+	price, 
+	total_order_price_undiscounted,
+	total_discounts,
+	discount_codes.code discount_code,
+	discount_codes.type discount_type,
+	total_order_shipping_price,
+	total_order_price_incl_shipping,
+	checkout_id,
+	product_id, 
+	landing_site,
+	sku, 
+	variant_title, 
+	variant_id,
+	line_item_id,
+	customer_id,
+	_sdc_sequence,
+	lv
+	FROM (
+
+		SELECT
+		'lucadanni' client_name,
+		'Shopify' as lookup_platform,
+		created_at,
+		order_number,
+		quantity,
+		cast(pre_tax_price as float64) price, 
+		total_line_items_price total_order_price_undiscounted,
+		total_discounts,
+		discount_codes,
+		cast(discounted_price as float64) total_order_shipping_price,
+		total_price_usd total_order_price_incl_shipping,
+		checkout_id,
+		product_id, 
+		landing_site,
+		sku, 
+		variant_title, 
+		variant_id,
+		_id line_item_id,
+		customer.id customer_id,
+		_sdc_sequence,
+		first_value(_sdc_sequence) OVER (PARTITION BY order_number, _id ORDER BY _sdc_sequence DESC) lv
+		FROM `growth-engines-pipeline.shopify_lucadanni.orders` 
+		cross join unnest(line_items), unnest(shipping_lines)
+		where source_name != 'shopify_draft_order'
+	)
+	cross join unnest(discount_codes)
+	
+	
+
+)
+
+SELECT
+b.account,
+b.client,
+b.platform,
+created_at,
+a.order_number,
+a.quantity,
+c.quantity refund_quantity,
+case when c.quantity is not null then a.quantity - c.quantity else a.quantity end as final_quantity,
+price, 
+total_order_price_undiscounted,
+total_discounts,
+discount_code,
+discount_type,
+total_order_shipping_price,
+total_order_price_incl_shipping,
+refund_amount,
+case when refund_amount is not null then price - refund_amount else price end as final_price,
+a.checkout_id,
+a.product_id, 
+landing_site,
+sku, 
+variant_title, 
+a.variant_id,
+a.line_item_id,	
+customer_id
+FROM orders a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`clients_proc` b 
+ON ( a.client_name = b.client_name
+  AND a.lookup_platform = b.platform )
+LEFT JOIN `growth-engines-pipeline`.`dev`.`shopify_refunds_proc` c
+ON ( a.order_number = c.order_number
+	AND a.line_item_id = c.line_item_id )   	
+where a.lv = a._sdc_sequence
+
+
+2018-05-18 09:36:25,817: 400 Cannot access field code on a value with type ARRAY<STRUCT<amount FLOAT64, code STRING, type STRING>> at [19:24]
+2018-05-18 09:36:25,817: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7716a0>]}
+2018-05-18 09:36:26,174: 09:36:26 | 38 of 131 ERROR creating table model dev.shopify_orders_proc......... [ERROR in 1.51s]
+2018-05-18 09:36:26,175: 09:36:26 | 42 of 131 SKIP relation dev.autoanything_orders_info_proc............ [SKIP]
+2018-05-18 09:36:27,645: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e6bf98>]}
+2018-05-18 09:36:27,814: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e6b550>]}
+2018-05-18 09:36:27,991: 09:36:27 | 39 of 131 OK created table model dev.shopify_products_proc........... [CREATE TABLE in 3.32s]
+2018-05-18 09:36:28,506: 09:36:28 | 40 of 131 OK created table model dev.bing_ads_stats.................. [CREATE TABLE in 3.49s]
+2018-05-18 09:36:40,502: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ecadd8>]}
+2018-05-18 09:36:40,854: 09:36:40 | 41 of 131 OK created table model dev.ga_mcf_stats.................... [CREATE TABLE in 16.18s]
+2018-05-18 09:36:40,855: 09:36:40 | 43 of 131 START table model dev.adwords_join......................... [RUN]
+2018-05-18 09:36:40,855: Compiling model.agency_data_pipeline.adwords_join
+2018-05-18 09:36:40,861: 09:36:40 | 44 of 131 START table model dev.ga_traffic........................... [RUN]
+2018-05-18 09:36:40,863: Writing injected SQL for node "model.agency_data_pipeline.adwords_join"
+2018-05-18 09:36:40,863: 09:36:40 | 45 of 131 START table model dev.ga_transactions...................... [RUN]
+2018-05-18 09:36:40,863: Compiling model.agency_data_pipeline.ga_traffic
+2018-05-18 09:36:40,863: Compiling model.agency_data_pipeline.ga_transactions
+2018-05-18 09:36:40,880: Acquiring new bigquery connection "ga_transactions".
+2018-05-18 09:36:40,881: Re-using an available connection from the pool.
+2018-05-18 09:36:40,889: Acquiring new bigquery connection "adwords_join".
+2018-05-18 09:36:40,889: Fetching data for query ga_transactions:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Google Analytics'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:40,897: Acquiring new bigquery connection "ga_traffic".
+2018-05-18 09:36:40,898: Re-using an available connection from the pool.
+2018-05-18 09:36:40,900: Re-using an available connection from the pool.
+2018-05-18 09:36:40,902: Fetching data for query ga_traffic:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`dev`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'GA Traffic'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:42,013: Fetching data for query ga_transactions:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`dev`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'lucadanni'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:42,150: Fetching data for query ga_traffic:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`dev`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'yandy'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:42,172: Model SQL (adwords_join):
+select
+a.day,
+a.campaignid, 
+a.campaign,
+a.account, 
+channel,
+platform,
+url,
+lower(replace(replace(replace(utm_campaign,' ', ''),'-',''),'_','')) utm_campaign, 
+cost,
+impressions,
+clicks,
+impression_share_num,
+impression_share_den,
+transactions,
+revenue
+FROM ( 
+	
+	select
+	day,
+	a.campaign,
+	a.campaignid, 
+	account, 
+	channel,
+	platform,
+	url,
+	cost,
+	impressions,
+	clicks,
+	impression_share_num,
+	impression_share_den
+	FROM `growth-engines-pipeline`.`dev`.`adwords_campaigns` a
+	LEFT JOIN `growth-engines-pipeline`.`dev`.`adwords_urls` b
+	ON a.campaignid = b.campaignid
+
+) a 
+LEFT JOIN `growth-engines-pipeline`.`dev`.`adwords_ads` b
+ON ( a.campaignid = b.campaignid
+	and a.day = b.day )
+2018-05-18 09:36:43,123: Fetching data for query ga_transactions:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`dev`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'autoanything'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:43,637: Fetching data for query ga_traffic:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`dev`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'lucadanni'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:44,017: Writing injected SQL for node "model.agency_data_pipeline.ga_traffic"
+2018-05-18 09:36:44,215: Fetching data for query ga_transactions:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`dev`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'yandy'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-18 09:36:44,534: Writing injected SQL for node "model.agency_data_pipeline.ga_transactions"
+2018-05-18 09:36:45,031: Model SQL (ga_traffic):
+-- depends_on: `growth-engines-pipeline`.`dev`.`mappings_ga_proc`, `growth-engines-pipeline`.`dev`.`ga_conversions`
+
+
+##`growth-engines-pipeline`.`dev`.`clients_proc` 
+
+
+
+with ga_report as (
+
+	    
+
+	    	
+	    	
+		   	SELECT
+		   	'yandy' as client_name,
+		   	'GA Traffic' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) campaign,
+			sessions,
+			## goal completion columns
+							
+				goalcompletionsall as goal_completions,		
+			
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, campaign ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.ga_yandy_traffic.report` 
+
+		     UNION ALL 
+	   
+
+	    	
+	    	
+		   	SELECT
+		   	'lucadanni' as client_name,
+		   	'GA Traffic' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) campaign,
+			sessions,
+			## goal completion columns
+							
+				goalcompletionsall as goal_completions,		
+			
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, campaign ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.ga_lucadanni_traffic.report` 
+
+		    
+	   
+
+)
+
+
+SELECT  
+cast(date as date) date,
+b.account,
+b.client client,
+c.source source,
+c.medium medium,
+a.campaign campaign,
+concat(a.source, ' / ', a.medium) source_medium,  
+case when c.platform is null then "Unmapped" else c.platform end as platform,
+case when c.channel is null then "Unmapped" else c.channel end as channel,
+regexp_replace(url, r'offers.|offer.|get.|info.|pos.|go.|join.|pages.','') url,
+max(sessions) sessions,
+max(goal_completions) goal_completions
+FROM ga_report a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`clients_proc` b 
+ON ( a.client_name = b.client_name 
+	AND a.lookup_platform = b.platform )
+LEFT JOIN `growth-engines-pipeline`.`dev`.`mappings_ga_proc` c
+ON ( a.source = c.source
+  AND a.medium = c.medium 
+  AND a.client_name = c.client_name )
+GROUP BY date, account, client, source, medium, campaign, source_medium, platform, channel, url
+
+
+2018-05-18 09:36:45,482: Model SQL (ga_transactions):
+-- depends_on: `growth-engines-pipeline`.`dev`.`mappings_ga_proc`, `growth-engines-pipeline`.`dev`.`ga_conversions`
+
+
+##`growth-engines-pipeline`.`dev`.`clients_proc` 
+
+
+
+with ga_report as (
+
+	    
+
+	    	
+	    	
+		   	SELECT
+		   	'lucadanni' as client_name,
+		   	'Google Analytics' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) campaign,
+			cast(regexp_replace(transactionid, r'#|B', '') as int64) transactionid,
+			transactions last_touch_transactions,
+			(transactionrevenue - transactionshipping - transactiontax) as last_touch_revenue,
+			transactionshipping,
+			transactiontax,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, transactionid ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.ga_lucadanni.report` 
+
+		     UNION ALL 
+	   
+
+	    	
+	    	
+		   	SELECT
+		   	'autoanything' as client_name,
+		   	'Google Analytics' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) campaign,
+			cast(regexp_replace(transactionid, r'#|B', '') as int64) transactionid,
+			transactions last_touch_transactions,
+			(transactionrevenue - transactionshipping - transactiontax) as last_touch_revenue,
+			transactionshipping,
+			transactiontax,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, transactionid ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.ga_autoanything.report` 
+
+		     UNION ALL 
+	   
+
+	    	
+	    	
+		   	SELECT
+		   	'yandy' as client_name,
+		   	'Google Analytics' as lookup_platform,
+			lower(trim(regexp_replace(replace(replace(replace(replace(CONCAT(hostname,landingpagepath),'www.',''),'http://',''),'https://',''),'.html',''),r'\?.*$',''),'/')) as url,
+			date,
+			lower(source) source,
+			lower(medium) medium,
+			lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) campaign,
+			cast(regexp_replace(transactionid, r'#|B', '') as int64) transactionid,
+			transactions last_touch_transactions,
+			(transactionrevenue - transactionshipping - transactiontax) as last_touch_revenue,
+			transactionshipping,
+			transactiontax,
+			_sdc_sequence,
+			first_value(_sdc_sequence) OVER (PARTITION BY hostname, landingpagepath, date, source, medium, transactionid ORDER BY _sdc_sequence DESC) lv
+			FROM `growth-engines-pipeline.ga_yandy.report` 
+
+		    
+	   
+
+)
+
+
+SELECT  
+cast(date as date) date,
+b.account,
+b.client client,
+c.source source,
+c.medium medium,
+a.campaign campaign,
+concat(a.source, ' / ', a.medium) source_medium,  
+case when c.platform is null then "Unmapped" else c.platform end as platform,
+case when c.channel is null then "Unmapped" else c.channel end as channel,
+regexp_replace(url, r'offers.|offer.|get.|info.|pos.|go.|join.|pages.','') url,
+transactionid,
+max(last_touch_transactions) last_touch_transactions,
+max(last_touch_revenue) last_touch_revenue,
+max(transactionshipping) last_touch_shipping,
+max(transactiontax) last_touch_tax
+FROM ga_report a
+LEFT JOIN `growth-engines-pipeline`.`dev`.`clients_proc` b 
+ON ( a.client_name = b.client_name 
+	AND a.lookup_platform = b.platform )
+LEFT JOIN `growth-engines-pipeline`.`dev`.`mappings_ga_proc` c
+ON ( a.source = c.source
+  AND a.medium = c.medium 
+  AND a.client_name = c.client_name )
+GROUP BY date, account, client, source, medium, campaign, source_medium, platform, channel, url, transactionid
+
+
+2018-05-18 09:36:52,453: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ecdb70>]}
+2018-05-18 09:36:52,804: 09:36:52 | 43 of 131 OK created table model dev.adwords_join.................... [CREATE TABLE in 11.60s]
+2018-05-18 09:37:01,621: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7715f8>]}
+2018-05-18 09:37:01,996: 09:37:01 | 45 of 131 OK created table model dev.ga_transactions................. [CREATE TABLE in 20.76s]
+2018-05-18 09:37:12,860: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e6f7f0>]}
+2018-05-18 09:37:13,679: 09:37:13 | 44 of 131 OK created table model dev.ga_traffic...................... [CREATE TABLE in 32.00s]
+2018-05-18 09:37:13,679: 09:37:13 | 46 of 131 SKIP relation dev.autoanything_orders_proc................. [SKIP]
+2018-05-18 09:37:13,680: 09:37:13 | 47 of 131 START table model dev.fb_ads_stats......................... [RUN]
+2018-05-18 09:37:13,680: 09:37:13 | 48 of 131 SKIP relation dev.yandy_base_proc.......................... [SKIP]
+2018-05-18 09:37:13,680: 09:37:13 | 49 of 131 START table model dev.adwords_stats........................ [RUN]
+2018-05-18 09:37:13,680: 09:37:13 | 50 of 131 START table model dev.adwords_impression_share............. [RUN]
+2018-05-18 09:37:13,680: Compiling model.agency_data_pipeline.fb_ads_stats
+2018-05-18 09:37:13,681: Compiling model.agency_data_pipeline.adwords_stats
+2018-05-18 09:37:13,681: Compiling model.agency_data_pipeline.adwords_impression_share
+2018-05-18 09:37:13,686: Writing injected SQL for node "model.agency_data_pipeline.fb_ads_stats"
+2018-05-18 09:37:13,691: Writing injected SQL for node "model.agency_data_pipeline.adwords_stats"
+2018-05-18 09:37:13,695: Writing injected SQL for node "model.agency_data_pipeline.adwords_impression_share"
+2018-05-18 09:37:13,696: Acquiring new bigquery connection "fb_ads_stats".
+2018-05-18 09:37:13,696: Re-using an available connection from the pool.
+2018-05-18 09:37:13,699: Acquiring new bigquery connection "adwords_impression_share".
+2018-05-18 09:37:13,699: Re-using an available connection from the pool.
+2018-05-18 09:37:13,702: Acquiring new bigquery connection "adwords_stats".
+2018-05-18 09:37:13,703: Re-using an available connection from the pool.
+2018-05-18 09:37:14,686: Model SQL (adwords_stats):
+SELECT 
+cast(day as date) date, 
+account, 
+platform,
+channel,
+url,
+utm_campaign,
+campaign,
+case when ( utm_campaign like '%brand%' or utm_campaign like '%[b]%' ) and utm_campaign not like '%non%' then 'Brand Search'
+	when utm_campaign like '%shopping%' then 'Shopping'
+	else 'Non-brand Search' end as campaign_type,
+sum(cost) cost,
+sum(impressions) impressions,
+sum(clicks) clicks,
+sum(transactions) transactions,
+sum(revenue) revenue
+FROM 
+  `growth-engines-pipeline`.`dev`.`adwords_join`
+group by date, account, platform, channel, url, campaign, utm_campaign, campaign_type
+2018-05-18 09:37:14,727: Model SQL (adwords_impression_share):
+SELECT 
+cast(day as date) date, 
+account, 
+channel,
+platform,
+sum(impression_share_num) impressions,
+sum(impression_share_den) available_impressions
+FROM 
+  `growth-engines-pipeline`.`dev`.`adwords_join`
+group by date, account, platform, channel
+2018-05-18 09:37:14,826: Model SQL (fb_ads_stats):
+with cost as (
+
+    select 
+        date, account, ad_id, campaign,
+        cost, impressions, clicks, null as conversions, null as revenue
+    from `growth-engines-pipeline`.`dev`.`fb_ads_insights`
+),
+
+conversions as (
+
+    select 
+        date, account, ad_id, campaign,
+        null as cost, null as impressions, null as clicks, conversions, revenue
+    from `growth-engines-pipeline`.`dev`.`fb_ads_insights_conversions`
+),
+
+urls as (
+
+    select ad_id, url
+    from `growth-engines-pipeline`.`dev`.`fb_ads`
+)
+
+
+SELECT
+    cast(date as date) date,
+    'FB Ads' platform,
+    'Paid' channel,
+    account, 
+    b.url url,
+    campaign,
+    lower(replace(replace(replace(campaign,' ', ''),'-',''),'_','')) utm_campaign, 
+    sum(cost) cost,
+    sum(impressions) impressions,
+    sum(clicks) clicks,
+    sum(conversions) transactions,
+    sum(revenue) revenue
+FROM
+(
+    SELECT *
+    FROM 
+      cost
+    UNION ALL
+    SELECT *
+    FROM 
+      conversions
+) a
+LEFT JOIN urls b
+ON ( a.ad_id = b.ad_id )
+group by date, platform, channel, account, url, campaign, utm_campaign
+2018-05-18 09:37:17,052: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7bde10>]}
+2018-05-18 09:37:17,155: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a771fd0>]}
+2018-05-18 09:37:17,404: 09:37:17 | 50 of 131 OK created table model dev.adwords_impression_share........ [CREATE TABLE in 3.37s]
+2018-05-18 09:37:17,749: 09:37:17 | 47 of 131 OK created table model dev.fb_ads_stats.................... [CREATE TABLE in 3.47s]
+2018-05-18 09:37:28,733: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7bd748>]}
+2018-05-18 09:37:29,104: 09:37:29 | 49 of 131 OK created table model dev.adwords_stats................... [CREATE TABLE in 15.05s]
+2018-05-18 09:37:29,105: 09:37:29 | 51 of 131 SKIP relation dev.yandy_orders_proc........................ [SKIP]
+2018-05-18 09:37:29,106: 09:37:29 | 52 of 131 SKIP relation dev.yandy_products_proc...................... [SKIP]
+2018-05-18 09:37:29,107: 09:37:29 | 53 of 131 SKIP relation dev.yandy_customers_proc..................... [SKIP]
+2018-05-18 09:37:29,107: 09:37:29 | 54 of 131 START table model dev.agg_ga_transaction_order_number...... [RUN]
+2018-05-18 09:37:29,108: Compiling model.agency_data_pipeline.agg_ga_transaction_order_number
+2018-05-18 09:37:29,119: Writing injected SQL for node "model.agency_data_pipeline.agg_ga_transaction_order_number"
+2018-05-18 09:37:29,123: Acquiring new bigquery connection "agg_ga_transaction_order_number".
+2018-05-18 09:37:29,123: Re-using an available connection from the pool.
+2018-05-18 09:37:30,671: Model SQL (agg_ga_transaction_order_number):
+with ga as (
+
+    select 
+        date, account, client, 
+        channel as last_touch_channel, 
+        platform as last_touch_platform, 
+        url as last_touch_url, 
+        campaign as last_touch_utm_campaign, 
+        '' as first_touch_channel, 
+        '' as first_touch_platform, 
+        '' as first_touch_utm_campaign, 
+        transactionid,
+        last_touch_transactions, last_touch_revenue,
+        last_touch_shipping, last_touch_tax,
+        null as first_touch_transactions, null as first_touch_revenue
+    from `growth-engines-pipeline`.`dev`.`ga_transactions`
+
+),
+
+ga_mcf as (
+
+    select 
+        date, account, client, 
+        '' as last_touch_channel,
+        '' as last_touch_platform,
+        '' as last_touch_url,
+        '' as last_touch_utm_campaign, 
+        channel as first_touch_channel, 
+        platform as first_touch_platform, 
+        campaign as first_touch_utm_campaign, 
+        transactionid, 
+        null as last_touch_transactions, null as last_touch_revenue,
+        null as last_touch_shipping, null as last_touch_tax,
+        first_touch_transactions, first_touch_revenue
+    from `growth-engines-pipeline`.`dev`.`ga_mcf_stats`
+
+)
+
+
+SELECT
+    date, 
+    client,
+    transactionid,
+    max(last_touch_channel) last_touch_channel, 
+    max(last_touch_platform) last_touch_platform, 
+    max(last_touch_url) last_touch_url, 
+    max(last_touch_utm_campaign) last_touch_utm_campaign, 
+    max(first_touch_channel) first_touch_channel, 
+    max(first_touch_platform) first_touch_platform, 
+    max(first_touch_utm_campaign) first_touch_utm_campaign,
+    sum(last_touch_transactions) last_touch_transactions,
+    sum(last_touch_revenue) last_touch_revenue,
+    sum(last_touch_shipping) last_touch_shipping_revenue,
+    sum(last_touch_tax) last_touch_tax_revenue,
+    sum(first_touch_transactions) first_touch_transactions,
+    sum(first_touch_revenue) - ifnull(sum(last_touch_shipping),0) - ifnull(sum(last_touch_tax),0) first_touch_revenue
+FROM
+(
+    SELECT *
+    FROM 
+      ga
+    UNION ALL
+    SELECT *
+    FROM 
+      ga_mcf
+) 
+GROUP BY
+    date, client, transactionid
+2018-05-18 09:37:48,778: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a771668>]}
+2018-05-18 09:37:49,138: 09:37:49 | 54 of 131 OK created table model dev.agg_ga_transaction_order_number. [CREATE TABLE in 19.67s]
+2018-05-18 09:37:49,138: 09:37:49 | 55 of 131 START table model dev.agg_ga_campaign...................... [RUN]
+2018-05-18 09:37:49,138: Compiling model.agency_data_pipeline.agg_ga_campaign
+2018-05-18 09:37:49,144: Writing injected SQL for node "model.agency_data_pipeline.agg_ga_campaign"
+2018-05-18 09:37:49,145: Acquiring new bigquery connection "agg_ga_campaign".
+2018-05-18 09:37:49,145: Re-using an available connection from the pool.
+2018-05-18 09:37:52,485: Model SQL (agg_ga_campaign):
+with ga_transactions as (
+
+	select 
+		date, account, client, channel, platform, url, 
+		campaign,
+		null as sessions, null as goal_completions, last_touch_transactions, last_touch_revenue,
+		last_touch_shipping, last_touch_tax,
+		null as first_touch_transactions, null as first_touch_revenue
+	from `growth-engines-pipeline`.`dev`.`ga_transactions`
+
+),
+
+ga_traffic as (
+
+    select 
+        date, account, client, channel, platform, url, 
+        campaign,
+        sessions, goal_completions, null as last_touch_transactions, null as last_touch_revenue,
+        null as last_touch_shipping, null as last_touch_tax,
+        null as first_touch_transactions, null as first_touch_revenue
+    from `growth-engines-pipeline`.`dev`.`ga_traffic`
+
+),
+
+ga_mcf as (
+
+	select 
+		date, account, client, channel, platform, '' as url,
+		campaign, 
+		null as sessions, null as goal_completions, null as last_touch_transactions, null as last_touch_revenue,
+		null as last_touch_shipping, null as last_touch_tax,
+		first_touch_transactions, first_touch_revenue
+	from `growth-engines-pipeline`.`dev`.`ga_mcf_stats`
+
+)
+
+
+SELECT
+    date, 
+    client,
+    platform,
+    channel, 
+    url,
+    campaign utm_campaign,
+	sum(sessions) sessions,
+	sum(goal_completions) goal_completions,
+	sum(last_touch_transactions) last_touch_transactions,
+	sum(last_touch_revenue) last_touch_revenue,
+    sum(last_touch_shipping) last_touch_shipping_revenue,
+    sum(last_touch_tax) last_touch_tax_revenue,
+    sum(first_touch_transactions) first_touch_transactions,
+    sum(first_touch_revenue) - sum(ifnull(last_touch_shipping,0)) - sum(ifnull(last_touch_tax,0)) first_touch_revenue
+
+FROM
+(
+    SELECT *
+    FROM 
+      ga_transactions
+    UNION ALL
+    SELECT *
+    FROM 
+      ga_traffic
+    UNION ALL
+    SELECT *
+    FROM 
+      ga_mcf
+) 
+GROUP BY
+    date, client, platform, channel, url, utm_campaign
+2018-05-18 09:38:33,577: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e79160>]}
+2018-05-18 09:38:34,330: 09:38:34 | 55 of 131 OK created table model dev.agg_ga_campaign................. [CREATE TABLE in 44.44s]
+2018-05-18 09:38:34,331: 09:38:34 | 56 of 131 SKIP relation dev.agg_customers_union...................... [SKIP]
+2018-05-18 09:38:34,332: 09:38:34 | 57 of 131 SKIP relation dev.agg_products............................. [SKIP]
+2018-05-18 09:38:34,332: 09:38:34 | 58 of 131 SKIP relation dev.agg_products_cogs........................ [SKIP]
+2018-05-18 09:38:34,333: 09:38:34 | 59 of 131 START table model dev.agg_platforms_union.................. [RUN]
+2018-05-18 09:38:34,333: Compiling model.agency_data_pipeline.agg_platforms_union
+2018-05-18 09:38:34,344: Writing injected SQL for node "model.agency_data_pipeline.agg_platforms_union"
+2018-05-18 09:38:34,347: Acquiring new bigquery connection "agg_platforms_union".
+2018-05-18 09:38:34,347: Re-using an available connection from the pool.
+2018-05-18 09:38:35,416: Model SQL (agg_platforms_union):
+SELECT 
+date, 
+account, 
+channel,
+platform,
+url,
+utm_campaign,
+campaign,
+campaign_type,
+cost,
+impressions,
+clicks,
+transactions,
+revenue
+FROM 
+`growth-engines-pipeline`.`dev`.`adwords_stats`
+
+UNION ALL
+
+SELECT 
+date, 
+account, 
+channel,
+platform,
+url,
+utm_campaign,
+campaign,
+campaign_type,
+cost,
+impressions,
+clicks,
+transactions,
+revenue
+FROM 
+`growth-engines-pipeline`.`dev`.`bing_ads_stats`
+
+UNION ALL  
+
+SELECT 
+date, 
+account, 
+channel,
+platform,
+url,
+utm_campaign,
+campaign,
+'Display' as campaign_type,
+cost,
+impressions,
+clicks,
+transactions,
+revenue
+FROM 
+`growth-engines-pipeline`.`dev`.`fb_ads_stats`
+2018-05-18 09:38:44,826: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7b84e0>]}
+2018-05-18 09:38:45,163: 09:38:45 | 59 of 131 OK created table model dev.agg_platforms_union............. [CREATE TABLE in 10.49s]
+2018-05-18 09:38:45,164: 09:38:45 | 60 of 131 START table model dev.agg_platforms_client................. [RUN]
+2018-05-18 09:38:45,164: Compiling model.agency_data_pipeline.agg_platforms_client
+2018-05-18 09:38:45,171: Writing injected SQL for node "model.agency_data_pipeline.agg_platforms_client"
+2018-05-18 09:38:45,172: Acquiring new bigquery connection "agg_platforms_client".
+2018-05-18 09:38:45,172: Re-using an available connection from the pool.
+2018-05-18 09:38:46,235: Model SQL (agg_platforms_client):
+SELECT 
+date, 
+a.account account, 
+b.client client,
+a.platform platform,
+a.channel channel,
+url,
+utm_campaign,
+campaign_type,
+campaign,
+cost,
+impressions,
+clicks,
+transactions ad_platform_transactions,
+revenue ad_platform_revenue
+FROM 
+  `growth-engines-pipeline`.`dev`.`agg_platforms_union` a
+LEFT JOIN 
+  `growth-engines-pipeline`.`dev`.`accounts_proc` b
+ON ( 
+  a.account = b.account AND
+  a.platform = b.platform
+)
+2018-05-18 09:38:56,931: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fbbd527a-fe25-467d-9b99-db21e4aa8dc4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7849b0>]}
+2018-05-18 09:38:57,301: 09:38:57 | 60 of 131 OK created table model dev.agg_platforms_client............ [CREATE TABLE in 11.77s]
+2018-05-18 09:38:57,302: 09:38:57 | 61 of 131 SKIP relation dev.agg_orders_union......................... [SKIP]
+2018-05-18 09:38:57,302: 09:38:57 | 62 of 131 SKIP relation dev.agg_transaction_line_item................ [SKIP]
+2018-05-18 09:38:57,303: 09:38:57 | 63 of 131 SKIP relation dev.agg_transaction_order_number............. [SKIP]
+2018-05-18 09:38:57,304: 09:38:57 | 64 of 131 SKIP relation dev.customers_by_transaction................. [SKIP]
+2018-05-18 09:38:57,305: 09:38:57 | 65 of 131 SKIP relation dev.frequency_proc........................... [SKIP]
+2018-05-18 09:38:57,305: 09:38:57 | 66 of 131 SKIP relation dev.frequency_stats.......................... [SKIP]
+2018-05-18 09:38:57,306: 09:38:57 | 67 of 131 SKIP relation dev.agg_ga_transaction....................... [SKIP]
+2018-05-18 09:38:57,307: 09:38:57 | 68 of 131 SKIP relation dev.agg_transaction.......................... [SKIP]
+2018-05-18 09:38:57,307: 09:38:57 | 69 of 131 SKIP relation dev.agg_transaction_line_item_type........... [SKIP]
+2018-05-18 09:38:57,308: 09:38:57 | 70 of 131 SKIP relation dev.customers_first_purchase_proc............ [SKIP]
+2018-05-18 09:38:57,309: 09:38:57 | 71 of 131 SKIP relation dev.agg_transaction_product_type............. [SKIP]
+2018-05-18 09:38:57,309: 09:38:57 | 72 of 131 SKIP relation dev.agg_transaction_daily.................... [SKIP]
+2018-05-18 09:38:57,309: 09:38:57 | 73 of 131 SKIP relation dev.customers_first_purchase_product_type_proc [SKIP]
+2018-05-18 09:38:57,310: 09:38:57 | 74 of 131 SKIP relation dev.agg_ga_campaign_by_type.................. [SKIP]
+2018-05-18 09:38:57,311: 09:38:57 | 75 of 131 SKIP relation dev.customers_products_proc.................. [SKIP]
+2018-05-18 09:38:57,312: 09:38:57 | 76 of 131 SKIP relation dev.growth_customer_0_365.................... [SKIP]
+2018-05-18 09:38:57,312: 09:38:57 | 77 of 131 SKIP relation dev.products_proc............................ [SKIP]
+2018-05-18 09:38:57,312: 09:38:57 | 78 of 131 SKIP relation dev.order_paths_proc......................... [SKIP]
+2018-05-18 09:38:57,312: 09:38:57 | 79 of 131 SKIP relation dev.growth_customer_0_30..................... [SKIP]
+2018-05-18 09:38:57,312: 09:38:57 | 80 of 131 SKIP relation dev.customers_proc........................... [SKIP]
+2018-05-18 09:38:57,315: 09:38:57 | 81 of 131 SKIP relation dev.order_paths_agg.......................... [SKIP]
+2018-05-18 09:38:57,315: 09:38:57 | 82 of 131 SKIP relation dev.segment_proc_sku......................... [SKIP]
+2018-05-18 09:38:57,315: 09:38:57 | 83 of 131 SKIP relation dev.retention_60_plus........................ [SKIP]
+2018-05-18 09:38:57,316: 09:38:57 | 84 of 131 SKIP relation dev.retention_0_30........................... [SKIP]
+2018-05-18 09:38:57,316: 09:38:57 | 85 of 131 SKIP relation dev.retention_30_60.......................... [SKIP]
+2018-05-18 09:38:57,316: 09:38:57 | 86 of 131 SKIP relation dev.retention_730_plus....................... [SKIP]
+2018-05-18 09:38:57,317: 09:38:57 | 87 of 131 SKIP relation dev.retention_365_730........................ [SKIP]
+2018-05-18 09:38:57,317: 09:38:57 | 88 of 131 SKIP relation dev.retention_30_395......................... [SKIP]
+2018-05-18 09:38:57,318: 09:38:57 | 89 of 131 SKIP relation dev.retention_0_365.......................... [SKIP]
+2018-05-18 09:38:57,320: 09:38:57 | 90 of 131 SKIP relation dev.segment_proc_customers_products.......... [SKIP]
+2018-05-18 09:38:57,320: 09:38:57 | 91 of 131 SKIP relation dev.segment_stats_sku........................ [SKIP]
+2018-05-18 09:38:57,321: 09:38:57 | 92 of 131 SKIP relation dev.retention_0_365_rebuy.................... [SKIP]
+2018-05-18 09:38:57,322: 09:38:57 | 93 of 131 SKIP relation dev.segment_proc_sku_pct..................... [SKIP]
+2018-05-18 09:38:57,322: 09:38:57 | 94 of 131 SKIP relation dev.order_paths_stats........................ [SKIP]
+2018-05-18 09:38:57,322: 09:38:57 | 95 of 131 SKIP relation dev.segment_stats_category................... [SKIP]
+2018-05-18 09:38:57,322: 09:38:57 | 96 of 131 SKIP relation dev.segment_stats_category_roll_rates........ [SKIP]
+2018-05-18 09:38:57,323: 09:38:57 | 97 of 131 SKIP relation dev.segment_stats_customers_products_agg..... [SKIP]
+2018-05-18 09:38:57,323: 09:38:57 | 98 of 131 SKIP relation dev.segment_stats_sku_roll_rates............. [SKIP]
+2018-05-18 09:38:57,324: 09:38:57 | 99 of 131 SKIP relation dev.segment_proc_category_pct................ [SKIP]
+2018-05-18 09:38:57,325: 09:38:57 | 100 of 131 SKIP relation dev.retention_0_30_rebuy.................... [SKIP]
+2018-05-18 09:38:57,327: 09:38:57 | 101 of 131 SKIP relation dev.retention_stats_rebuy_rate_month........ [SKIP]
+2018-05-18 09:38:57,327: 09:38:57 | 102 of 131 SKIP relation dev.segment_stats_customers_products........ [SKIP]
+2018-05-18 09:38:57,327: 09:38:57 | 103 of 131 SKIP relation dev.segment_stats_sku_pct................... [SKIP]
+2018-05-18 09:38:57,328: 09:38:57 | 104 of 131 SKIP relation dev.retention_0_365_new..................... [SKIP]
+2018-05-18 09:38:57,328: 09:38:57 | 105 of 131 SKIP relation dev.retention_0_365_reactivated............. [SKIP]
+2018-05-18 09:38:57,328: 09:38:57 | 106 of 131 SKIP relation dev.retention_0_30_reactivated.............. [SKIP]
+2018-05-18 09:38:57,329: 09:38:57 | 107 of 131 SKIP relation dev.segment_stats_category_pct.............. [SKIP]
+2018-05-18 09:38:57,330: 09:38:57 | 108 of 131 SKIP relation dev.retention_0_30_new...................... [SKIP]
+2018-05-18 09:38:57,330: 09:38:57 | 109 of 131 SKIP relation dev.segment_proc_customers.................. [SKIP]
+2018-05-18 09:38:57,332: 09:38:57 | 110 of 131 SKIP relation dev.segment_stats_customers_agg............. [SKIP]
+2018-05-18 09:38:57,333: 09:38:57 | 111 of 131 SKIP relation dev.segment_stats_customers_roll_rates...... [SKIP]
+2018-05-18 09:38:57,333: 09:38:57 | 112 of 131 SKIP relation dev.segment_stats_customers................. [SKIP]
+2018-05-18 09:38:57,333: 09:38:57 | 113 of 131 SKIP relation dev.growth_customer_0_365_segment........... [SKIP]
+2018-05-18 09:38:57,333: 09:38:57 | 114 of 131 SKIP relation dev.growth_customer_0_30_segment............ [SKIP]
+2018-05-18 09:38:57,334: 09:38:57 | 115 of 131 SKIP relation dev.segment_proc_customers_pct.............. [SKIP]
+2018-05-18 09:38:57,336: 09:38:57 | 116 of 131 SKIP relation dev.growth_stats_monthly.................... [SKIP]
+2018-05-18 09:38:57,336: 09:38:57 | 117 of 131 SKIP relation dev.segment_stats_customers_pct............. [SKIP]
+2018-05-18 09:38:57,336: 09:38:57 | 118 of 131 SKIP relation dev.growth_stats............................ [SKIP]
+2018-05-18 09:38:57,337: 09:38:57 | 119 of 131 SKIP relation dev.segment_list_customers_products......... [SKIP]
+2018-05-18 09:38:57,337: 09:38:57 | 120 of 131 SKIP relation dev.retention_stats_month................... [SKIP]
+2018-05-18 09:38:57,337: 09:38:57 | 121 of 131 SKIP relation dev.retention_stats_month_forecast.......... [SKIP]
+2018-05-18 09:38:57,338: 09:38:57 | 122 of 131 SKIP relation dev.segment_list_customers.................. [SKIP]
+2018-05-18 09:38:57,338: 09:38:57 | 123 of 131 SKIP relation dev.retention_stats_rebuy_rate.............. [SKIP]
+2018-05-18 09:38:57,339: 09:38:57 | 124 of 131 SKIP relation dev.retention_stats_month_data_studio....... [SKIP]
+2018-05-18 09:38:57,339: 09:38:57 | 125 of 131 SKIP relation dev.agg_campaign............................ [SKIP]
+2018-05-18 09:38:57,339: 09:38:57 | 126 of 131 SKIP relation dev.retention_stats......................... [SKIP]
+2018-05-18 09:38:57,340: 09:38:57 | 127 of 131 SKIP relation dev.retention_stats_forecast................ [SKIP]
+2018-05-18 09:38:57,340: 09:38:57 | 128 of 131 SKIP relation dev.agg_platform_monthly.................... [SKIP]
+2018-05-18 09:38:57,340: 09:38:57 | 129 of 131 SKIP relation dev.retention_stats_data_studio............. [SKIP]
+2018-05-18 09:38:57,340: 09:38:57 | 130 of 131 SKIP relation dev.agg_campaign_daily...................... [SKIP]
+2018-05-18 09:38:57,342: 09:38:57 | 131 of 131 SKIP relation dev.agg_campaign_daily_anomalies............ [SKIP]
+2018-05-18 09:38:57,403: 09:38:57 | 
+2018-05-18 09:38:57,403: 09:38:57 | Finished running 131 table models in 262.52s.
+2018-05-18 09:38:57,404: Connection 'master' was left open.
+2018-05-18 09:38:57,405: 
+2018-05-18 09:38:57,405: Completed with 3 errors:
+2018-05-18 09:38:57,405: 
+2018-05-18 09:38:57,405: Database Error in model yandy_orders_info_proc (models/base/postgres-yandy/yandy_orders_info_proc.sql)
+2018-05-18 09:38:57,406:   Resources exceeded during query execution: The query could not be executed in the allotted memory. OVER() operator used too much memory..
+2018-05-18 09:38:57,406:   compiled SQL at target/compiled/agency_data_pipeline/base/postgres-yandy/yandy_orders_info_proc.sql
+2018-05-18 09:38:57,406: 
+2018-05-18 09:38:57,406: Database Error in model autoanything_promo (models/base/microsoft-sql-autoanything/autoanything_promo.sql)
+2018-05-18 09:38:57,407:   Name promo_code not found inside b at [4:3]
+2018-05-18 09:38:57,407:   compiled SQL at target/compiled/agency_data_pipeline/base/microsoft-sql-autoanything/autoanything_promo.sql
+2018-05-18 09:38:57,407: 
+2018-05-18 09:38:57,407: Database Error in model shopify_orders_proc (models/base/shopify/shopify_orders_proc.sql)
+2018-05-18 09:38:57,407:   Cannot access field code on a value with type ARRAY<STRUCT<amount FLOAT64, code STRING, type STRING>> at [19:24]
+2018-05-18 09:38:57,408:   compiled SQL at target/compiled/agency_data_pipeline/base/shopify/shopify_orders_proc.sql
+2018-05-18 09:38:57,408: 
+Done. PASS=48 ERROR=3 SKIP=80 TOTAL=131
+2018-05-18 09:38:57,408: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108238cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108238a58>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108238c88>]}
+2018-05-18 09:38:57,778: Flushing usage events

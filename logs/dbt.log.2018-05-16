@@ -1,0 +1,1014 @@
+2018-05-16 10:14:13,895: Tracking: tracking
+2018-05-16 10:14:13,905: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a74d978>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a74d278>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a74d6d8>]}
+2018-05-16 10:14:14,818: Loading dependency project from /usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/include
+2018-05-16 10:14:14,863: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/growth-engines/dbt_modules
+2018-05-16 10:14:14,864: Parsing get_column_values.sql
+2018-05-16 10:14:14,905: Parsing get_url_parameter.sql
+2018-05-16 10:14:14,913: Parsing split_part.sql
+2018-05-16 10:14:14,922: Parsing table_exists.sql
+2018-05-16 10:14:14,933: Parsing core.sql
+2018-05-16 10:14:14,949: Parsing adapters/bigquery.sql
+2018-05-16 10:14:14,957: Parsing adapters/common.sql
+2018-05-16 10:14:14,977: Parsing adapters/postgres.sql
+2018-05-16 10:14:14,984: Parsing adapters/redshift.sql
+2018-05-16 10:14:15,012: Parsing etc/get_custom_schema.sql
+2018-05-16 10:14:15,024: Parsing materializations/archive.sql
+2018-05-16 10:14:15,067: Parsing materializations/bigquery.sql
+2018-05-16 10:14:15,083: Parsing materializations/helpers.sql
+2018-05-16 10:14:15,112: Parsing materializations/incremental.sql
+2018-05-16 10:14:15,146: Parsing materializations/table.sql
+2018-05-16 10:14:15,172: Parsing materializations/view.sql
+2018-05-16 10:14:15,190: Parsing materializations/wrapper.sql
+2018-05-16 10:14:15,196: Parsing schema_tests/accepted_values.sql
+2018-05-16 10:14:15,202: Parsing schema_tests/not_null.sql
+2018-05-16 10:14:15,208: Parsing schema_tests/relationships.sql
+2018-05-16 10:14:15,214: Parsing schema_tests/unique.sql
+2018-05-16 10:14:15,372: Parsing model.agency_data_pipeline.accounts_proc
+2018-05-16 10:14:15,384: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8b2c18>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8193c8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a808b38>]}
+2018-05-16 10:14:15,742: Encountered an error:
+2018-05-16 10:14:15,742: Compilation Error in model accounts_proc (models/admin/accounts_proc.sql)
+  Required var 'bigquery-project' not found in config:
+  Vars supplied to accounts_proc = {}
+2018-05-16 10:14:15,802: Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 40, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 84, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 138, in run_from_args
+    results = run_from_task(task, proj, parsed)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 146, in run_from_task
+    result = task.run()
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/task/compile.py", line 25, in run
+    results = runner.run(query, CompileRunner)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/runner.py", line 221, in run
+    return self.run_from_graph(Selector, Runner, query)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/runner.py", line 183, in run_from_graph
+    flat_graph, linker = self.compile(self.project)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/runner.py", line 179, in compile
+    (flat_graph, linker) = compiler.compile()
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/compilation.py", line 278, in compile
+    root_project, all_projects)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/loader.py", line 23, in load_all
+    loader.load_all(root_project, all_projects, macros))
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/loader.py", line 48, in load_all
+    project, project_name, macros))
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/loader.py", line 85, in load_project
+    macros=macros)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/parser.py", line 338, in load_and_parse_sql
+    return parse_sql_nodes(result, root_project, all_projects, tags, macros)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/parser.py", line 282, in parse_sql_nodes
+    macros=macros)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/parser.py", line 231, in parse_node
+    capture_macros=True)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/clients/jinja.py", line 171, in get_rendered
+    return render_template(template, ctx, node)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/clients/jinja.py", line 158, in render_template
+    return template.render(ctx)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "<template>", line 15, in top-level template code
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/jinja2/sandbox.py", line 427, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/context/common.py", line 204, in __call__
+    self.assert_var_defined(var_name, default)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/context/common.py", line 188, in assert_var_defined
+    self.model
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/exceptions.py", line 115, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model accounts_proc (models/admin/accounts_proc.sql)
+  Required var 'bigquery-project' not found in config:
+  Vars supplied to accounts_proc = {}
+
+2018-05-16 10:16:42,443: Tracking: tracking
+2018-05-16 10:16:42,446: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111df518>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111df0b8>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1111df5f8>]}
+2018-05-16 10:16:43,439: Loading dependency project from /usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/include
+2018-05-16 10:16:43,460: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/growth-engines/dbt_modules
+2018-05-16 10:16:43,467: Parsing get_column_values.sql
+2018-05-16 10:16:43,483: Parsing get_url_parameter.sql
+2018-05-16 10:16:43,489: Parsing split_part.sql
+2018-05-16 10:16:43,501: Parsing table_exists.sql
+2018-05-16 10:16:43,513: Parsing core.sql
+2018-05-16 10:16:43,529: Parsing adapters/bigquery.sql
+2018-05-16 10:16:43,538: Parsing adapters/common.sql
+2018-05-16 10:16:43,556: Parsing adapters/postgres.sql
+2018-05-16 10:16:43,564: Parsing adapters/redshift.sql
+2018-05-16 10:16:43,597: Parsing etc/get_custom_schema.sql
+2018-05-16 10:16:43,607: Parsing materializations/archive.sql
+2018-05-16 10:16:43,644: Parsing materializations/bigquery.sql
+2018-05-16 10:16:43,663: Parsing materializations/helpers.sql
+2018-05-16 10:16:43,687: Parsing materializations/incremental.sql
+2018-05-16 10:16:43,723: Parsing materializations/table.sql
+2018-05-16 10:16:43,760: Parsing materializations/view.sql
+2018-05-16 10:16:43,778: Parsing materializations/wrapper.sql
+2018-05-16 10:16:43,784: Parsing schema_tests/accepted_values.sql
+2018-05-16 10:16:43,790: Parsing schema_tests/not_null.sql
+2018-05-16 10:16:43,795: Parsing schema_tests/relationships.sql
+2018-05-16 10:16:43,804: Parsing schema_tests/unique.sql
+2018-05-16 10:16:43,945: Parsing model.agency_data_pipeline.accounts_proc
+2018-05-16 10:16:43,949: Parsing model.agency_data_pipeline.all_dates
+2018-05-16 10:16:43,952: Parsing model.agency_data_pipeline.carts_proc
+2018-05-16 10:16:43,956: Parsing model.agency_data_pipeline.clients_proc
+2018-05-16 10:16:43,959: Parsing model.agency_data_pipeline.cogs_proc
+2018-05-16 10:16:43,961: Parsing model.agency_data_pipeline.conversion_goals_proc
+2018-05-16 10:16:43,964: Parsing model.agency_data_pipeline.mappings_ga_proc
+2018-05-16 10:16:43,967: Acquiring new bigquery connection "master".
+2018-05-16 10:16:43,967: Opening a new connection (0 currently allocated)
+2018-05-16 10:16:43,969: Parsing model.agency_data_pipeline.monthend_dates
+2018-05-16 10:16:43,971: Parsing model.agency_data_pipeline.adwords_ads
+2018-05-16 10:16:43,974: Parsing model.agency_data_pipeline.adwords_campaigns
+2018-05-16 10:16:43,976: Parsing model.agency_data_pipeline.adwords_conversions
+2018-05-16 10:16:43,978: Parsing model.agency_data_pipeline.adwords_impression_share
+2018-05-16 10:16:43,980: Parsing model.agency_data_pipeline.adwords_join
+2018-05-16 10:16:43,983: Parsing model.agency_data_pipeline.adwords_stats
+2018-05-16 10:16:43,986: Parsing model.agency_data_pipeline.adwords_urls
+2018-05-16 10:16:43,989: Parsing model.agency_data_pipeline.bing_ads_ads
+2018-05-16 10:16:43,991: Parsing model.agency_data_pipeline.bing_ads_conversions
+2018-05-16 10:16:43,994: Parsing model.agency_data_pipeline.bing_ads_impression_share
+2018-05-16 10:16:43,996: Parsing model.agency_data_pipeline.bing_ads_stats
+2018-05-16 10:16:43,998: Parsing model.agency_data_pipeline.fb_adcreative
+2018-05-16 10:16:44,005: Parsing model.agency_data_pipeline.fb_ads
+2018-05-16 10:16:44,011: Parsing model.agency_data_pipeline.fb_ads_insights
+2018-05-16 10:16:44,018: Parsing model.agency_data_pipeline.fb_ads_insights_conversions
+2018-05-16 10:16:44,024: Parsing model.agency_data_pipeline.fb_ads_stats
+2018-05-16 10:16:44,027: Parsing model.agency_data_pipeline.ga_conversions
+2018-05-16 10:16:44,029: Parsing model.agency_data_pipeline.ga_traffic
+2018-05-16 10:16:44,043: Parsing model.agency_data_pipeline.ga_transactions
+2018-05-16 10:16:44,054: Parsing model.agency_data_pipeline.ga_mcf_proc
+2018-05-16 10:16:44,057: Parsing model.agency_data_pipeline.ga_mcf_stats
+2018-05-16 10:16:44,059: Parsing model.agency_data_pipeline.autoanything_category_proc
+2018-05-16 10:16:44,061: Parsing model.agency_data_pipeline.autoanything_customers_info_proc
+2018-05-16 10:16:44,064: Parsing model.agency_data_pipeline.autoanything_customers_proc
+2018-05-16 10:16:44,066: Parsing model.agency_data_pipeline.autoanything_orders_info_proc
+2018-05-16 10:16:44,070: Parsing model.agency_data_pipeline.autoanything_orders_proc
+2018-05-16 10:16:44,073: Parsing model.agency_data_pipeline.autoanything_products_proc
+2018-05-16 10:16:44,077: Parsing model.agency_data_pipeline.autoanything_products_proc_prelim
+2018-05-16 10:16:44,079: Parsing model.agency_data_pipeline.autoanything_returns_proc
+2018-05-16 10:16:44,081: Parsing model.agency_data_pipeline.yandy_base_proc
+2018-05-16 10:16:44,086: Parsing model.agency_data_pipeline.yandy_customers_proc
+2018-05-16 10:16:44,089: Parsing model.agency_data_pipeline.yandy_fifo_transactions_proc
+2018-05-16 10:16:44,091: Parsing model.agency_data_pipeline.yandy_orders_info_proc
+2018-05-16 10:16:44,093: Parsing model.agency_data_pipeline.yandy_orders_proc
+2018-05-16 10:16:44,095: Parsing model.agency_data_pipeline.yandy_orders_prods_proc
+2018-05-16 10:16:44,097: Parsing model.agency_data_pipeline.yandy_product_options_proc
+2018-05-16 10:16:44,100: Parsing model.agency_data_pipeline.yandy_products_info_proc
+2018-05-16 10:16:44,103: Parsing model.agency_data_pipeline.yandy_products_proc
+2018-05-16 10:16:44,106: Parsing model.agency_data_pipeline.shopify_customers_proc
+2018-05-16 10:16:44,120: Parsing model.agency_data_pipeline.shopify_orders_proc
+2018-05-16 10:16:44,129: Parsing model.agency_data_pipeline.shopify_products_proc
+2018-05-16 10:16:44,137: Parsing model.agency_data_pipeline.shopify_refunds_proc
+2018-05-16 10:16:44,142: Parsing model.agency_data_pipeline.agg_campaign
+2018-05-16 10:16:44,146: Parsing model.agency_data_pipeline.agg_campaign_daily
+2018-05-16 10:16:44,148: Parsing model.agency_data_pipeline.agg_campaign_daily_anomalies
+2018-05-16 10:16:44,153: Parsing model.agency_data_pipeline.agg_customers_union
+2018-05-16 10:16:44,155: Parsing model.agency_data_pipeline.agg_ga_campaign
+2018-05-16 10:16:44,158: Parsing model.agency_data_pipeline.agg_ga_campaign_by_type
+2018-05-16 10:16:44,161: Parsing model.agency_data_pipeline.agg_ga_transaction
+2018-05-16 10:16:44,163: Parsing model.agency_data_pipeline.agg_ga_transaction_order_number
+2018-05-16 10:16:44,167: Parsing model.agency_data_pipeline.agg_orders_union
+2018-05-16 10:16:44,171: Parsing model.agency_data_pipeline.agg_platform_monthly
+2018-05-16 10:16:44,172: Parsing model.agency_data_pipeline.agg_platforms_client
+2018-05-16 10:16:44,174: Parsing model.agency_data_pipeline.agg_platforms_union
+2018-05-16 10:16:44,177: Parsing model.agency_data_pipeline.agg_products
+2018-05-16 10:16:44,179: Parsing model.agency_data_pipeline.agg_products_cogs
+2018-05-16 10:16:44,182: Parsing model.agency_data_pipeline.agg_transaction
+2018-05-16 10:16:44,186: Parsing model.agency_data_pipeline.agg_transaction_daily
+2018-05-16 10:16:44,188: Parsing model.agency_data_pipeline.agg_transaction_line_item
+2018-05-16 10:16:44,189: Parsing model.agency_data_pipeline.agg_transaction_line_item_type
+2018-05-16 10:16:44,192: Parsing model.agency_data_pipeline.agg_transaction_order_number
+2018-05-16 10:16:44,194: Parsing model.agency_data_pipeline.agg_transaction_product_type
+2018-05-16 10:16:44,196: Parsing model.agency_data_pipeline.customers_by_transaction
+2018-05-16 10:16:44,197: Parsing model.agency_data_pipeline.growth_customer_0_365
+2018-05-16 10:16:44,200: Parsing model.agency_data_pipeline.growth_customer_0_365_segment
+2018-05-16 10:16:44,204: Parsing model.agency_data_pipeline.growth_stats
+2018-05-16 10:16:44,206: Parsing model.agency_data_pipeline.growth_customer_0_30
+2018-05-16 10:16:44,208: Parsing model.agency_data_pipeline.growth_customer_0_30_segment
+2018-05-16 10:16:44,212: Parsing model.agency_data_pipeline.growth_stats_monthly
+2018-05-16 10:16:44,214: Parsing model.agency_data_pipeline.retention_0_365
+2018-05-16 10:16:44,217: Parsing model.agency_data_pipeline.retention_0_365_new
+2018-05-16 10:16:44,220: Parsing model.agency_data_pipeline.retention_0_365_reactivated
+2018-05-16 10:16:44,222: Parsing model.agency_data_pipeline.retention_0_365_rebuy
+2018-05-16 10:16:44,225: Parsing model.agency_data_pipeline.retention_30_395
+2018-05-16 10:16:44,228: Parsing model.agency_data_pipeline.retention_365_730
+2018-05-16 10:16:44,231: Parsing model.agency_data_pipeline.retention_730_plus
+2018-05-16 10:16:44,235: Parsing model.agency_data_pipeline.retention_stats
+2018-05-16 10:16:44,241: Parsing model.agency_data_pipeline.retention_stats_data_studio
+2018-05-16 10:16:44,243: Parsing model.agency_data_pipeline.retention_stats_forecast
+2018-05-16 10:16:44,245: Parsing model.agency_data_pipeline.retention_stats_rebuy_rate
+2018-05-16 10:16:44,250: Parsing model.agency_data_pipeline.retention_0_30
+2018-05-16 10:16:44,253: Parsing model.agency_data_pipeline.retention_0_30_new
+2018-05-16 10:16:44,255: Parsing model.agency_data_pipeline.retention_0_30_reactivated
+2018-05-16 10:16:44,258: Parsing model.agency_data_pipeline.retention_0_30_rebuy
+2018-05-16 10:16:44,260: Parsing model.agency_data_pipeline.retention_30_60
+2018-05-16 10:16:44,262: Parsing model.agency_data_pipeline.retention_60_plus
+2018-05-16 10:16:44,264: Parsing model.agency_data_pipeline.retention_stats_month
+2018-05-16 10:16:44,278: Parsing model.agency_data_pipeline.retention_stats_month_data_studio
+2018-05-16 10:16:44,280: Parsing model.agency_data_pipeline.retention_stats_month_forecast
+2018-05-16 10:16:44,283: Parsing model.agency_data_pipeline.retention_stats_rebuy_rate_month
+2018-05-16 10:16:44,287: Parsing model.agency_data_pipeline.customers_first_purchase_proc
+2018-05-16 10:16:44,289: Parsing model.agency_data_pipeline.customers_proc
+2018-05-16 10:16:44,291: Parsing model.agency_data_pipeline.segment_list_customers
+2018-05-16 10:16:44,293: Parsing model.agency_data_pipeline.segment_proc_customers
+2018-05-16 10:16:44,296: Parsing model.agency_data_pipeline.segment_stats_customers
+2018-05-16 10:16:44,298: Parsing model.agency_data_pipeline.segment_stats_customers_agg
+2018-05-16 10:16:44,303: Parsing model.agency_data_pipeline.customers_first_purchase_product_type_proc
+2018-05-16 10:16:44,305: Parsing model.agency_data_pipeline.customers_products_proc
+2018-05-16 10:16:44,307: Parsing model.agency_data_pipeline.segment_list_customers_products
+2018-05-16 10:16:44,309: Parsing model.agency_data_pipeline.segment_proc_customers_products
+2018-05-16 10:16:44,312: Parsing model.agency_data_pipeline.segment_stats_customers_products
+2018-05-16 10:16:44,314: Parsing model.agency_data_pipeline.segment_stats_customers_products_agg
+2018-05-16 10:16:44,318: Parsing model.agency_data_pipeline.frequency_proc
+2018-05-16 10:16:44,320: Parsing model.agency_data_pipeline.frequency_stats
+2018-05-16 10:16:44,322: Parsing model.agency_data_pipeline.order_paths_agg
+2018-05-16 10:16:44,325: Parsing model.agency_data_pipeline.order_paths_proc
+2018-05-16 10:16:44,327: Parsing model.agency_data_pipeline.order_paths_stats
+2018-05-16 10:16:44,329: Parsing model.agency_data_pipeline.products_proc
+2018-05-16 10:16:44,332: Parsing model.agency_data_pipeline.segment_proc_sku
+2018-05-16 10:16:44,335: Parsing model.agency_data_pipeline.segment_stats_category
+2018-05-16 10:16:44,337: Parsing model.agency_data_pipeline.segment_stats_sku
+2018-05-16 10:16:44,381: Found 119 models, 0 tests, 0 archives, 0 analyses, 46 macros, 0 operations
+2018-05-16 10:16:44,501: 
+2018-05-16 10:16:44,513: 10:16:44 | Concurrency: 4 threads (target='dev')
+2018-05-16 10:16:44,513: 10:16:44 | 
+2018-05-16 10:16:46,443: Connection 'master' was left open.
+2018-05-16 10:16:46,443: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1113ba828>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1113ba8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1113ba208>]}
+2018-05-16 10:16:46,797: Encountered an error:
+2018-05-16 10:16:46,797: 404 GET https://www.googleapis.com/bigquery/v2/projects/growth-engines-pipeline/datasets/agency_data_pipeline_dev/tables: Not found: Dataset growth-engines-pipeline:agency_data_pipeline_dev
+2018-05-16 10:16:46,831: Traceback (most recent call last):
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 40, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 84, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 138, in run_from_args
+    results = run_from_task(task, proj, parsed)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/main.py", line 146, in run_from_task
+    result = task.run()
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/task/compile.py", line 25, in run
+    results = runner.run(query, CompileRunner)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/runner.py", line 221, in run
+    return self.run_from_graph(Selector, Runner, query)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/runner.py", line 208, in run_from_graph
+    res = self.execute_nodes(linker, Runner, flat_graph, dep_list)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/runner.py", line 114, in execute_nodes
+    existing = adapter.query_for_existing(profile, schemas)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/adapters/bigquery.py", line 154, in query_for_existing
+    all_tables.extend(dataset.list_tables())
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/google/cloud/iterator.py", line 218, in _items_iter
+    for page in self._page_iter(increment=False):
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/google/cloud/iterator.py", line 248, in _page_iter
+    page = self._next_page()
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/google/cloud/iterator.py", line 348, in _next_page
+    response = self._get_next_page_response()
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/google/cloud/iterator.py", line 399, in _get_next_page_response
+    query_params=params)
+  File "/usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/google/cloud/_http.py", line 293, in api_request
+    raise exceptions.from_http_response(response)
+google.cloud.exceptions.NotFound: 404 GET https://www.googleapis.com/bigquery/v2/projects/growth-engines-pipeline/datasets/agency_data_pipeline_dev/tables: Not found: Dataset growth-engines-pipeline:agency_data_pipeline_dev
+
+2018-05-16 10:21:24,700: Tracking: tracking
+2018-05-16 10:21:24,703: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d94ef98>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d94ef60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d94ee48>]}
+2018-05-16 10:21:25,616: Loading dependency project from /usr/local/Cellar/dbt/0.9.0/libexec/lib/python3.6/site-packages/dbt/include
+2018-05-16 10:21:25,637: Loading dependency project from /Users/davidkrevitt/Dropbox/CIFL/adp-models/growth-engines/dbt_modules
+2018-05-16 10:21:25,644: Parsing get_column_values.sql
+2018-05-16 10:21:25,665: Parsing get_url_parameter.sql
+2018-05-16 10:21:25,671: Parsing split_part.sql
+2018-05-16 10:21:25,684: Parsing table_exists.sql
+2018-05-16 10:21:25,694: Parsing core.sql
+2018-05-16 10:21:25,709: Parsing adapters/bigquery.sql
+2018-05-16 10:21:25,718: Parsing adapters/common.sql
+2018-05-16 10:21:25,736: Parsing adapters/postgres.sql
+2018-05-16 10:21:25,742: Parsing adapters/redshift.sql
+2018-05-16 10:21:25,769: Parsing etc/get_custom_schema.sql
+2018-05-16 10:21:25,778: Parsing materializations/archive.sql
+2018-05-16 10:21:25,813: Parsing materializations/bigquery.sql
+2018-05-16 10:21:25,830: Parsing materializations/helpers.sql
+2018-05-16 10:21:25,850: Parsing materializations/incremental.sql
+2018-05-16 10:21:25,879: Parsing materializations/table.sql
+2018-05-16 10:21:25,904: Parsing materializations/view.sql
+2018-05-16 10:21:25,922: Parsing materializations/wrapper.sql
+2018-05-16 10:21:25,928: Parsing schema_tests/accepted_values.sql
+2018-05-16 10:21:25,935: Parsing schema_tests/not_null.sql
+2018-05-16 10:21:25,939: Parsing schema_tests/relationships.sql
+2018-05-16 10:21:25,945: Parsing schema_tests/unique.sql
+2018-05-16 10:21:26,089: Parsing model.agency_data_pipeline.accounts_proc
+2018-05-16 10:21:26,092: Parsing model.agency_data_pipeline.all_dates
+2018-05-16 10:21:26,093: Parsing model.agency_data_pipeline.carts_proc
+2018-05-16 10:21:26,096: Parsing model.agency_data_pipeline.clients_proc
+2018-05-16 10:21:26,100: Parsing model.agency_data_pipeline.cogs_proc
+2018-05-16 10:21:26,102: Parsing model.agency_data_pipeline.conversion_goals_proc
+2018-05-16 10:21:26,105: Parsing model.agency_data_pipeline.mappings_ga_proc
+2018-05-16 10:21:26,107: Acquiring new bigquery connection "master".
+2018-05-16 10:21:26,107: Opening a new connection (0 currently allocated)
+2018-05-16 10:21:26,109: Parsing model.agency_data_pipeline.monthend_dates
+2018-05-16 10:21:26,110: Parsing model.agency_data_pipeline.adwords_ads
+2018-05-16 10:21:26,113: Parsing model.agency_data_pipeline.adwords_campaigns
+2018-05-16 10:21:26,117: Parsing model.agency_data_pipeline.adwords_conversions
+2018-05-16 10:21:26,119: Parsing model.agency_data_pipeline.adwords_impression_share
+2018-05-16 10:21:26,121: Parsing model.agency_data_pipeline.adwords_join
+2018-05-16 10:21:26,124: Parsing model.agency_data_pipeline.adwords_stats
+2018-05-16 10:21:26,125: Parsing model.agency_data_pipeline.adwords_urls
+2018-05-16 10:21:26,128: Parsing model.agency_data_pipeline.bing_ads_ads
+2018-05-16 10:21:26,130: Parsing model.agency_data_pipeline.bing_ads_conversions
+2018-05-16 10:21:26,135: Parsing model.agency_data_pipeline.bing_ads_impression_share
+2018-05-16 10:21:26,138: Parsing model.agency_data_pipeline.bing_ads_stats
+2018-05-16 10:21:26,140: Parsing model.agency_data_pipeline.fb_adcreative
+2018-05-16 10:21:26,145: Parsing model.agency_data_pipeline.fb_ads
+2018-05-16 10:21:26,153: Parsing model.agency_data_pipeline.fb_ads_insights
+2018-05-16 10:21:26,158: Parsing model.agency_data_pipeline.fb_ads_insights_conversions
+2018-05-16 10:21:26,164: Parsing model.agency_data_pipeline.fb_ads_stats
+2018-05-16 10:21:26,168: Parsing model.agency_data_pipeline.ga_conversions
+2018-05-16 10:21:26,170: Parsing model.agency_data_pipeline.ga_traffic
+2018-05-16 10:21:26,184: Parsing model.agency_data_pipeline.ga_transactions
+2018-05-16 10:21:26,193: Parsing model.agency_data_pipeline.ga_mcf_proc
+2018-05-16 10:21:26,196: Parsing model.agency_data_pipeline.ga_mcf_stats
+2018-05-16 10:21:26,200: Parsing model.agency_data_pipeline.autoanything_category_proc
+2018-05-16 10:21:26,202: Parsing model.agency_data_pipeline.autoanything_customers_info_proc
+2018-05-16 10:21:26,205: Parsing model.agency_data_pipeline.autoanything_customers_proc
+2018-05-16 10:21:26,206: Parsing model.agency_data_pipeline.autoanything_orders_info_proc
+2018-05-16 10:21:26,209: Parsing model.agency_data_pipeline.autoanything_orders_proc
+2018-05-16 10:21:26,212: Parsing model.agency_data_pipeline.autoanything_products_proc
+2018-05-16 10:21:26,216: Parsing model.agency_data_pipeline.autoanything_products_proc_prelim
+2018-05-16 10:21:26,219: Parsing model.agency_data_pipeline.autoanything_returns_proc
+2018-05-16 10:21:26,221: Parsing model.agency_data_pipeline.yandy_base_proc
+2018-05-16 10:21:26,227: Parsing model.agency_data_pipeline.yandy_customers_proc
+2018-05-16 10:21:26,230: Parsing model.agency_data_pipeline.yandy_fifo_transactions_proc
+2018-05-16 10:21:26,236: Parsing model.agency_data_pipeline.yandy_orders_info_proc
+2018-05-16 10:21:26,239: Parsing model.agency_data_pipeline.yandy_orders_proc
+2018-05-16 10:21:26,241: Parsing model.agency_data_pipeline.yandy_orders_prods_proc
+2018-05-16 10:21:26,243: Parsing model.agency_data_pipeline.yandy_product_options_proc
+2018-05-16 10:21:26,245: Parsing model.agency_data_pipeline.yandy_products_info_proc
+2018-05-16 10:21:26,248: Parsing model.agency_data_pipeline.yandy_products_proc
+2018-05-16 10:21:26,251: Parsing model.agency_data_pipeline.shopify_customers_proc
+2018-05-16 10:21:26,257: Parsing model.agency_data_pipeline.shopify_orders_proc
+2018-05-16 10:21:26,266: Parsing model.agency_data_pipeline.shopify_products_proc
+2018-05-16 10:21:26,273: Parsing model.agency_data_pipeline.shopify_refunds_proc
+2018-05-16 10:21:26,278: Parsing model.agency_data_pipeline.agg_campaign
+2018-05-16 10:21:26,283: Parsing model.agency_data_pipeline.agg_campaign_daily
+2018-05-16 10:21:26,286: Parsing model.agency_data_pipeline.agg_campaign_daily_anomalies
+2018-05-16 10:21:26,289: Parsing model.agency_data_pipeline.agg_customers_union
+2018-05-16 10:21:26,291: Parsing model.agency_data_pipeline.agg_ga_campaign
+2018-05-16 10:21:26,294: Parsing model.agency_data_pipeline.agg_ga_campaign_by_type
+2018-05-16 10:21:26,297: Parsing model.agency_data_pipeline.agg_ga_transaction
+2018-05-16 10:21:26,301: Parsing model.agency_data_pipeline.agg_ga_transaction_order_number
+2018-05-16 10:21:26,304: Parsing model.agency_data_pipeline.agg_orders_union
+2018-05-16 10:21:26,307: Parsing model.agency_data_pipeline.agg_platform_monthly
+2018-05-16 10:21:26,309: Parsing model.agency_data_pipeline.agg_platforms_client
+2018-05-16 10:21:26,311: Parsing model.agency_data_pipeline.agg_platforms_union
+2018-05-16 10:21:26,314: Parsing model.agency_data_pipeline.agg_products
+2018-05-16 10:21:26,317: Parsing model.agency_data_pipeline.agg_products_cogs
+2018-05-16 10:21:26,320: Parsing model.agency_data_pipeline.agg_transaction
+2018-05-16 10:21:26,323: Parsing model.agency_data_pipeline.agg_transaction_daily
+2018-05-16 10:21:26,324: Parsing model.agency_data_pipeline.agg_transaction_line_item
+2018-05-16 10:21:26,326: Parsing model.agency_data_pipeline.agg_transaction_line_item_type
+2018-05-16 10:21:26,328: Parsing model.agency_data_pipeline.agg_transaction_order_number
+2018-05-16 10:21:26,330: Parsing model.agency_data_pipeline.agg_transaction_product_type
+2018-05-16 10:21:26,334: Parsing model.agency_data_pipeline.customers_by_transaction
+2018-05-16 10:21:26,336: Parsing model.agency_data_pipeline.growth_customer_0_365
+2018-05-16 10:21:26,338: Parsing model.agency_data_pipeline.growth_customer_0_365_segment
+2018-05-16 10:21:26,341: Parsing model.agency_data_pipeline.growth_stats
+2018-05-16 10:21:26,343: Parsing model.agency_data_pipeline.growth_customer_0_30
+2018-05-16 10:21:26,345: Parsing model.agency_data_pipeline.growth_customer_0_30_segment
+2018-05-16 10:21:26,349: Parsing model.agency_data_pipeline.growth_stats_monthly
+2018-05-16 10:21:26,352: Parsing model.agency_data_pipeline.retention_0_365
+2018-05-16 10:21:26,354: Parsing model.agency_data_pipeline.retention_0_365_new
+2018-05-16 10:21:26,357: Parsing model.agency_data_pipeline.retention_0_365_reactivated
+2018-05-16 10:21:26,360: Parsing model.agency_data_pipeline.retention_0_365_rebuy
+2018-05-16 10:21:26,362: Parsing model.agency_data_pipeline.retention_30_395
+2018-05-16 10:21:26,364: Parsing model.agency_data_pipeline.retention_365_730
+2018-05-16 10:21:26,368: Parsing model.agency_data_pipeline.retention_730_plus
+2018-05-16 10:21:26,370: Parsing model.agency_data_pipeline.retention_stats
+2018-05-16 10:21:26,377: Parsing model.agency_data_pipeline.retention_stats_data_studio
+2018-05-16 10:21:26,378: Parsing model.agency_data_pipeline.retention_stats_forecast
+2018-05-16 10:21:26,380: Parsing model.agency_data_pipeline.retention_stats_rebuy_rate
+2018-05-16 10:21:26,387: Parsing model.agency_data_pipeline.retention_0_30
+2018-05-16 10:21:26,389: Parsing model.agency_data_pipeline.retention_0_30_new
+2018-05-16 10:21:26,391: Parsing model.agency_data_pipeline.retention_0_30_reactivated
+2018-05-16 10:21:26,394: Parsing model.agency_data_pipeline.retention_0_30_rebuy
+2018-05-16 10:21:26,396: Parsing model.agency_data_pipeline.retention_30_60
+2018-05-16 10:21:26,399: Parsing model.agency_data_pipeline.retention_60_plus
+2018-05-16 10:21:26,402: Parsing model.agency_data_pipeline.retention_stats_month
+2018-05-16 10:21:26,409: Parsing model.agency_data_pipeline.retention_stats_month_data_studio
+2018-05-16 10:21:26,411: Parsing model.agency_data_pipeline.retention_stats_month_forecast
+2018-05-16 10:21:26,413: Parsing model.agency_data_pipeline.retention_stats_rebuy_rate_month
+2018-05-16 10:21:26,417: Parsing model.agency_data_pipeline.customers_first_purchase_proc
+2018-05-16 10:21:26,419: Parsing model.agency_data_pipeline.customers_proc
+2018-05-16 10:21:26,422: Parsing model.agency_data_pipeline.segment_list_customers
+2018-05-16 10:21:26,424: Parsing model.agency_data_pipeline.segment_proc_customers
+2018-05-16 10:21:26,426: Parsing model.agency_data_pipeline.segment_stats_customers
+2018-05-16 10:21:26,428: Parsing model.agency_data_pipeline.segment_stats_customers_agg
+2018-05-16 10:21:26,432: Parsing model.agency_data_pipeline.customers_first_purchase_product_type_proc
+2018-05-16 10:21:26,435: Parsing model.agency_data_pipeline.customers_products_proc
+2018-05-16 10:21:26,437: Parsing model.agency_data_pipeline.segment_list_customers_products
+2018-05-16 10:21:26,439: Parsing model.agency_data_pipeline.segment_proc_customers_products
+2018-05-16 10:21:26,442: Parsing model.agency_data_pipeline.segment_stats_customers_products
+2018-05-16 10:21:26,444: Parsing model.agency_data_pipeline.segment_stats_customers_products_agg
+2018-05-16 10:21:26,446: Parsing model.agency_data_pipeline.frequency_proc
+2018-05-16 10:21:26,450: Parsing model.agency_data_pipeline.frequency_stats
+2018-05-16 10:21:26,453: Parsing model.agency_data_pipeline.order_paths_agg
+2018-05-16 10:21:26,455: Parsing model.agency_data_pipeline.order_paths_proc
+2018-05-16 10:21:26,457: Parsing model.agency_data_pipeline.order_paths_stats
+2018-05-16 10:21:26,459: Parsing model.agency_data_pipeline.products_proc
+2018-05-16 10:21:26,462: Parsing model.agency_data_pipeline.segment_proc_sku
+2018-05-16 10:21:26,465: Parsing model.agency_data_pipeline.segment_stats_category
+2018-05-16 10:21:26,468: Parsing model.agency_data_pipeline.segment_stats_sku
+2018-05-16 10:21:26,509: Found 119 models, 0 tests, 0 archives, 0 analyses, 46 macros, 0 operations
+2018-05-16 10:21:26,638: 
+2018-05-16 10:21:26,644: 10:21:26 | Concurrency: 4 threads (target='prod')
+2018-05-16 10:21:26,644: 10:21:26 | 
+2018-05-16 10:21:29,253: Compiling model.agency_data_pipeline.adwords_urls
+2018-05-16 10:21:29,253: Compiling model.agency_data_pipeline.yandy_orders_prods_proc
+2018-05-16 10:21:29,253: Compiling model.agency_data_pipeline.bing_ads_ads
+2018-05-16 10:21:29,253: Compiling model.agency_data_pipeline.adwords_campaigns
+2018-05-16 10:21:29,258: Writing injected SQL for node "model.agency_data_pipeline.adwords_urls"
+2018-05-16 10:21:29,262: Writing injected SQL for node "model.agency_data_pipeline.yandy_orders_prods_proc"
+2018-05-16 10:21:29,273: Writing injected SQL for node "model.agency_data_pipeline.adwords_campaigns"
+2018-05-16 10:21:29,274: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_ads"
+2018-05-16 10:21:29,278: Compiling model.agency_data_pipeline.adwords_conversions
+2018-05-16 10:21:29,285: Writing injected SQL for node "model.agency_data_pipeline.adwords_conversions"
+2018-05-16 10:21:29,286: Compiling model.agency_data_pipeline.accounts_proc
+2018-05-16 10:21:29,292: Writing injected SQL for node "model.agency_data_pipeline.accounts_proc"
+2018-05-16 10:21:29,292: Compiling model.agency_data_pipeline.yandy_products_info_proc
+2018-05-16 10:21:29,299: Writing injected SQL for node "model.agency_data_pipeline.yandy_products_info_proc"
+2018-05-16 10:21:29,299: Compiling model.agency_data_pipeline.conversion_goals_proc
+2018-05-16 10:21:29,305: Compiling model.agency_data_pipeline.yandy_product_options_proc
+2018-05-16 10:21:29,311: Writing injected SQL for node "model.agency_data_pipeline.yandy_product_options_proc"
+2018-05-16 10:21:29,315: Writing injected SQL for node "model.agency_data_pipeline.conversion_goals_proc"
+2018-05-16 10:21:29,315: Compiling model.agency_data_pipeline.clients_proc
+2018-05-16 10:21:29,316: Compiling model.agency_data_pipeline.yandy_orders_info_proc
+2018-05-16 10:21:29,316: Compiling model.agency_data_pipeline.autoanything_customers_info_proc
+2018-05-16 10:21:29,330: Writing injected SQL for node "model.agency_data_pipeline.clients_proc"
+2018-05-16 10:21:29,331: Writing injected SQL for node "model.agency_data_pipeline.yandy_orders_info_proc"
+2018-05-16 10:21:29,332: Compiling model.agency_data_pipeline.monthend_dates
+2018-05-16 10:21:29,339: Writing injected SQL for node "model.agency_data_pipeline.autoanything_customers_info_proc"
+2018-05-16 10:21:29,345: Writing injected SQL for node "model.agency_data_pipeline.monthend_dates"
+2018-05-16 10:21:29,346: Compiling model.agency_data_pipeline.bing_ads_impression_share
+2018-05-16 10:21:29,346: Compiling model.agency_data_pipeline.autoanything_category_proc
+2018-05-16 10:21:29,357: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_impression_share"
+2018-05-16 10:21:29,364: Writing injected SQL for node "model.agency_data_pipeline.autoanything_category_proc"
+2018-05-16 10:21:29,366: Compiling model.agency_data_pipeline.autoanything_returns_proc
+2018-05-16 10:21:29,364: Compiling model.agency_data_pipeline.autoanything_products_proc_prelim
+2018-05-16 10:21:29,381: Writing injected SQL for node "model.agency_data_pipeline.autoanything_returns_proc"
+2018-05-16 10:21:29,382: Compiling model.agency_data_pipeline.cogs_proc
+2018-05-16 10:21:29,389: Compiling model.agency_data_pipeline.ga_conversions
+2018-05-16 10:21:29,397: Writing injected SQL for node "model.agency_data_pipeline.autoanything_products_proc_prelim"
+2018-05-16 10:21:29,398: Writing injected SQL for node "model.agency_data_pipeline.ga_conversions"
+2018-05-16 10:21:29,406: Writing injected SQL for node "model.agency_data_pipeline.cogs_proc"
+2018-05-16 10:21:29,406: Compiling model.agency_data_pipeline.carts_proc
+2018-05-16 10:21:29,414: Writing injected SQL for node "model.agency_data_pipeline.carts_proc"
+2018-05-16 10:21:29,415: Compiling model.agency_data_pipeline.yandy_fifo_transactions_proc
+2018-05-16 10:21:29,425: Writing injected SQL for node "model.agency_data_pipeline.yandy_fifo_transactions_proc"
+2018-05-16 10:21:29,426: Compiling model.agency_data_pipeline.all_dates
+2018-05-16 10:21:29,436: Writing injected SQL for node "model.agency_data_pipeline.all_dates"
+2018-05-16 10:21:29,438: Compiling model.agency_data_pipeline.ga_mcf_proc
+2018-05-16 10:21:29,438: Compiling model.agency_data_pipeline.fb_adcreative
+2018-05-16 10:21:29,445: Compiling model.agency_data_pipeline.fb_ads_insights_conversions
+2018-05-16 10:21:29,453: Compiling model.agency_data_pipeline.shopify_refunds_proc
+2018-05-16 10:21:29,455: Writing injected SQL for node "model.agency_data_pipeline.ga_mcf_proc"
+2018-05-16 10:21:29,473: Acquiring new bigquery connection "fb_adcreative".
+2018-05-16 10:21:29,496: Acquiring new bigquery connection "fb_ads_insights_conversions".
+2018-05-16 10:21:29,496: Acquiring new bigquery connection "shopify_refunds_proc".
+2018-05-16 10:21:29,496: Opening a new connection (1 currently allocated)
+2018-05-16 10:21:29,498: Fetching data for query fb_adcreative:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:29,500: Opening a new connection (2 currently allocated)
+2018-05-16 10:21:29,549: Compiling model.agency_data_pipeline.adwords_ads
+2018-05-16 10:21:29,559: Writing injected SQL for node "model.agency_data_pipeline.adwords_ads"
+2018-05-16 10:21:29,564: Fetching data for query fb_ads_insights_conversions:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:29,564: Opening a new connection (3 currently allocated)
+2018-05-16 10:21:29,566: Compiling model.agency_data_pipeline.autoanything_orders_info_proc
+2018-05-16 10:21:29,628: Writing injected SQL for node "model.agency_data_pipeline.autoanything_orders_info_proc"
+2018-05-16 10:21:29,638: Fetching data for query shopify_refunds_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:29,639: Compiling model.agency_data_pipeline.bing_ads_conversions
+2018-05-16 10:21:29,647: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_conversions"
+2018-05-16 10:21:29,648: Compiling model.agency_data_pipeline.mappings_ga_proc
+2018-05-16 10:21:29,657: Writing injected SQL for node "model.agency_data_pipeline.mappings_ga_proc"
+2018-05-16 10:21:29,720: Compiling model.agency_data_pipeline.fb_ads_insights
+2018-05-16 10:21:29,728: Acquiring new bigquery connection "fb_ads_insights".
+2018-05-16 10:21:29,729: Opening a new connection (4 currently allocated)
+2018-05-16 10:21:29,732: Fetching data for query fb_ads_insights:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:30,907: Writing injected SQL for node "model.agency_data_pipeline.fb_adcreative"
+2018-05-16 10:21:30,912: Writing injected SQL for node "model.agency_data_pipeline.fb_ads_insights_conversions"
+2018-05-16 10:21:30,915: Writing injected SQL for node "model.agency_data_pipeline.fb_ads_insights"
+2018-05-16 10:21:30,917: Compiling model.agency_data_pipeline.autoanything_customers_proc
+2018-05-16 10:21:30,922: Writing injected SQL for node "model.agency_data_pipeline.autoanything_customers_proc"
+2018-05-16 10:21:31,437: Writing injected SQL for node "model.agency_data_pipeline.shopify_refunds_proc"
+2018-05-16 10:21:31,439: Compiling model.agency_data_pipeline.autoanything_products_proc
+2018-05-16 10:21:31,439: Compiling model.agency_data_pipeline.shopify_customers_proc
+2018-05-16 10:21:31,439: Compiling model.agency_data_pipeline.fb_ads
+2018-05-16 10:21:31,447: Writing injected SQL for node "model.agency_data_pipeline.autoanything_products_proc"
+2018-05-16 10:21:31,469: Acquiring new bigquery connection "shopify_customers_proc".
+2018-05-16 10:21:31,472: Acquiring new bigquery connection "fb_ads".
+2018-05-16 10:21:31,472: Re-using an available connection from the pool.
+2018-05-16 10:21:31,472: Fetching data for query shopify_customers_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:31,473: Re-using an available connection from the pool.
+2018-05-16 10:21:31,473: Fetching data for query fb_ads:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'FB Ads'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:31,806: Writing injected SQL for node "model.agency_data_pipeline.shopify_customers_proc"
+2018-05-16 10:21:31,828: Writing injected SQL for node "model.agency_data_pipeline.fb_ads"
+2018-05-16 10:21:31,829: Compiling model.agency_data_pipeline.bing_ads_stats
+2018-05-16 10:21:31,830: Compiling model.agency_data_pipeline.autoanything_orders_proc
+2018-05-16 10:21:31,830: Compiling model.agency_data_pipeline.shopify_products_proc
+2018-05-16 10:21:31,830: Compiling model.agency_data_pipeline.ga_mcf_stats
+2018-05-16 10:21:31,843: Writing injected SQL for node "model.agency_data_pipeline.bing_ads_stats"
+2018-05-16 10:21:31,845: Writing injected SQL for node "model.agency_data_pipeline.autoanything_orders_proc"
+2018-05-16 10:21:31,855: Acquiring new bigquery connection "shopify_products_proc".
+2018-05-16 10:21:31,860: Writing injected SQL for node "model.agency_data_pipeline.ga_mcf_stats"
+2018-05-16 10:21:31,861: Re-using an available connection from the pool.
+2018-05-16 10:21:31,861: Fetching data for query shopify_products_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:31,863: Compiling model.agency_data_pipeline.shopify_orders_proc
+2018-05-16 10:21:31,878: Acquiring new bigquery connection "shopify_orders_proc".
+2018-05-16 10:21:31,878: Re-using an available connection from the pool.
+2018-05-16 10:21:31,878: Fetching data for query shopify_orders_proc:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Shopify'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:32,255: Writing injected SQL for node "model.agency_data_pipeline.shopify_orders_proc"
+2018-05-16 10:21:32,261: Writing injected SQL for node "model.agency_data_pipeline.shopify_products_proc"
+2018-05-16 10:21:32,262: Compiling model.agency_data_pipeline.ga_transactions
+2018-05-16 10:21:32,263: Compiling model.agency_data_pipeline.ga_traffic
+2018-05-16 10:21:32,263: Compiling model.agency_data_pipeline.adwords_join
+2018-05-16 10:21:32,290: Writing injected SQL for node "model.agency_data_pipeline.adwords_join"
+2018-05-16 10:21:32,295: Acquiring new bigquery connection "ga_transactions".
+2018-05-16 10:21:32,301: Re-using an available connection from the pool.
+2018-05-16 10:21:32,308: Fetching data for query ga_transactions:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'Google Analytics'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:32,310: Acquiring new bigquery connection "ga_traffic".
+2018-05-16 10:21:32,310: Re-using an available connection from the pool.
+2018-05-16 10:21:32,310: Fetching data for query ga_traffic:
+
+
+        select
+            client_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`clients_proc`
+
+        
+        ##where 1 = 1
+        where platform = 'GA Traffic'
+        
+        
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:32,642: Fetching data for query ga_transactions:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'autoanything'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:32,681: Fetching data for query ga_traffic:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'yandy'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:33,081: Fetching data for query ga_transactions:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'lucadanni'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:33,088: Fetching data for query ga_traffic:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'lucadanni'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:33,429: Fetching data for query ga_transactions:
+
+
+        select
+            goal_name as value
+
+        from `growth-engines-pipeline`.`agency_data_pipeline`.`ga_conversions`
+
+        
+        ##where 1 = 1
+        where goal_type = 'Conversion'
+        
+        
+        
+        ##and 2 = 2
+        and client_name = 'yandy'
+        
+
+        group by 1
+        order by count(*) desc
+
+        
+        limit 50
+        
+2018-05-16 10:21:33,490: Writing injected SQL for node "model.agency_data_pipeline.ga_traffic"
+2018-05-16 10:21:33,934: Writing injected SQL for node "model.agency_data_pipeline.ga_transactions"
+2018-05-16 10:21:33,936: Compiling model.agency_data_pipeline.adwords_impression_share
+2018-05-16 10:21:33,946: Compiling model.agency_data_pipeline.fb_ads_stats
+2018-05-16 10:21:33,946: Compiling model.agency_data_pipeline.yandy_base_proc
+2018-05-16 10:21:33,946: Compiling model.agency_data_pipeline.adwords_stats
+2018-05-16 10:21:33,948: Writing injected SQL for node "model.agency_data_pipeline.adwords_impression_share"
+2018-05-16 10:21:33,961: Writing injected SQL for node "model.agency_data_pipeline.fb_ads_stats"
+2018-05-16 10:21:33,980: Writing injected SQL for node "model.agency_data_pipeline.adwords_stats"
+2018-05-16 10:21:33,980: Writing injected SQL for node "model.agency_data_pipeline.yandy_base_proc"
+2018-05-16 10:21:33,985: Compiling model.agency_data_pipeline.yandy_orders_proc
+2018-05-16 10:21:33,985: Compiling model.agency_data_pipeline.yandy_products_proc
+2018-05-16 10:21:33,993: Writing injected SQL for node "model.agency_data_pipeline.yandy_orders_proc"
+2018-05-16 10:21:34,003: Writing injected SQL for node "model.agency_data_pipeline.yandy_products_proc"
+2018-05-16 10:21:34,006: Compiling model.agency_data_pipeline.agg_ga_transaction_order_number
+2018-05-16 10:21:34,006: Compiling model.agency_data_pipeline.yandy_customers_proc
+2018-05-16 10:21:34,020: Writing injected SQL for node "model.agency_data_pipeline.agg_ga_transaction_order_number"
+2018-05-16 10:21:34,030: Writing injected SQL for node "model.agency_data_pipeline.yandy_customers_proc"
+2018-05-16 10:21:34,035: Compiling model.agency_data_pipeline.agg_ga_campaign
+2018-05-16 10:21:34,048: Writing injected SQL for node "model.agency_data_pipeline.agg_ga_campaign"
+2018-05-16 10:21:34,049: Compiling model.agency_data_pipeline.agg_customers_union
+2018-05-16 10:21:34,058: Writing injected SQL for node "model.agency_data_pipeline.agg_customers_union"
+2018-05-16 10:21:34,059: Compiling model.agency_data_pipeline.agg_products
+2018-05-16 10:21:34,071: Writing injected SQL for node "model.agency_data_pipeline.agg_products"
+2018-05-16 10:21:34,072: Compiling model.agency_data_pipeline.agg_products_cogs
+2018-05-16 10:21:34,073: Compiling model.agency_data_pipeline.agg_platforms_union
+2018-05-16 10:21:34,083: Writing injected SQL for node "model.agency_data_pipeline.agg_products_cogs"
+2018-05-16 10:21:34,095: Writing injected SQL for node "model.agency_data_pipeline.agg_platforms_union"
+2018-05-16 10:21:34,096: Compiling model.agency_data_pipeline.agg_platforms_client
+2018-05-16 10:21:34,109: Writing injected SQL for node "model.agency_data_pipeline.agg_platforms_client"
+2018-05-16 10:21:34,110: Compiling model.agency_data_pipeline.agg_orders_union
+2018-05-16 10:21:34,126: Writing injected SQL for node "model.agency_data_pipeline.agg_orders_union"
+2018-05-16 10:21:34,129: Compiling model.agency_data_pipeline.agg_transaction_line_item
+2018-05-16 10:21:34,136: Compiling model.agency_data_pipeline.agg_transaction_order_number
+2018-05-16 10:21:34,146: Writing injected SQL for node "model.agency_data_pipeline.agg_transaction_line_item"
+2018-05-16 10:21:34,153: Writing injected SQL for node "model.agency_data_pipeline.agg_transaction_order_number"
+2018-05-16 10:21:34,154: Compiling model.agency_data_pipeline.customers_by_transaction
+2018-05-16 10:21:34,165: Writing injected SQL for node "model.agency_data_pipeline.customers_by_transaction"
+2018-05-16 10:21:34,169: Compiling model.agency_data_pipeline.frequency_proc
+2018-05-16 10:21:34,181: Writing injected SQL for node "model.agency_data_pipeline.frequency_proc"
+2018-05-16 10:21:34,187: Compiling model.agency_data_pipeline.frequency_stats
+2018-05-16 10:21:34,207: Writing injected SQL for node "model.agency_data_pipeline.frequency_stats"
+2018-05-16 10:21:34,211: Compiling model.agency_data_pipeline.agg_transaction_line_item_type
+2018-05-16 10:21:34,211: Compiling model.agency_data_pipeline.agg_ga_transaction
+2018-05-16 10:21:34,211: Compiling model.agency_data_pipeline.agg_transaction
+2018-05-16 10:21:34,227: Writing injected SQL for node "model.agency_data_pipeline.agg_transaction_line_item_type"
+2018-05-16 10:21:34,231: Writing injected SQL for node "model.agency_data_pipeline.agg_ga_transaction"
+2018-05-16 10:21:34,244: Writing injected SQL for node "model.agency_data_pipeline.agg_transaction"
+2018-05-16 10:21:34,247: Compiling model.agency_data_pipeline.agg_transaction_product_type
+2018-05-16 10:21:34,247: Compiling model.agency_data_pipeline.customers_first_purchase_product_type_proc
+2018-05-16 10:21:34,247: Compiling model.agency_data_pipeline.customers_first_purchase_proc
+2018-05-16 10:21:34,247: Compiling model.agency_data_pipeline.agg_ga_campaign_by_type
+2018-05-16 10:21:34,269: Writing injected SQL for node "model.agency_data_pipeline.customers_first_purchase_product_type_proc"
+2018-05-16 10:21:34,270: Writing injected SQL for node "model.agency_data_pipeline.agg_transaction_product_type"
+2018-05-16 10:21:34,277: Writing injected SQL for node "model.agency_data_pipeline.customers_first_purchase_proc"
+2018-05-16 10:21:34,289: Writing injected SQL for node "model.agency_data_pipeline.agg_ga_campaign_by_type"
+2018-05-16 10:21:34,292: Compiling model.agency_data_pipeline.agg_transaction_daily
+2018-05-16 10:21:34,303: Writing injected SQL for node "model.agency_data_pipeline.agg_transaction_daily"
+2018-05-16 10:21:34,306: Compiling model.agency_data_pipeline.customers_proc
+2018-05-16 10:21:34,311: Compiling model.agency_data_pipeline.products_proc
+2018-05-16 10:21:34,318: Compiling model.agency_data_pipeline.growth_customer_0_365
+2018-05-16 10:21:34,325: Compiling model.agency_data_pipeline.order_paths_proc
+2018-05-16 10:21:34,330: Writing injected SQL for node "model.agency_data_pipeline.customers_proc"
+2018-05-16 10:21:34,356: Writing injected SQL for node "model.agency_data_pipeline.products_proc"
+2018-05-16 10:21:34,357: Writing injected SQL for node "model.agency_data_pipeline.order_paths_proc"
+2018-05-16 10:21:34,362: Writing injected SQL for node "model.agency_data_pipeline.growth_customer_0_365"
+2018-05-16 10:21:34,365: Compiling model.agency_data_pipeline.growth_customer_0_30
+2018-05-16 10:21:34,377: Compiling model.agency_data_pipeline.customers_products_proc
+2018-05-16 10:21:34,380: Writing injected SQL for node "model.agency_data_pipeline.growth_customer_0_30"
+2018-05-16 10:21:34,395: Writing injected SQL for node "model.agency_data_pipeline.customers_products_proc"
+2018-05-16 10:21:34,397: Compiling model.agency_data_pipeline.retention_730_plus
+2018-05-16 10:21:34,397: Compiling model.agency_data_pipeline.retention_0_30
+2018-05-16 10:21:34,397: Compiling model.agency_data_pipeline.retention_60_plus
+2018-05-16 10:21:34,398: Compiling model.agency_data_pipeline.retention_0_365
+2018-05-16 10:21:34,427: Writing injected SQL for node "model.agency_data_pipeline.retention_0_30"
+2018-05-16 10:21:34,431: Writing injected SQL for node "model.agency_data_pipeline.retention_60_plus"
+2018-05-16 10:21:34,435: Writing injected SQL for node "model.agency_data_pipeline.retention_730_plus"
+2018-05-16 10:21:34,445: Writing injected SQL for node "model.agency_data_pipeline.retention_0_365"
+2018-05-16 10:21:34,447: Compiling model.agency_data_pipeline.order_paths_agg
+2018-05-16 10:21:34,454: Compiling model.agency_data_pipeline.segment_proc_sku
+2018-05-16 10:21:34,459: Writing injected SQL for node "model.agency_data_pipeline.order_paths_agg"
+2018-05-16 10:21:34,460: Compiling model.agency_data_pipeline.retention_30_395
+2018-05-16 10:21:34,460: Compiling model.agency_data_pipeline.retention_365_730
+2018-05-16 10:21:34,474: Writing injected SQL for node "model.agency_data_pipeline.segment_proc_sku"
+2018-05-16 10:21:34,506: Compiling model.agency_data_pipeline.retention_30_60
+2018-05-16 10:21:34,513: Writing injected SQL for node "model.agency_data_pipeline.retention_30_395"
+2018-05-16 10:21:34,515: Writing injected SQL for node "model.agency_data_pipeline.retention_365_730"
+2018-05-16 10:21:34,522: Writing injected SQL for node "model.agency_data_pipeline.retention_30_60"
+2018-05-16 10:21:34,525: Compiling model.agency_data_pipeline.segment_proc_customers_products
+2018-05-16 10:21:34,525: Compiling model.agency_data_pipeline.segment_stats_sku
+2018-05-16 10:21:34,542: Writing injected SQL for node "model.agency_data_pipeline.segment_proc_customers_products"
+2018-05-16 10:21:34,554: Writing injected SQL for node "model.agency_data_pipeline.segment_stats_sku"
+2018-05-16 10:21:34,557: Compiling model.agency_data_pipeline.retention_0_30_rebuy
+2018-05-16 10:21:34,562: Compiling model.agency_data_pipeline.retention_0_365_rebuy
+2018-05-16 10:21:34,563: Compiling model.agency_data_pipeline.segment_stats_category
+2018-05-16 10:21:34,563: Compiling model.agency_data_pipeline.segment_stats_customers_products_agg
+2018-05-16 10:21:34,565: Writing injected SQL for node "model.agency_data_pipeline.retention_0_30_rebuy"
+2018-05-16 10:21:34,582: Writing injected SQL for node "model.agency_data_pipeline.retention_0_365_rebuy"
+2018-05-16 10:21:34,597: Writing injected SQL for node "model.agency_data_pipeline.segment_stats_category"
+2018-05-16 10:21:34,603: Writing injected SQL for node "model.agency_data_pipeline.segment_stats_customers_products_agg"
+2018-05-16 10:21:34,604: Compiling model.agency_data_pipeline.order_paths_stats
+2018-05-16 10:21:34,619: Writing injected SQL for node "model.agency_data_pipeline.order_paths_stats"
+2018-05-16 10:21:34,625: Compiling model.agency_data_pipeline.retention_0_30_reactivated
+2018-05-16 10:21:34,631: Compiling model.agency_data_pipeline.retention_0_365_reactivated
+2018-05-16 10:21:34,643: Compiling model.agency_data_pipeline.retention_0_365_new
+2018-05-16 10:21:34,643: Compiling model.agency_data_pipeline.retention_stats_rebuy_rate_month
+2018-05-16 10:21:34,661: Writing injected SQL for node "model.agency_data_pipeline.retention_0_30_reactivated"
+2018-05-16 10:21:34,663: Writing injected SQL for node "model.agency_data_pipeline.retention_0_365_reactivated"
+2018-05-16 10:21:34,665: Writing injected SQL for node "model.agency_data_pipeline.retention_0_365_new"
+2018-05-16 10:21:34,674: Writing injected SQL for node "model.agency_data_pipeline.retention_stats_rebuy_rate_month"
+2018-05-16 10:21:34,675: Compiling model.agency_data_pipeline.retention_0_30_new
+2018-05-16 10:21:34,681: Compiling model.agency_data_pipeline.segment_proc_customers
+2018-05-16 10:21:34,688: Compiling model.agency_data_pipeline.segment_stats_customers_products
+2018-05-16 10:21:34,690: Writing injected SQL for node "model.agency_data_pipeline.retention_0_30_new"
+2018-05-16 10:21:34,718: Writing injected SQL for node "model.agency_data_pipeline.segment_proc_customers"
+2018-05-16 10:21:34,724: Writing injected SQL for node "model.agency_data_pipeline.segment_stats_customers_products"
+2018-05-16 10:21:34,726: Compiling model.agency_data_pipeline.segment_stats_customers_agg
+2018-05-16 10:21:34,740: Writing injected SQL for node "model.agency_data_pipeline.segment_stats_customers_agg"
+2018-05-16 10:21:34,741: Compiling model.agency_data_pipeline.growth_customer_0_30_segment
+2018-05-16 10:21:34,748: Compiling model.agency_data_pipeline.growth_customer_0_365_segment
+2018-05-16 10:21:34,754: Writing injected SQL for node "model.agency_data_pipeline.growth_customer_0_30_segment"
+2018-05-16 10:21:34,766: Writing injected SQL for node "model.agency_data_pipeline.growth_customer_0_365_segment"
+2018-05-16 10:21:34,767: Compiling model.agency_data_pipeline.segment_stats_customers
+2018-05-16 10:21:34,777: Writing injected SQL for node "model.agency_data_pipeline.segment_stats_customers"
+2018-05-16 10:21:34,779: Compiling model.agency_data_pipeline.growth_stats
+2018-05-16 10:21:34,785: Compiling model.agency_data_pipeline.growth_stats_monthly
+2018-05-16 10:21:34,804: Writing injected SQL for node "model.agency_data_pipeline.growth_stats_monthly"
+2018-05-16 10:21:34,805: Writing injected SQL for node "model.agency_data_pipeline.growth_stats"
+2018-05-16 10:21:34,806: Compiling model.agency_data_pipeline.retention_stats_month
+2018-05-16 10:21:34,806: Compiling model.agency_data_pipeline.segment_list_customers_products
+2018-05-16 10:21:34,822: Writing injected SQL for node "model.agency_data_pipeline.segment_list_customers_products"
+2018-05-16 10:21:34,842: Writing injected SQL for node "model.agency_data_pipeline.retention_stats_month"
+2018-05-16 10:21:34,843: Compiling model.agency_data_pipeline.retention_stats_month_forecast
+2018-05-16 10:21:34,855: Writing injected SQL for node "model.agency_data_pipeline.retention_stats_month_forecast"
+2018-05-16 10:21:34,857: Compiling model.agency_data_pipeline.segment_list_customers
+2018-05-16 10:21:34,868: Writing injected SQL for node "model.agency_data_pipeline.segment_list_customers"
+2018-05-16 10:21:34,869: Compiling model.agency_data_pipeline.retention_stats_rebuy_rate
+2018-05-16 10:21:34,880: Writing injected SQL for node "model.agency_data_pipeline.retention_stats_rebuy_rate"
+2018-05-16 10:21:34,881: Compiling model.agency_data_pipeline.retention_stats_month_data_studio
+2018-05-16 10:21:34,895: Writing injected SQL for node "model.agency_data_pipeline.retention_stats_month_data_studio"
+2018-05-16 10:21:34,896: Compiling model.agency_data_pipeline.agg_campaign
+2018-05-16 10:21:34,896: Compiling model.agency_data_pipeline.retention_stats
+2018-05-16 10:21:34,923: Writing injected SQL for node "model.agency_data_pipeline.agg_campaign"
+2018-05-16 10:21:34,936: Writing injected SQL for node "model.agency_data_pipeline.retention_stats"
+2018-05-16 10:21:34,937: Compiling model.agency_data_pipeline.retention_stats_data_studio
+2018-05-16 10:21:34,937: Compiling model.agency_data_pipeline.agg_platform_monthly
+2018-05-16 10:21:34,938: Compiling model.agency_data_pipeline.retention_stats_forecast
+2018-05-16 10:21:34,938: Compiling model.agency_data_pipeline.agg_campaign_daily
+2018-05-16 10:21:34,948: Writing injected SQL for node "model.agency_data_pipeline.retention_stats_data_studio"
+2018-05-16 10:21:34,960: Writing injected SQL for node "model.agency_data_pipeline.agg_platform_monthly"
+2018-05-16 10:21:34,977: Writing injected SQL for node "model.agency_data_pipeline.agg_campaign_daily"
+2018-05-16 10:21:34,979: Writing injected SQL for node "model.agency_data_pipeline.retention_stats_forecast"
+2018-05-16 10:21:34,983: Compiling model.agency_data_pipeline.agg_campaign_daily_anomalies
+2018-05-16 10:21:34,998: Writing injected SQL for node "model.agency_data_pipeline.agg_campaign_daily_anomalies"
+2018-05-16 10:21:35,033: Connection 'master' was left open.
+2018-05-16 10:21:35,034: 10:21:35 | Done.
+2018-05-16 10:21:35,034: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da02b38>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da02d68>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d94ef98>]}
+2018-05-16 10:21:35,382: Flushing usage events
