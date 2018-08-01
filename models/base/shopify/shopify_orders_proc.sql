@@ -47,9 +47,10 @@ with orders as (
 		_sdc_sequence,
 		first_value(_sdc_sequence) OVER (PARTITION BY order_number, _id ORDER BY _sdc_sequence DESC) lv
 		FROM `{{ var('bigquery-project') }}.shopify_{{store}}.orders` 
-		cross join unnest(line_items), unnest(shipping_lines)
+		cross join unnest(shipping_lines)
 		where source_name != 'shopify_draft_order'
 	)
+	cross join unnest(line_items)
 	where lv = _sdc_sequence
 	
 	{% if not loop.last %} UNION ALL {% endif %}
