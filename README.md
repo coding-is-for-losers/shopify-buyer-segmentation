@@ -1,5 +1,5 @@
 # Shopify + Google Analytics Buyer Segmentation
-SQL models (written in the DBT framework) for performing Shopify + Google Analytics buyer segmentation analysis.
+SQL models (written in the [DBT](https://getdbt.com) framework) for performing Shopify + Google Analytics buyer segmentation analysis.
 
 To get set up...
 
