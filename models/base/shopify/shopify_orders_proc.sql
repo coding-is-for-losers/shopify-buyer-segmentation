@@ -44,11 +44,12 @@ with orders as (
 		_id line_item_id,    
 		customer.id customer_id,    
     	line_items,
+    	financial_status,
 		_sdc_sequence,
 		first_value(_sdc_sequence) OVER (PARTITION BY order_number, _id ORDER BY _sdc_sequence DESC) lv
 		FROM `{{ {{ target.project }} }}.shopify_{{store}}.orders` 
 		cross join unnest(shipping_lines)
-		where source_name != 'shopify_draft_order'
+		where financial_status in ('paid', 'partially_refunded', 'refunded')
 	)
 	cross join unnest(line_items)
 	where lv = _sdc_sequence
