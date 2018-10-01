@@ -7,7 +7,7 @@ with refunds as (
 	{% for store in stores %}
 	SELECT
 	'{{store}}' store_name,
-	order_number,
+	_id order_number,
 	checkout_id,
 	financial_status,
 	line_item_id,
